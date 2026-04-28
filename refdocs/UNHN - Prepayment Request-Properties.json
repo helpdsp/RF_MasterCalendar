@@ -1,0 +1,17 @@
+﻿{
+    "Title":  "UNHN - Prepayment Request",
+    "Id":  "6de46c73-81d9-4d74-a99b-2cf735936104",
+    "BaseTemplate":  100,
+    "BaseType":  0,
+    "Hidden":  false,
+    "EnableVersioning":  true,
+    "EnableMinorVersions":  false,
+    "EnableModeration":  false,
+    "ForceCheckout":  false,
+    "ItemCount":  14,
+    "DefaultViewUrl":  "/sites/GBR-UK-Shared-Services/Lists/UABEPaymentRequest/Pending.aspx",
+    "RootFolderServerUrl":  "/sites/GBR-UK-Shared-Services/Lists/UABEPaymentRequest",
+    "Description":  "",
+    "ContentTypesEnabled":  true,
+    "OnQuickLaunch":  true
+}

@@ -1,0 +1,24 @@
+openapi: 3.0.0
+info:
+  title: SharePoint REST API (Central Submissions)
+  version: 1.0.0
+  description: SharePoint REST endpoints used by the Power Automate consolidation flow.
+
+paths:
+  /_api/web/lists/getbytitle('{ListName}')/items:
+    get:
+      summary: Get pending items from plant list
+      parameters:
+        - name: ListName
+          in: path
+          required: true
+          schema:
+            type: string
+        - name: $filter
+          in: query
+          schema:
+            type: string
+            default: "Timestamp eq null"
+    post:
+      summary: Create or update items (Consolidation)
+      description: Used to write to Master List or update Timestamp in plant list.

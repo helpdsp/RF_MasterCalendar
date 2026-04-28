@@ -1,0 +1,33 @@
+export const velocityDark: Record<string, string> = {
+  '--background': '#060e20',
+  '--foreground': '#dee5ff',
+  '--card': 'rgba(255,255,255,0.05)',
+  '--primary': '#a3a6ff',
+  '--primary-dim': '#6063ee',
+  '--secondary': '#ac8aff',
+  '--accent': '#69f6b8',
+  '--surface-container-low': 'rgba(255,255,255,0.03)',
+  '--surface-container-high': 'rgba(255,255,255,0.08)',
+  '--surface-bright': 'rgba(255,255,255,0.12)',
+  '--radius': '0.75rem',
+  '--success': '#69f6b8',
+  '--warning': '#ffd166',
+  '--destructive': '#ff6b6b',
+}
+
+export const velocityPro: Record<string, string> = {
+  '--background': '#faf4ff',
+  '--foreground': '#302950',
+  '--card': '#ffffff',
+  '--primary': '#4647d3',
+  '--primary-dim': '#9396ff',
+  '--secondary': '#5e4ab3',
+  '--accent': '#963776',
+  '--surface-container-low': '#f4eeff',
+  '--surface-container-high': '#e1d8ff',
+  '--surface-bright': '#ffffff',
+  '--radius': '0.75rem',
+  '--success': '#2d8a4e',
+  '--warning': '#b45309',
+  '--destructive': '#dc2626',
+}
