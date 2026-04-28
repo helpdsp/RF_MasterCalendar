@@ -1,4 +1,4 @@
-﻿# **PROJECT_NAME**
+﻿# **SK_PREPAYMENT**
 
 Plantilla local-first para ejecutar el flujo VISION completo (brief → spec → sprints → ejecución)
 sin depender de matriz.
