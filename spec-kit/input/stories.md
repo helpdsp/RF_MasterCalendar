@@ -1,10 +1,10 @@
 # User Stories: SWUK Central Submissions
 
-> [!IMPORTANT]
-> **Reverse Engineering Mode**: This project builds upon an existing Proof of Concept (POC). We are reverse-engineering the logic from existing SharePoint lists (Facilities, Master, UNHN) and the `SWUK Prepayment Request Consolidation` Power Automate flow to create a hardened, scalable regional solution.
+> [!NOTE]
+> This project builds upon an existing Proof of Concept (POC). The existing SharePoint lists (Facilities, Master, UNHN) and the `SWUK Prepayment Request Consolidation` Power Automate flow serve as the validated baseline. The solution hardens, scales, and automates this pattern for all 23 UK plants.
 
 ## Epic 1: Foundation & Security
-- **ST-1.1**: Define and create the "Prepayment Item" Site Content Type and associated Site Columns.
+- ~~**ST-1.1**: Define and create the "Prepayment Item" Site Content Type and associated Site Columns.~~ *(Done — delivered via POC.)*
 - **ST-1.2**: Develop the **PnP PowerShell 1.5.0** script for automated provisioning of security groups and lists.
 - **ST-1.3**: Provision SharePoint Security Groups for all 23 plants following the `[Plant Code] Members` convention using the script.
 - **ST-1.4**: Configure base permissions at the site level to allow group discovery while maintaining isolation.
