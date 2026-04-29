@@ -167,7 +167,10 @@ function Ensure-View {
         [string]$ViewTitle,
         [string]$Query,
         [string[]]$Fields,
-        [bool]$SetAsDefault = $false
+        [bool]$SetAsDefault = $false,
+        [string]$ViewType = "Html",
+        [int]$RowLimit = 0,
+        [bool]$Paged = $false
     )
 
     $view = Get-PnPView -List $ListName -Identity $ViewTitle -ErrorAction SilentlyContinue
@@ -177,13 +180,16 @@ function Ensure-View {
     }
 
     $params = @{
-        List = $ListName
-        Title = $ViewTitle
-        Query = $Query
-        Fields = $Fields
+        List     = $ListName
+        Title    = $ViewTitle
+        Query    = $Query
+        Fields   = $Fields
+        ViewType = $ViewType
     }
 
-    if ($SetAsDefault) { $params.SetAsDefault = $true }
+    if ($SetAsDefault)      { $params.SetAsDefault = $true }
+    if ($RowLimit -gt 0)    { $params.RowLimit = $RowLimit }
+    if ($Paged)             { $params.Paged = $true }
 
     Add-PnPView @params | Out-Null
     Write-Success "Created view: $ViewTitle."
@@ -213,13 +219,8 @@ function Ensure-ContentTypeOnList {
 
     $itemContentType = Get-PnPContentType -List $ListName | Where-Object { $_.Name -eq "Item" }
     if ($itemContentType) {
-        try {
-            Remove-PnPContentTypeFromList -List $ListName -ContentType "Item" -Force
-            Write-Success "Removed default Item content type."
-        }
-        catch {
-            Write-WarningMessage "Could not remove Item content type. It may still be in use or locked. Details: $($_.Exception.Message)"
-        }
+        Remove-PnPContentTypeFromList -List $ListName -ContentType "Item"
+        Write-Success "Removed default Item content type."
     }
 }
 
@@ -300,21 +301,65 @@ try {
     Write-Step "Configuring content types..."
     Ensure-ContentTypeOnList -ListName $ListName -ContentTypeId $ContentTypeId
 
-    Write-Step "Creating required list-level fields..."
-    $calcFormula = '=IF(ISBLANK([Title]),"No","Yes")'
-    Ensure-Field -ListName $ListName -DisplayName "Processed" -InternalName "isEmpty" -Type Calculated -Formula $calcFormula -ResultType Text -AddToDefaultView $true
-    Ensure-Field -ListName $ListName -DisplayName "Processed On" -InternalName "Processed_x0020_On" -Type DateTime
-    Ensure-Field -ListName $ListName -DisplayName "Plant" -InternalName "Plant" -Type Text
+    Write-Step "Renaming Title field to Timestamp..."
+    Set-PnPField -List $ListName -Identity "Title" -Values @{ Title = "Timestamp" }
+    Write-Success "Title field renamed to Timestamp."
 
+    Write-Step "Creating required list-level fields..."
+    $calcFormula = '=IF(ISBLANK([Timestamp]),"No","Yes")'
+    Ensure-Field -ListName $ListName -DisplayName "Processed" -InternalName "isEmpty" -Type Calculated -Formula $calcFormula -ResultType Text -AddToDefaultView $true
+
+    Write-Step "Setting Plant field default value..."
     Set-PnPField -List $ListName -Identity "Plant" -Values @{ DefaultValue = $PlantCode }
     Write-Success "Plant field default value set to: $PlantCode."
 
     Write-Step "Creating views..."
     $pendingQuery = "<Where><Eq><FieldRef Name='isEmpty' /><Value Type='Text'>No</Value></Eq></Where>"
-    Ensure-View -ListName $ListName -ViewTitle "Pending" -Query $pendingQuery -Fields @("Title", "Bus_x0020_Area", "Invoice_x0020_Number", "Invoice_x0020_Value", "PO") -SetAsDefault $true
+    $pendingFields = @(
+        "Bus_x0020_Area",
+        "PO",
+        "Invoice_x0020_Number",
+        "Invoice_x0020_Value",
+        "Payment_x0020_Description",
+        "Date_x0020_From",
+        "Date_x0020_To",
+        "GL",
+        "Cost_x0020_Centre",
+        "Vendor_x0020_Number",
+        "Vendor_x0020_Name",
+        "Rationale_x0020_for_x0020_Prepay",
+        "isEmpty"
+    )
+    Ensure-View -ListName $ListName -ViewTitle "Pending" -Query $pendingQuery -Fields $pendingFields -SetAsDefault $true -ViewType "Grid"
+    Set-PnPView -List $ListName -Identity "Pending" -Aggregations "<FieldRef Name='Invoice_x0020_Value' Type='SUM'/>"
+    Write-Success "Set Invoice Value Sum aggregation on Pending view."
 
     $processedQuery = "<Where><Eq><FieldRef Name='isEmpty' /><Value Type='Text'>Yes</Value></Eq></Where>"
-    Ensure-View -ListName $ListName -ViewTitle "Processed" -Query $processedQuery -Fields @("Title", "Bus_x0020_Area", "Invoice_x0020_Number", "Invoice_x0020_Value", "PO", "Processed_x0020_On")
+    $processedFields = @(
+        "Bus_x0020_Area",
+        "PO",
+        "Invoice_x0020_Number",
+        "Invoice_x0020_Value",
+        "Payment_x0020_Description",
+        "Date_x0020_From",
+        "Date_x0020_To",
+        "GL",
+        "Cost_x0020_Centre",
+        "Vendor_x0020_Number",
+        "Vendor_x0020_Name",
+        "Rationale_x0020_for_x0020_Prepay",
+        "isEmpty",
+        "LinkTitle"
+    )
+    Ensure-View -ListName $ListName -ViewTitle "Processed" -Query $processedQuery -Fields $processedFields -RowLimit 30 -Paged $true
+    Set-PnPView -List $ListName -Identity "Processed" -Aggregations "<FieldRef Name='Invoice_x0020_Value' Type='SUM'/>"
+    Write-Success "Set Invoice Value Sum aggregation on Processed view."
+
+    $allItemsView = Get-PnPView -List $ListName -Identity "All Items" -ErrorAction SilentlyContinue
+    if ($allItemsView) {
+        Remove-PnPView -List $ListName -Identity "All Items" -Force
+        Write-Success "Removed default 'All Items' view."
+    }
 
     Write-Step "Breaking list inheritance and assigning permissions..."
     Set-PnPList -Identity $ListName -BreakRoleInheritance -CopyRoleAssignments:$false
