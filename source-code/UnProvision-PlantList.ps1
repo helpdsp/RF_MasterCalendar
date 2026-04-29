@@ -165,10 +165,10 @@ try {
     Connect-PnPOnline -Url $SiteUrl -UseWebLogin
     Write-Success "Connected to SharePoint site."
 
-    Write-Host "`nThe following items will be permanently removed:" -ForegroundColor Red
-    Write-Host "  - Facilities Master List entry : $PlantCode" -ForegroundColor Red
-    Write-Host "  - SharePoint List              : $ListName (sent to recycle bin)" -ForegroundColor Red
-    Write-Host "  - SharePoint Security Group    : $GroupName" -ForegroundColor Red
+    Write-Host "`nThe following items will be permanently removed:" -ForegroundColor Yellow
+    Write-Host "  - Facilities Master List entry : $PlantCode" -ForegroundColor Yellow
+    Write-Host "  - SharePoint List              : $ListName (sent to recycle bin)" -ForegroundColor Yellow
+    Write-Host "  - SharePoint Security Group    : $GroupName" -ForegroundColor Yellow
 
     if (-not (Confirm-Action -Message "`nAre you sure you want to unprovision plant '$PlantCode'?")) {
         Write-Host "`nUnprovisioning cancelled." -ForegroundColor Yellow

@@ -23,6 +23,13 @@
 
 .EXAMPLE
     .\Provision-PlantList-Enhanced.ps1 -PlantCode "MAR" -PlantName "Margate"
+    .\Provision-PlantList.ps1 
+        -PlantCode "NOC" 
+        -PlantName "Northampton" 
+        -SiteUrl "https://smurfitkappa.sharepoint.com/sites/GBR-UK-Shared-Services" 
+        -FacilitiesListName "Facilities Master List" 
+        -ContentTypeId "0x0100F7C0524FF1642744B2C4644A8C17544B" 
+        -PnPModulePath "C:\PowerShellModules\PnP.PowerShell\1.5.0\PnP.PowerShell.psd1"
 
 .NOTES
     Compatible with PnP.PowerShell 1.5.0.
