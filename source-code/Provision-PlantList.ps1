@@ -34,7 +34,7 @@ param (
 Write-Host "Connecting to $SiteUrl..." -ForegroundColor Cyan
 Connect-PnPOnline -Url $SiteUrl -UseWebLogin
 # 2. Create Security Group
-$GroupName = "[$PlantCode] Members"
+$GroupName = "$PlantCode Members"
 Write-Host "Creating Security Group: $GroupName..." -ForegroundColor Cyan
 $group = New-PnPGroup -Title $GroupName -Description "Members group for $PlantName prepayment submissions."
 $groupId = $group.Id
@@ -43,7 +43,11 @@ Write-Host "Group Created with ID: $groupId" -ForegroundColor Green
 # 3. Create Plant List
 $ListName = "$PlantCode - Prepayment Request"
 Write-Host "Creating List: $ListName..." -ForegroundColor Cyan
-$list = New-PnPList -Title $ListName -Template GenericList -OnQuickLaunch
+$list = Get-PnPList -Identity $ListName -ErrorAction SilentlyContinue
+if (-not $list) {
+    $list = New-PnPList -Title $ListName -Template GenericList -OnQuickLaunch | Out-Null
+}
+
 
 # 4. Enable and Add Content Type
 Write-Host "Configuring Content Types..." -ForegroundColor Cyan
