@@ -116,9 +116,9 @@ function Remove-FacilitiesEntry {
 
     $safePlantCode = $PlantCode.Replace("'", "''")
     $query = "<View><Query><Where><Eq><FieldRef Name='Title' /><Value Type='Text'>$safePlantCode</Value></Eq></Where></Query><RowLimit>1</RowLimit></View>"
-    $existingItem = Get-PnPListItem -List $FacilitiesListName -Query $query -ErrorAction Stop
+    $existingItem = @(Get-PnPListItem -List $FacilitiesListName -Query $query -ErrorAction Stop)
 
-    if (-not $existingItem -or $existingItem.Count -eq 0) {
+    if ($existingItem.Count -eq 0) {
         Write-WarningMessage "No entry found for '$PlantCode' in '$FacilitiesListName'. Skipping."
         return
     }

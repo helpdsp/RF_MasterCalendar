@@ -239,7 +239,7 @@ function Ensure-FacilitiesRegistration {
 
     $safePlantCode = $PlantCode.Replace("'", "''")
     $query = "<View><Query><Where><Eq><FieldRef Name='Title' /><Value Type='Text'>$safePlantCode</Value></Eq></Where></Query><RowLimit>1</RowLimit></View>"
-    $existingItem = Get-PnPListItem -List $FacilitiesListName -Query $query -ErrorAction Stop
+    $existingItem = @(Get-PnPListItem -List $FacilitiesListName -Query $query -ErrorAction Stop)
 
     $values = @{
         "Title" = $PlantCode
@@ -248,7 +248,7 @@ function Ensure-FacilitiesRegistration {
         "MembershipGroupId" = $MembershipGroupId
     }
 
-    if ($existingItem -and $existingItem.Count -gt 0) {
+    if ($existingItem.Count -gt 0) {
         Set-PnPListItem -List $FacilitiesListName -Identity $existingItem[0].Id -Values $values | Out-Null
         Write-WarningMessage "Plant already existed in Facilities Master List. Existing record was updated."
     }
