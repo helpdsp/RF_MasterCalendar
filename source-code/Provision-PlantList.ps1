@@ -289,6 +289,9 @@ try {
     $groupId = [int]$group.Id
     Write-Success "Using group '$GroupName' with ID: $groupId."
 
+    Set-PnPGroupPermissions -Identity $GroupName -AddRole "Read"
+    Write-Success "Granted Read permission at site level to group: $GroupName."
+
     $ListName = "$PlantCode - Prepayment Request"
     Write-Step "Creating or reusing list: $ListName..."
     $list = Ensure-List -ListName $ListName
