@@ -1,5 +1,0 @@
-#confirm content types
-Get-PnPContentType | Select-Object Name, Id, Group | Sort-Object Name |  Format-Table -AutoSize
-
-#get content type id for prepayment item
-Get-PnPContentType | Where-Object { $_.Name -like "*Prepayment*" -or $_.Name -like "*Payment*" -or $_.Name -like "*Request*" } | Select-Object Name, Id, Group |     Format-Table -AutoSize

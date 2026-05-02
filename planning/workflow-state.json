@@ -1,50 +1,41 @@
 {
   "version": 1,
   "setup": {
-    "reverseEngineering": false,
+    "reverseEngineering": null,
     "referencesDir": "refdocs",
     "sourceDir": "source-code",
-    "initializedAt": "2026-04-27T16:58:16.996Z"
+    "initializedAt": null
   },
-  "status": "sprint_active",
+  "status": "awaiting_project_type",
   "brief": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "path": "spec-kit/input/brief.md",
-    "generatedAt": "2026-04-27T17:00:06.000Z",
-    "approvedAt": "2026-04-27T17:00:37.000Z"
+    "generatedAt": null,
+    "approvedAt": null
   },
   "spec": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-04-27T17:00:58.000Z",
-    "approvedAt": "2026-04-27T17:40:31.131Z",
-    "artifactFiles": [
-      "PRD.md",
-      "technical-spec.md",
-      "api-spec.yaml",
-      "data-model.md",
-      "epics.md",
-      "stories.md",
-      "sprint-plan.md",
-      "test-plan.md"
-    ]
+    "generatedAt": null,
+    "approvedAt": null,
+    "artifactFiles": []
   },
   "sprints": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-04-27T17:40:31.132Z",
-    "approvedAt": "2026-04-27T17:40:31.134Z",
-    "total": 3,
-    "active": 1,
+    "generatedAt": null,
+    "approvedAt": null,
+    "total": 0,
+    "active": null,
     "completed": []
   },
   "lastAction": {
-    "command": "start_sprint",
-    "at": "2026-04-27T17:50:56.984Z",
-    "details": "Sprint 1 started."
+    "command": null,
+    "at": null,
+    "details": ""
   },
-  "updatedAt": "2026-04-27T17:50:56.984Z"
+  "updatedAt": "2026-05-02T18:14:19.465Z"
 }
