@@ -1,0 +1,17 @@
+{
+  "Title": "Tickets",
+  "Id": "f694b2d2-449e-4c7f-abd0-3f4adb13234b",
+  "BaseTemplate": 101,
+  "BaseType": 1,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": true,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 470,
+  "DefaultViewUrl": "/sites/ITHelpdesk/Tickets/Forms/All Tickets.aspx",
+  "RootFolderServerUrl": "/sites/ITHelpdesk/Tickets",
+  "Description": "IT Helpdesk tickets (one Document Set per ticket)",
+  "ContentTypesEnabled": true,
+  "OnQuickLaunch": false
+}

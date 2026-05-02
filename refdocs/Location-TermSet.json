@@ -1,0 +1,34 @@
+{
+  "TermSetName": "Location",
+  "TermSetId": "5c3227ff-1094-4e6a-88b5-a5e54bcc82d0",
+  "Description": null,
+  "TermGroupName": "IT Helpdesk Taxonomy",
+  "TermGroupId": "cea34b94-1af7-47c4-8840-71f12677def9",
+  "TermCount": 4,
+  "Terms": [
+    {
+      "Name": "All Locations",
+      "Id": "cc29169d-b412-4e70-8409-a9e352128ffb",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "City Hall",
+      "Id": "67401ed8-7c62-4afe-9df7-08bc2d8c2ec7",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Corpyard",
+      "Id": "76a4854d-2ee5-42ce-998a-70258c6e26db",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "RCNS",
+      "Id": "b0a7d527-efda-45eb-83c3-8ad0bcac407a",
+      "Description": "",
+      "IsAvailableForTagging": true
+    }
+  ]
+}

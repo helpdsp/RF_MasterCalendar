@@ -1,0 +1,94 @@
+{
+  "TermSetName": "Category/Subcategory",
+  "TermSetId": "46589286-e234-4b6c-8e5e-17f2798176cc",
+  "Description": null,
+  "TermGroupName": "IT Helpdesk Taxonomy",
+  "TermGroupId": "cea34b94-1af7-47c4-8840-71f12677def9",
+  "TermCount": 14,
+  "Terms": [
+    {
+      "Name": "Conference Room",
+      "Id": "bef33d40-90d8-44cf-bdf6-f0f7ebff29f7",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Copier",
+      "Id": "27f07d9a-b3b7-4d8d-be93-f60915229d1c",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Cybersecurity",
+      "Id": "cba9669c-3e14-43dd-91f1-fc14d99a90a9",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Data Restore",
+      "Id": "a378af72-aa0f-49bf-86a8-b73903897e15",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Email",
+      "Id": "dc6853c4-f347-497c-90b0-b25bc5480e84",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Laptop/Desktop",
+      "Id": "c644de87-75dd-475f-817f-522795b91352",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Network",
+      "Id": "b299f45c-50b2-42df-9e39-c5e8845aaa67",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "New Equipment",
+      "Id": "849d018a-d4ea-4e9a-842c-7d55a375135a",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Other",
+      "Id": "78a04a23-5b48-424e-8787-1bbd112cbece",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Password",
+      "Id": "9a4e2177-5a4b-4f54-8a1d-97d54b38d3be",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Public Records Request",
+      "Id": "2b542dcf-5673-4a62-b97f-ab79e2f8fcf3",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "Software",
+      "Id": "40e92df4-381c-45f5-b04c-766ec8554774",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "To Be Determined",
+      "Id": "e4c2034b-7f7f-4504-9a0a-2a17d65d25ff",
+      "Description": "",
+      "IsAvailableForTagging": true
+    },
+    {
+      "Name": "User Account",
+      "Id": "1bf5b702-807a-4f6f-9bab-2866f318091e",
+      "Description": "",
+      "IsAvailableForTagging": true
+    }
+  ]
+}

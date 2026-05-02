@@ -1,0 +1,17 @@
+{
+  "Title": "IT Helpdesk Locations",
+  "Id": "a45bd351-f1ca-4526-a9d2-df5b26244ae1",
+  "BaseTemplate": 100,
+  "BaseType": 0,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 3,
+  "DefaultViewUrl": "/sites/ITHelpdesk/Lists/IT Helpdesk Locations/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/ITHelpdesk/Lists/IT Helpdesk Locations",
+  "Description": "",
+  "ContentTypesEnabled": false,
+  "OnQuickLaunch": false
+}

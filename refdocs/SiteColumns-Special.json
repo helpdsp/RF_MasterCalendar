@@ -1,0 +1,398 @@
+[
+  {
+    "Title": "A2OD Mount Count",
+    "InternalName": "A2ODMountCount",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "App Created By",
+    "InternalName": "AppAuthor",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "App Modified By",
+    "InternalName": "AppEditor",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Category",
+    "InternalName": "Category",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Category",
+    "InternalName": "GbwCategory",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Category",
+    "InternalName": "HealthReportCategory",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Check In Comment",
+    "InternalName": "_CheckinComment",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Comment count",
+    "InternalName": "_CommentCount",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Comment settings",
+    "InternalName": "_CommentFlags",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Compatible Search Data Types",
+    "InternalName": "CompatibleSearchDataTypes",
+    "Type": "MultiChoice",
+    "Group": "Display Template Columns"
+  },
+  {
+    "Title": "Compatible UI Version(s)",
+    "InternalName": "UIVersion",
+    "Type": "MultiChoice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Connection Type",
+    "InternalName": "ConnectionType",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Created",
+    "InternalName": "Created_x0020_Date",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Discussion Title",
+    "InternalName": "DiscussionTitleLookup",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Expiration Date",
+    "InternalName": "_ExpirationDate",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "File Size",
+    "InternalName": "File_x0020_Size",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Folder Child Count",
+    "InternalName": "FolderChildCount",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Gender",
+    "InternalName": "Gender",
+    "Type": "Choice",
+    "Group": "Core Contact and Calendar Columns"
+  },
+  {
+    "Title": "Issue Status",
+    "InternalName": "IssueStatus",
+    "Type": "Choice",
+    "Group": "Extended Columns"
+  },
+  {
+    "Title": "Item Child Count",
+    "InternalName": "ItemChildCount",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Item Type",
+    "InternalName": "FSObjType",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "ITPriority",
+    "InternalName": "ITPriority",
+    "Type": "Choice",
+    "Group": "05 - IT Issue & Support Request - Priority and SLA"
+  },
+  {
+    "Title": "Label applied by",
+    "InternalName": "_ComplianceTagUserId",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Label setting",
+    "InternalName": "_ComplianceFlags",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Language",
+    "InternalName": "Language",
+    "Type": "Choice",
+    "Group": "Base Columns"
+  },
+  {
+    "Title": "Last Modified Date",
+    "InternalName": "SMLastModifiedDate",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Like count",
+    "InternalName": "_LikeCount",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "List Type",
+    "InternalName": "ListType",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Modified",
+    "InternalName": "Last_x0020_Modified",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Parent ID",
+    "InternalName": "ParentID",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Path",
+    "InternalName": "FileDirRef",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "POS",
+    "InternalName": "IMEPos",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Priority",
+    "InternalName": "Priority",
+    "Type": "Choice",
+    "Group": "Core Task and Issue Columns"
+  },
+  {
+    "Title": "ProgId",
+    "InternalName": "ProgId",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Property Bag",
+    "InternalName": "MetaInfo",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Response",
+    "InternalName": "AttendeeStatus",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Retention label",
+    "InternalName": "_ComplianceTag",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Retention label Applied",
+    "InternalName": "_ComplianceTagWrittenTime",
+    "Type": "Lookup",
+    "Group": "Custom Columns"
+  },
+  {
+    "Title": "Schedule",
+    "InternalName": "HealthRuleSchedule",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Scope",
+    "InternalName": "HealthRuleScope",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "ScopeId",
+    "InternalName": "ScopeId",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Severity",
+    "InternalName": "HealthReportSeverity",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Shortest Thread-Index Id Lookup",
+    "InternalName": "ShortestThreadIndexIdLookup",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Site Page Flags",
+    "InternalName": "_SPSitePageFlags",
+    "Type": "MultiChoice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "SLAStatus",
+    "InternalName": "SLAStatus",
+    "Type": "Choice",
+    "Group": "05 - IT Issue & Support Request - Priority and SLA"
+  },
+  {
+    "Title": "Sort Type",
+    "InternalName": "SortBehavior",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Source Name (Converted Document)",
+    "InternalName": "ParentLeafName",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Source Version (Converted Document)",
+    "InternalName": "ParentVersionString",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Standalone",
+    "InternalName": "DisplayTemplateJSTemplateType",
+    "Type": "Choice",
+    "Group": "JavaScript Display Template Columns"
+  },
+  {
+    "Title": "Status",
+    "InternalName": "_Status",
+    "Type": "Choice",
+    "Group": "Core Document Columns"
+  },
+  {
+    "Title": "Status",
+    "InternalName": "DecisionStatus",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Target Control Type",
+    "InternalName": "DisplayTemplateJSTargetControlType",
+    "Type": "Choice",
+    "Group": "JavaScript Display Template Columns"
+  },
+  {
+    "Title": "Target Control Type (Search)",
+    "InternalName": "TargetControlType",
+    "Type": "MultiChoice",
+    "Group": "Display Template Columns"
+  },
+  {
+    "Title": "Target Web Part",
+    "InternalName": "XSLStyleWPType",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Task Status",
+    "InternalName": "TaskStatus",
+    "Type": "Choice",
+    "Group": "Core Task and Issue Columns"
+  },
+  {
+    "Title": "Template Level",
+    "InternalName": "DisplayTemplateLevel",
+    "Type": "Choice",
+    "Group": "Display Template Columns"
+  },
+  {
+    "Title": "Ticket Status",
+    "InternalName": "TicketStatus",
+    "Type": "Choice",
+    "Group": "04 - IT Issue & Support Request - Ticket Lifecycle"
+  },
+  {
+    "Title": "Total File Count",
+    "InternalName": "SMTotalFileCount",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Total File Stream Size",
+    "InternalName": "SMTotalFileStreamSize",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Total Size",
+    "InternalName": "SMTotalSize",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "UDC Purpose",
+    "InternalName": "Purpose",
+    "Type": "Choice",
+    "Group": "Extended Columns"
+  },
+  {
+    "Title": "Unique Id",
+    "InternalName": "UniqueId",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "URL Path",
+    "InternalName": "FileRef",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Vacation Length",
+    "InternalName": "NumberOfVacation",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Vacation Type",
+    "InternalName": "Vacation",
+    "Type": "Choice",
+    "Group": "_Hidden"
+  },
+  {
+    "Title": "Virus Status",
+    "InternalName": "VirusStatus",
+    "Type": "Lookup",
+    "Group": "_Hidden"
+  }
+]

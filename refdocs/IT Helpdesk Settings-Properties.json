@@ -1,0 +1,17 @@
+{
+  "Title": "IT Helpdesk Settings",
+  "Id": "4bd88d04-2a06-4344-a86c-629b42dc6705",
+  "BaseTemplate": 100,
+  "BaseType": 0,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 2,
+  "DefaultViewUrl": "/sites/ITHelpdesk/Lists/settings/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/ITHelpdesk/Lists/settings",
+  "Description": "",
+  "ContentTypesEnabled": false,
+  "OnQuickLaunch": false
+}

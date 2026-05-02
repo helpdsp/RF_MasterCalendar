@@ -1,0 +1,56 @@
+[
+  {
+    "Title": "All Documents",
+    "Id": "b36c6e01-9bbb-47c8-ba08-e4cef5c7b3ae",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/AllItems.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "All Tickets",
+    "Id": "5dd81778-b634-410e-8023-8edf8b140164",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/All Tickets.aspx",
+    "DefaultView": true,
+    "Hidden": false,
+    "ViewQuery": "<GroupBy Collapse=\"FALSE\" GroupLimit=\"30\"><FieldRef Name=\"Ticket_x0020_Status\" /></GroupBy><OrderBy><FieldRef Name=\"Ticket_x0020_Number\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "assetLibTemp",
+    "Id": "270ad104-42cb-4dd8-af83-ec47fee2313a",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/Thumbnails.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"LinkFilename\" /></OrderBy>",
+    "RowLimit": 20
+  },
+  {
+    "Title": "Merge Documents",
+    "Id": "ac0c32f7-3060-4fb6-a698-155a3ea3e50f",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/Combine.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Relink Documents",
+    "Id": "cd4d79bc-2626-4412-ae86-7552723f6bf7",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/repair.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy><Where><Neq><FieldRef Name=\"xd_Signature\" /><Value Type=\"Boolean\">1</Value></Neq></Where>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Troubleshoot",
+    "Id": "91f6edc3-2aa8-4521-a32f-7a003c8e25ee",
+    "ServerRelativeUrl": "/sites/ITHelpdesk/Tickets/Forms/Troubleshoot.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+    "RowLimit": 30
+  }
+]

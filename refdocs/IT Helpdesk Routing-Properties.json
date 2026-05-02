@@ -1,0 +1,17 @@
+{
+  "Title": "IT Helpdesk Routing",
+  "Id": "3b95d0c9-4b57-4ac2-9426-eaf2d3484f2b",
+  "BaseTemplate": 100,
+  "BaseType": 0,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": true,
+  "ForceCheckout": false,
+  "ItemCount": 62,
+  "DefaultViewUrl": "/sites/ITHelpdesk/Lists/IT Helpdesk Routing/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/ITHelpdesk/Lists/IT Helpdesk Routing",
+  "Description": "",
+  "ContentTypesEnabled": false,
+  "OnQuickLaunch": false
+}
