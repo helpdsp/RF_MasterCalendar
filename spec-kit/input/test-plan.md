@@ -1,0 +1,237 @@
+# Test plan — Local Project
+
+> Align tests with quality gates and RF acceptance in the product PRD.
+
+## Context (brief + PRD excerpt)
+
+### Approved brief
+
+# Brief - IT Issue Tracking Platform V2 Phase 2
+
+## Executive Summary
+
+The IT Issue Tracking Platform V2 Phase 2 project enhances the City of Rancho Cordova's existing Microsoft 365-native helpdesk platform with operational audit, stronger visibility, a branded Microsoft Teams app experience, role-based Power BI dashboards, a Copilot Studio IT Helpdesk Agent, a curated SharePoint knowledge base, and human handoff automation. Phase 2 does not replace the Phase 1 architecture; it packages and extends the existing SharePoint, Teams, Microsoft Forms, Outlook, Power Automate, AI Builder, and managed taxonomy foundation into a more unified support experience.
+
+The primary value of Phase 2 is to make IT support easier to access, easier to monitor, and easier to manage. Employees get a clearer Teams-based entry point for submitting tickets, viewing their own ticket history, asking common IT questions, and using natural language to check ticket status. Helpdesk agents get operational dashboards that highlight open workload, SLA risk, closure metrics, and ticket distribution. IT leadership gets executive reporting for ticket volume, SLA compliance, resolution time, issue categories, and support demand patterns.
+
+The updated SOW consolidates licensing and governance assumptions. The $4,999 professional services cost covers delivery work only. Microsoft licenses, Copilot Studio capacity, Power BI licenses, Power Platform premium licenses, Fabric capacity, Microsoft 365 Copilot licensing, and other subscription costs are excluded unless separately approved in writing. Production rollout depends on Rancho Cordova administrator approval for Teams custom apps, app setup policies, Copilot Studio availability, Power BI access, Power Automate connector licensing, and Microsoft 365 Government tenant constraints.
+
+## Context
+
+Phase 1 is already implemented using Microsoft 365 services. The current platform includes a Teams-based support workspace, Microsoft Forms ticket intake, a SharePoint Online IT Ticket Intake Queue, supporting SharePoint configuration lists, a Tickets document library, Power Automate flows, Outlook shared mailbox intake, 8x8 voicemail-to-ticket processing, AI Builder description cleanup, and Teams/email lifecycle notifications. The IT Ticket Intake Queue is the authoritative ticket database and is backed by item-level permissions so employees see only their own tickets while agents and managers receive broader operational access according to role.
+
+The existing Phase 1 architecture includes five Power Automate flows: Provision Ticket, Intake On Change, Forms-to-Ticket, Email-to-Ticket, and SLA Breach. These flows generate `INC-XXXXX` ticket numbers, route tickets using category/subcategory metadata, calculate business-hours-aware SLA targets using settings and holiday lists, apply item-level security, transfer attachments, correlate email replies, process 8x8 voicemail transcripts, and flag overdue tickets every 15 minutes.
+
+Phase 2 adds a formal audit of what Phase 1 delivered, then improves discoverability and usability through a branded Teams app package named `IT Helpdesk`. The updated experience is intended to surface Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About tabs through Teams personal/static tabs where tenant policy allows. The dashboard mockups show a polished Teams-integrated UI with the IT Helpdesk app in the Teams app rail, a horizontal product nav, refresh/bookmark/filter controls, KPI cards, dense data tables, role-specific dashboard pages, and Power BI-style visuals.
+
+## Goals
+
+- Audit the existing Phase 1 platform and compare original SOW commitments against actual delivered features, enhancements, configuration, and support work.
+- Create a branded Microsoft Teams app package named `IT Helpdesk` as a unified entry point for ticket submission, ticket visibility, dashboards, knowledge resources, and Copilot support.
+- Provide employees with self-service ticket visibility through a user-scoped My Tickets experience and an Employee Self-Service Ticket History dashboard.
+- Build role-based Power BI dashboards for helpdesk agents, employees, and IT leadership.
+- Configure an IT Helpdesk Copilot Agent in Microsoft Copilot Studio for ticket status lookup, guided ticket submission, FAQ answering, onboarding/help, and human handoff.
+- Establish a SharePoint-managed FAQ knowledge base that IT administrators can maintain without developer involvement.
+- Support human agent handoff when Copilot cannot resolve or route a request after the defined attempt threshold.
+- Improve notification, reporting, and operational visibility while preserving the Phase 1 system of record and Microsoft 365-native architecture.
+- Document licensing dependencies, administrator approvals, deployment guidance, testing results, and handoff instructions.
+
+## Target Users / Roles
+
+- City employees / requesters: need a simple Teams-based way to submit tickets, check ticket status, review open tickets and history, ask common IT questions, and request a human when self-service is not enough.
+- Helpdesk agents: need a daily workload dashboard showing assigned open tickets, SLA target urgency, breached and near-breach tickets, closure metrics, resolution time, and category distribution.
+- IT leadership / managers: need executive reporting for volume trends, SLA compliance, agent performance, average resolution time, top issue categories, submission heatmaps, and resource planning.
+- IT administrators: need maintainable SharePoint lists, Teams app deployment guidance, Power BI workspace/RLS guidance, Copilot publishing guidance, FAQ maintenance documentation, and clear licensing/admin dependency notes.
+- Rancho Cordova Teams / M365 administrators: approve or configure custom Teams app upload, organizational app catalog availability, app setup policies, app pinning, Power BI access, Copilot Studio publishing, and connector licensing.
+- Delivery team: performs the audit, configures the Teams app package, dashboards, Copilot topics, Power Automate integrations, handoff notifications, testing, training, and documentation.
+
+## Scope - In
+
+- Phase 1 feature audit covering Forms intake, Teams tabs, SharePoint lists and views, fields and metadata, ticket lifecycle, Power Automate flows, notifications, routing, SLA behavior, permissions, and delivered enhancements beyond original scope.
+- V1 SOW vs. actual delivered comparison, enhancement log, gap analysis, recommendations, and optional future backlog.
+- Branded Microsoft Teams app package named `IT Helpdesk`, including app name, descriptions, icons, manifest, app package ZIP, personal/static tab configuration, deployment guidance, and app setup policy guidance.
+- Teams app tabs or entry points for Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About, subject to tenant policy and approved Microsoft 365 URLs.
+- Submit Ticket experience showing issue title, category, subcategory, priority, location, description, attachment upload, and submit action.
+- My Tickets experience showing ticket number, issue title, priority, status, assigned agent, SLA target, and last updated for the logged-in employee.
+- Power BI Dashboard Suite with Agent Workload & Performance, Employee Self-Service Ticket History, and IT Leadership Executive dashboards.
+- Power BI workspace publishing support, Teams tab embedding support, and Row-Level Security configuration guidance or implementation as agreed.
+- Agent dashboard with KPI cards for tickets closed this week/month, average resolution time, SLA compliance, assigned open ticket priority table, SLA breach/near-breach warning, filters, and ticket volume by category.
+- Employee dashboard with open ticket count, closed-this-year count, average resolution time, open ticket table, full ticket history, date/status filters, assigned agent, SLA target, and user-scoped ticket data.
+- Executive dashboard with total tickets this month, average resolution time, weekly/monthly volume trend, SLA compliance scorecard, sortable agent performance table, average resolution time matrix, top issue categories, and ticket submission heatmap.
+- IT Helpdesk Copilot Agent in Copilot Studio with welcome/help topic, ticket status lookup, guided ticket submission, FAQ response topic, human handoff topic, Power Automate integrations, and Teams publishing support.
+- SharePoint FAQ knowledge base list with recommended metadata: Question, Answer, Category, Keywords, Status, Last Reviewed Date, Owner, Related Link, and Escalation Required.
+- Initial FAQ category structure, including Password Reset, VPN Access, Microsoft Teams, Outlook, Hardware, Software Requests, Printer Support, Account Access, Shared Drives, Security, and MFA.
+- Human handoff workflow, Teams private channel notification, handoff card template, and user confirmation messages.
+- Testing for Teams app loading, tab navigation, submit ticket, My Tickets, Power BI access/RLS, Copilot welcome, status lookup, guided submission, FAQ accuracy, handoff, notifications, and permissions.
+- Training and handoff materials: admin deployment guidance, Teams app usage guide, Copilot usage guide, Power BI overview, knowledge base maintenance guide, testing checklist, and handoff documentation.
+
+## Scope - Out / Non-goals
+
+- Full custom web application development.
+- Custom React, SPFx, or full-code Teams application development.
+- Custom APIs outside approved Microsoft 365 connectors and Power Automate patterns.
+- Mobile-specific custom application development.
+- Replacing SharePoint as the system of record.
+- Replacing existing Power Automate flows with custom code.
+- Advanced ITSM processes such as Problem Management or Change Management.
+- Asset management, CMDB, or inventory tracking.
+- AI model training or custom language model development.
+- Tenant-wide Teams deployment without Rancho Cordova administrator approval.
+- Complex custom authentication beyond Microsoft 365 / Teams authentication.
+- Data migration from other ticketing platforms.
+- Advanced Power BI data warehouse architecture.
+- Long-term production support after handoff.
+- Ongoing FAQ content maintenance after initial configuration.
+- Microsoft licensing procurement, subscription purchase, or payment of Copilot Studio, Power BI, Power Platform, Fabric, Microsoft 365 Copilot, or other Microsoft service costs.
+- Reactivating the reserved Document Set/PDF ticket summary architecture unless separately scoped.
+
+## Functional Requirements Summary
+
+### Existing Phase 1 behavior to preserve
+
+- The IT Ticket Intake Queue remains the central ticket database and single source of truth.
+- Existing intake channels remain available: Teams/Form tab, Outlook shared mailbox, Teams/SharePoint list views, and 8x8 voicemail-to-email.
+- Provision Ticket Flow creates ticket numbers, detects source, routes tickets, calculates SLA targets, applies item-level security, and sends notifications.
+- Intake On Change detects ticket lifecycle changes, sends employee/agent notifications, records closed dates, and reroutes tickets after category/subcategory changes.
+- Forms-to-Ticket maps submitted form data to SharePoint, resolves managed metadata, runs AI Builder cleanup, and transfers attachments.
+- Email-to-Ticket creates or updates tickets from shared mailbox messages, extracts voicemail transcripts, cleans email bodies, resolves sender identity, and preserves original email content.
+- SLA Breach Flow monitors open tickets and flags breached items on a scheduled recurrence.
+
+### Audit and Teams app requirements
+
+- The project shall produce a Phase 1 feature inventory and V1 SOW vs. actual comparison.
+- The project shall document delivered enhancements and recommendations for Phase 2 and future phases.
+- The project shall create a branded `IT Helpdesk` Teams app manifest and app package ZIP.
+- The app shall provide personal/static tab access to approved support entry points, prioritizing app-rail usability when app pinning is approved.
+- The app shall include or link to Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About experiences where tenant policy allows.
+- The app shall include app icon assets, short/long descriptions, deployment guidance, and setup policy guidance.
+
+### Dashboard requirements
+
+- All dashboards shall connect to the existing SharePoint ticket data, with the IT Ticket Intake Queue as primary source.
+- Power BI access shall respect report permissions, workspace/app permissions, and RLS rules where implemented.
+- Agent dashboard shall show open assigned tickets sorted by SLA target, with ticket number, title, priority, status, SLA target, and hours remaining.
+- Agent dashboard shall show breached tickets and tickets with fewer than two hours remaining before SLA breach.
+- Agent dashboard shall show tickets closed this week, tickets closed this month, average resolution time, SLA compliance percentage, filters, and ticket volume by category.
+- Employee dashboard shall show the logged-in user's open tickets, ticket history, status, priority, assigned agent, SLA target, submitted date, closed date, final status, and filters.
+- Executive dashboard shall show weekly and monthly volume trends, total tickets this month, average resolution time, SLA compliance scorecard, sortable agent performance, resolution time by category, top issue categories, and submission heatmap.
+- Dashboards shall be embedded or linked through Microsoft Teams, subject to Power BI licensing and permissions.
+
+### Copilot and knowledge base requirements
+
+- The Copilot Agent shall be available in Microsoft Teams when Copilot Studio licensing, capacity, publishing rights, and tenant constraints permit.
+- The agent shall answer natural-language ticket status requests such as "What is the status of my ticket?" and "Any update on INC-00042?"
+- Ticket status lookup shall return current status, assigned agent, and SLA target while scoping results to tickets associated with the requesting account.
+- The agent shall guide ticket submission by collecting issue title, category, subcategory, priority, description, and location, then calling a Power Automate flow to create the ticket.
+- The agent shall answer FAQ questions from the SharePoint knowledge base.
+- If no useful FAQ answer is available, the agent shall offer ticket creation or handoff.
+- If unresolved after two attempts, the agent shall summarize the conversation and post a handoff notification to the Agents Private Channel.
+- Handoff cards should include employee name/email, request summary, priority, conversation summary, source, timestamp, pending request ID or ticket number, and links where available.
+
+## Technical Stack & Constraints
+
+- Tenant: City of Rancho Cordova Microsoft 365 Government (GCC) tenant.
+- Current site collection: `https://cityofranchocordovaorg.sharepoint.com/sites/ITHelpdesk`.
+- Current primary data store: SharePoint Online IT Ticket Intake Queue list.
+- Supporting SharePoint assets: IT Helpdesk Settings, IT Helpdesk Routing, IT Helpdesk Holidays, IT Helpdesk Locations, Tickets document library, managed site columns, list views, and Term Store.
+- Current automation: Power Automate flows for Provision Ticket, Intake On Change, Forms-to-Ticket, Email-to-Ticket, and SLA Breach.
+- Phase 2 automation: Power Automate integrations for Copilot guided ticket submission and handoff notifications; connector licensing must be reviewed before production.
+- Conversational layer: Microsoft Copilot Studio published to Microsoft Teams, subject to Copilot Studio availability and licensing/capacity.
+- Reporting layer: Power BI dashboards published to a workspace and embedded or linked in Teams, subject to Power BI licensing, permissions, and RLS validation.
+- Teams packaging: Microsoft Teams app manifest, icons, package ZIP, personal/static tabs, organizational app catalog, app permission policies, app setup policies, and optional app rail pinning.
+- Knowledge layer: SharePoint FAQ list managed by IT administrators.
+- Taxonomy: Category/Subcategory and Location Term Store term sets remain the basis for consistent classification and reporting.
+- Security: Existing item-level SharePoint permissions must be preserved; Copilot and Power BI must not leak cross-user ticket data.
+- Design direction: Mockups show a Teams-native shell with IT Helpdesk app rail placement, top navigation, refresh/bookmarks/filters controls, KPI cards, priority/status badges, tabular ticket views, bar/line charts, heatmap, and role-specific dashboard pages.
+- Delivery timeline: estimated 3 to 4 weeks, dependent on administrator availability, Teams app approval, Power BI workspace access, Copilot Studio licensing, and validation cycles.
+- Cost constraint: professional services budget is $4,999; Microsoft subscription and licensing costs are excluded.
+
+## Success Criteria
+
+- Phase 1 audit report, V1 vs. actual comparison, enhancement log, gap analysis, and recommendations are delivered.
+- `IT Helpdesk` Teams app package is created, branded, packaged, documented, and tested in Teams subject to admin approval.
+- Agreed Teams app tabs are configured or documented with realistic approved Microsoft 365 entry points.
+- Power BI dashboards are created for agent, employee, and leadership audiences and published to the agreed workspace.
+- Dashboard access and RLS behavior are validated so users see only the data appropriate to their role.
+- Agent dashboard clearly surfaces SLA risk, open workload, closure KPIs, average resolution time, and category distribution.
+- Employee dashboard shows only the logged-in employee's open tickets and ticket history.
+- Executive dashboard provides useful operational visibility for ticket trends, SLA compliance, resolution time, agent performance, top categories, and submission timing.
+- Copilot Agent is configured or prepared for Teams publishing, including welcome/help, ticket status lookup, guided ticket submission, FAQ, and handoff topics.
+- Ticket status lookup, guided ticket submission, FAQ responses, and handoff notifications are tested.
+- SharePoint FAQ list and maintenance guidance are delivered.
+- Licensing dependencies, premium connector risks, admin approvals, and deployment constraints are explicitly documented.
+- Phase 2 enhancements do not break existing Phase 1 intake, routing, SLA, notification, permission, or reporting foundations.
+
+## Open Questions / Risks
+
+- Confirm whether Rancho Cordova allows custom Teams apps and organizational app catalog upload in the Microsoft Teams Admin Center.
+- Confirm whether app setup policies can install or pin the `IT Helpdesk` app to the Teams app rail for target users.
+- Confirm whether personal/static tabs can render each intended Microsoft 365 experience reliably in Teams.
+- Confirm final tab URLs and whether Submit Ticket will use Microsoft Forms, SharePoint, a Teams-hosted page, or another approved M365 surface.
+- Confirm Copilot Studio availability, licensing, capacity/credits, publishing rights, and GOV tenant limitations.
+- Confirm whether Microsoft 365 Copilot licensing affects the intended Copilot Agent audience.
+- Confirm whether any Copilot or Power Automate integration requires premium connectors, HTTP actions, custom connectors, Dataverse, or other premium licensing.
+- Confirm Power BI Pro, Premium, or Fabric licensing for intended users and whether broad employee dashboard access is financially and administratively approved.
+- Confirm Power BI workspace/app permissions and the authoritative identity fields for RLS: requester email, assigned agent email, SharePoint person fields, claims, or Entra ID attributes.
+- Confirm whether RLS is mandatory implementation scope or guidance-only, since the SOW states RLS "will be considered" while dashboard privacy requires strong user scoping.
+- Confirm whether Copilot guided ticket submission must support attachment upload; the mockup asks for attachment upload in Submit Ticket, but Copilot attachment handling is not explicit.
+- Confirm whether Copilot can return the final `INC-XXXXX` ticket number synchronously after existing provisioning completes or should return a pending confirmation.
+- Confirm branding assets, app icons, approved colors, app descriptions, and any City style requirements.
+- Confirm who will author initial FAQ entries and approve ongoing knowledge base governance.
+- Risk: Existing Phase 1 configuration may require cleanup before Phase 2 work can be layered on cleanly.
+- Risk: Some SharePoint or Power BI pages may not render cleanly inside Teams tabs and may need layout or URL adjustments.
+- Risk: FAQ quality directly affects Copilot usefulness and ticket deflection.
+- Risk: GOV tenant limitations or licensing procurement delays could shift the timeline beyond 3 to 4 weeks.
+- Risk: The mockups include polished dashboard UI expectations; implementation should clarify whether exact visual fidelity is required or whether they serve as directional references.
+
+## Input Sources
+
+- refdocs: `IT_Issue_Tracking_Platform_V2_Phase_2_SOW_Consolidated.md`
+- refdocs: `IT_IssueTracking_SolutionArchitecture.md`
+- refdocs: `Category_Subcategory-TermSet.json`
+- refdocs: `Location-TermSet.json`
+- refdocs: `IT Ticket Intake Queue-Fields.json`
+- refdocs: `IT Ticket Intake Queue-Properties.json`
+- refdocs: `IT Ticket Intake Queue-Views.json`
+- refdocs: `IT Helpdesk Routing-Fields.json`
+- refdocs: `IT Helpdesk Routing-Properties.json`
+- refdocs: `IT Helpdesk Routing-Views.json`
+- refdocs: `IT Helpdesk Settings-Fields.json`
+- refdocs: `IT Helpdesk Settings-Properties.json`
+- refdocs: `IT Helpdesk Settings-Views.json`
+- refdocs: `IT Helpdesk Holidays-Fields.json`
+- refdocs: `IT Helpdesk Holidays-Properties.json`
+- refdocs: `IT Helpdesk Holidays-Views.json`
+- refdocs: `IT Helpdesk Locations-Fields.json`
+- refdocs: `IT Helpdesk Locations-Properties.json`
+- refdocs: `IT Helpdesk Locations-Views.json`
+- refdocs: `Tickets-Fields.json`
+- refdocs: `Tickets-Properties.json`
+- refdocs: `Tickets-Views.json`
+- refdocs: `SiteColumns-ByGroup.json`
+- refdocs: `SiteColumns-Special.json`
+- refdocs: `IT Helpdesk-SiteColumns.json`
+- refdocs mockups: `mockups/Agent Workload & Performance Dashboard.png`
+- refdocs mockups: `mockups/Employee Self-Service Ticket History.png`
+- refdocs mockups: `mockups/IT Leadership Executive Dashboard.png`
+- refdocs visual reference: `IT Issue Tracking Platform V1 Solution Architecture Diagram.jpg`
+- refdocs binary references present: `Phase1_Rancho_Cordova_ITHelpDesk_SOW-status.docx`, `Phase2_SOW.docx`
+- refdocs Power Automate packages present: `ITIssueTrackingPlatform-Email-to-ticketflow_20260502182343.zip`, `ITIssueTrackingPlatform-Forms-to-ticketflow_20260502182326.zip`, `ITIssueTrackingPlatform-IntakeOnChange_20260502182311.zip`, `ITIssueTrackingPlatform-ProvisionTicketflow_20260502182254.zip`, `ITIssueTrackingPlatform-SLABreach_20260502182359.zip`
+- source-code: Not applicable. Workflow state has `reverseEngineering = false`.
+
+### Product PRD (excerpt)
+
+# Product PRD - IT Issue Tracking Platform V2 Phase 2
+
+## 1. Product Summary
+
+Phase 2 enhances the City of Rancho Cordova's existing Microsoft 365-native IT Issue Tracking Platform. It adds a Phase 1 audit, a branded Microsoft Teams app package named **IT Helpdesk**, role-based Power BI dashboards, a Copilot Studio IT Helpdesk Agent, a SharePoint-managed FAQ knowledge base, human agent handoff, and deployment/testing/handoff materials.
+
+The solution must preserve the existing Phase 1 architecture: SharePoint Online remains the system of record, the IT Ticket Intake Queue remains the primary ticket database, and existing Power Automate intake/provisioning/SLA/notification flows remain operational.
+
+## 2. Users and Roles
+
+- City employee / requester: submits support requests, checks status, views ticket history, asks FAQs, and requests human help.
+- Helpdesk agent: monitors assigned tickets, SLA risk, closure me
+
+...(truncated — see full product PRD in refdocs or pass a larger file)...
