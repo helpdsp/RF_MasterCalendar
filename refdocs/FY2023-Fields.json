@@ -1,0 +1,1552 @@
+[
+  {
+    "Title": "A2OD Mount Count",
+    "InternalName": "A2ODMountCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3a8ee3f8-166b-4394-b3e2-e98dcf86a847"
+  },
+  {
+    "Title": "Access Policy",
+    "InternalName": "AccessPolicy",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "b4cb04e8-622e-4c7d-8e87-b558a1bb907b"
+  },
+  {
+    "Title": "Actions Disabled by Policy",
+    "InternalName": "PolicyDisabledUICapabilities",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "321bc046-2178-49bd-893f-7aa4fd61d04e"
+  },
+  {
+    "Title": "AdditionalStreamSize",
+    "InternalName": "_AdditionalStreamSize",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "5075b983-f1d7-42c6-921a-f331958f0dc2"
+  },
+  {
+    "Title": "App Created By",
+    "InternalName": "AppAuthor",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "6bfaba20-36bf-44b5-a1b2-eb6346d49716"
+  },
+  {
+    "Title": "App Modified By",
+    "InternalName": "AppEditor",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "e08400f3-c779-4ed2-a18c-ab7f34caa318"
+  },
+  {
+    "Title": "Approval Status",
+    "InternalName": "_ModerationStatus",
+    "TypeAsString": "ModStat",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "fdc3b2ed-5bf2-4835-a4bc-b885f3396a61"
+  },
+  {
+    "Title": "Approver Comments",
+    "InternalName": "_ModerationComments",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "34ad21eb-75bd-4544-8c73-0e08330291fe"
+  },
+  {
+    "Title": "Archive State Last Modified Time",
+    "InternalName": "_FileArchiveTimeLastModified",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "7b7c59bd-e628-4cfc-91e9-c8757110e255"
+  },
+  {
+    "Title": "Archive Status",
+    "InternalName": "_FileArchiveStatus",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "0fd1bdf8-6f18-4a74-aa39-fe5a793d7085"
+  },
+  {
+    "Title": "BLOB Sequence Number",
+    "InternalName": "BSN",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "052d75ed-7afd-4818-a346-d7e413073907"
+  },
+  {
+    "Title": "Check In Comment",
+    "InternalName": "_CheckinComment",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "58014f77-5463-437b-ab67-eec79532da67"
+  },
+  {
+    "Title": "Checked Out To",
+    "InternalName": "CheckoutUser",
+    "TypeAsString": "User",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3881510a-4e4a-4ee8-b102-8ee8e2d0dd4b"
+  },
+  {
+    "Title": "Checked Out To",
+    "InternalName": "CheckedOutTitle",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "9d4adc35-7cc8-498c-8424-ee5fd541e43a"
+  },
+  {
+    "Title": "Checked Out To",
+    "InternalName": "LinkCheckedOutTitle",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "e2a15dfd-6ab8-4aec-91ab-02f6b64045b0"
+  },
+  {
+    "Title": "Client Id",
+    "InternalName": "SyncClientId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "6d2c4fde-3605-428e-a236-ce5f3dc2b4d4"
+  },
+  {
+    "Title": "Color",
+    "InternalName": "_ColorHex",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3bdab9ac-9e5d-44d4-bde9-13b37e170618"
+  },
+  {
+    "Title": "Color Tag",
+    "InternalName": "_ColorTag",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "76d13cd2-1bae-45a5-8b74-545b87b65037"
+  },
+  {
+    "Title": "Comment count",
+    "InternalName": "_CommentCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d307dff3-340f-44a2-9f4b-fbfe1ba07459"
+  },
+  {
+    "Title": "Comment settings",
+    "InternalName": "_CommentFlags",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "c274cbfd-084a-4017-925f-cce50c9e3eec"
+  },
+  {
+    "Title": "Compliance Asset Id",
+    "InternalName": "ComplianceAssetId",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3a6b296c-3f50-445c-a13f-9c679ea9dda3"
+  },
+  {
+    "Title": "Content Type",
+    "InternalName": "ContentType",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "_Hidden",
+    "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d"
+  },
+  {
+    "Title": "Content Type ID",
+    "InternalName": "ContentTypeId",
+    "TypeAsString": "ContentTypeId",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "03e45e84-1992-4d42-9116-26f756012634"
+  },
+  {
+    "Title": "Content Version",
+    "InternalName": "ContentVersion",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d48268e5-c65d-486c-bbf1-874cf986d7d3"
+  },
+  {
+    "Title": "Copy Source",
+    "InternalName": "_CopySource",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "6b4e226d-3d88-4a36-808d-a129bf52bccf"
+  },
+  {
+    "Title": "Created",
+    "InternalName": "Created",
+    "TypeAsString": "DateTime",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69"
+  },
+  {
+    "Title": "Created",
+    "InternalName": "Created_x0020_Date",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "998b5cff-4a35-47a7-92f3-3914aa6aa4a2"
+  },
+  {
+    "Title": "Created By",
+    "InternalName": "Author",
+    "TypeAsString": "User",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "1df5e554-ec7e-46a6-901d-d85a3881cb18"
+  },
+  {
+    "Title": "Description",
+    "InternalName": "_ExtendedDescription",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "cb19284a-cde7-4570-a980-1dab8bd74470"
+  },
+  {
+    "Title": "Dirty",
+    "InternalName": "_Dirty",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d6d3555c-2f57-4b19-bd39-4582f88adfe5"
+  },
+  {
+    "Title": "Document Concurrency Number",
+    "InternalName": "DocConcurrencyNumber",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "8e69e8e8-df8a-45dc-858a-1b806dde24c0"
+  },
+  {
+    "Title": "Document Created By",
+    "InternalName": "Created_x0020_By",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb"
+  },
+  {
+    "Title": "Document Modified By",
+    "InternalName": "Modified_x0020_By",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9"
+  },
+  {
+    "Title": "Document Parent Identifier",
+    "InternalName": "ParentUniqueId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3b653cee-df6b-4cd4-b66d-ad5ce875b25e"
+  },
+  {
+    "Title": "Document Stream Hash",
+    "InternalName": "StreamHash",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "692b7133-d1d1-4a01-b604-2987724f86c3"
+  },
+  {
+    "Title": "Draft Owner Id",
+    "InternalName": "_DraftOwnerId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "daff81f1-d785-4da9-8df6-5fd577f38558"
+  },
+  {
+    "Title": "Edit",
+    "InternalName": "Edit",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "503f1caa-358e-4918-9094-4a2cdc4bc034"
+  },
+  {
+    "Title": "Edit Menu Table End",
+    "InternalName": "_EditMenuTableEnd",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "2ea78cef-1bf9-4019-960a-02c41636cb47"
+  },
+  {
+    "Title": "Edit Menu Table Start",
+    "InternalName": "_EditMenuTableStart2",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "1344423c-c7f9-4134-88e4-ad842e2d723c"
+  },
+  {
+    "Title": "Edit Menu Table Start",
+    "InternalName": "_EditMenuTableStart",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3c6303be-e21f-4366-80d7-d6d0a3b22c7a"
+  },
+  {
+    "Title": "Effective Permissions Mask",
+    "InternalName": "PermMask",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "ba3c27ee-4791-4867-8821-ff99000bac98"
+  },
+  {
+    "Title": "Effective Sensitivity",
+    "InternalName": "_EffectiveIpLabelDisplayName",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "9e44c6c3-4793-4fde-8ed9-c1cfb442e83d"
+  },
+  {
+    "Title": "Emoji",
+    "InternalName": "_Emoji",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d8a77d76-536b-45d2-8b9b-e4e9b00cf3dc"
+  },
+  {
+    "Title": "Encoded Absolute URL",
+    "InternalName": "EncodedAbsUrl",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "7177cfc7-f399-4d4d-905d-37dd51bc90bf"
+  },
+  {
+    "Title": "Expiration Date",
+    "InternalName": "_ExpirationDate",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "ac9ce95b-f081-4b8a-bb19-2f4427d44674"
+  },
+  {
+    "Title": "Extracted Text",
+    "InternalName": "MediaServiceOCR",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "67aff0cf-8e19-43f2-9987-be89075e1467"
+  },
+  {
+    "Title": "File Size",
+    "InternalName": "FileSizeDisplay",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "78a07ba4-bda8-4357-9e0f-580d64487583"
+  },
+  {
+    "Title": "File Size",
+    "InternalName": "File_x0020_Size",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "8fca95c0-9b7d-456f-8dae-b41ee2728b85"
+  },
+  {
+    "Title": "File Type",
+    "InternalName": "File_x0020_Type",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "39360f11-34cf-4356-9945-25c44e68dade"
+  },
+  {
+    "Title": "Fiscal Year",
+    "InternalName": "Fiscal_x0020_Year",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "3c0179ca-7f48-4d30-84d9-db772d5b3da6"
+  },
+  {
+    "Title": "Folder Child Count",
+    "InternalName": "FolderChildCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341"
+  },
+  {
+    "Title": "From",
+    "InternalName": "EMail",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Core Contact and Calendar Columns",
+    "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15"
+  },
+  {
+    "Title": "GUID",
+    "InternalName": "GUID",
+    "TypeAsString": "Guid",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "ae069f25-3ac2-4256-b9c3-15dbc15da0e0"
+  },
+  {
+    "Title": "Has Copy Destinations",
+    "InternalName": "_HasCopyDestinations",
+    "TypeAsString": "Boolean",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "26d0756c-986a-48a7-af35-bf18ab85ff4a"
+  },
+  {
+    "Title": "HasEncryptedContent",
+    "InternalName": "_HasEncryptedContent",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "aea2e09b-09f5-423f-ab7f-72611e0ebffb"
+  },
+  {
+    "Title": "HasUserDefinedProtection",
+    "InternalName": "_HasUserDefinedProtection",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "345b4112-babf-4642-ba31-c8f9eaf3b57a"
+  },
+  {
+    "Title": "HTML File Link",
+    "InternalName": "xd_ProgID",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "cd1ecb9f-dd4e-4f29-ab9e-e9ff40048d64"
+  },
+  {
+    "Title": "HTML File Type",
+    "InternalName": "HTML_x0020_File_x0020_Type",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "0c5e0085-eb30-494b-9cdd-ece1d3c649a2"
+  },
+  {
+    "Title": "ID",
+    "InternalName": "ID",
+    "TypeAsString": "Counter",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "1d22ea11-1e32-424e-89ab-9fedbadb6ce1"
+  },
+  {
+    "Title": "ID of the User who has the item Checked Out",
+    "InternalName": "CheckedOutUserId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "a7b731a3-1df1-4d74-a5c6-e2efba617ae2"
+  },
+  {
+    "Title": "Image Tags",
+    "InternalName": "MediaServiceImageTags",
+    "TypeAsString": "TaxonomyFieldTypeMulti",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "_Hidden",
+    "Id": "5cf76f15-5ced-4ddc-b409-7134ff3c332f"
+  },
+  {
+    "Title": "Image Tags_0",
+    "InternalName": "lcf76f155ced4ddcb4097134ff3c332f",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "7c51d632-27e0-f6f7-a5d6-ed67b68bd369"
+  },
+  {
+    "Title": "Instance ID",
+    "InternalName": "InstanceID",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "50a54da4-1528-4e67-954a-e2d24f1e9efb"
+  },
+  {
+    "Title": "IpLabelHash",
+    "InternalName": "_IpLabelHash",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "3ad39ba5-a7f5-40f0-a970-ae9756dc49b0"
+  },
+  {
+    "Title": "IpLabelPromotionCtagVersion",
+    "InternalName": "_IpLabelPromotionCtagVersion",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d736872b-a0b9-4c9d-8750-ca0572b0b2da"
+  },
+  {
+    "Title": "Is Checked out to local",
+    "InternalName": "IsCheckedoutToLocal",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "cfaabd0f-bdbd-4bc2-b375-1e779e2cad08"
+  },
+  {
+    "Title": "Is Current Version",
+    "InternalName": "_IsCurrentVersion",
+    "TypeAsString": "Boolean",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "c101c3e7-122d-4d4d-bc34-58e94a38c816"
+  },
+  {
+    "Title": "Is Signed",
+    "InternalName": "xd_Signature",
+    "TypeAsString": "Boolean",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "fbf29b2d-cae5-49aa-8e0a-29955b540122"
+  },
+  {
+    "Title": "Item Child Count",
+    "InternalName": "ItemChildCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "b824e17e-a1b3-426e-aecf-f0184d900485"
+  },
+  {
+    "Title": "Item is a Record",
+    "InternalName": "_IsRecord",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "8382d247-72a9-44b1-9794-7b177edc89f3"
+  },
+  {
+    "Title": "Item Type",
+    "InternalName": "FSObjType",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "30bb605f-5bae-48fe-b4e3-1f81d9772af9"
+  },
+  {
+    "Title": "Label applied by",
+    "InternalName": "_ComplianceTagUserId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "418d7676-2d6f-42cf-a16a-e43d2971252a"
+  },
+  {
+    "Title": "Label setting",
+    "InternalName": "_ComplianceFlags",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "ccc1037f-f65e-434a-868e-8c98af31fe29"
+  },
+  {
+    "Title": "Last Modified Date",
+    "InternalName": "SMLastModifiedDate",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d340fca5-f503-4baa-bae9-90f1447ebff6"
+  },
+  {
+    "Title": "Level",
+    "InternalName": "_Level",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "43bdd51b-3c5b-4e78-90a8-fb2087f71e70"
+  },
+  {
+    "Title": "Like count",
+    "InternalName": "_LikeCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "db8d9d6d-dc9a-4fbd-85f3-4a753bfdc58c"
+  },
+  {
+    "Title": "List Schema Version",
+    "InternalName": "_ListSchemaVersion",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "142b1fa5-b93b-42d8-a37c-813c9d3e3f3a"
+  },
+  {
+    "Title": "Location",
+    "InternalName": "MediaServiceLocation",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "5e0382d1-eb43-4590-a609-575845fa9af9"
+  },
+  {
+    "Title": "Main Link settings",
+    "InternalName": "MainLinkSettings",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "5b9fa52c-509d-44aa-86b0-5a4c95716b8e"
+  },
+  {
+    "Title": "Media file metadata",
+    "InternalName": "ExtractedMetadataComputed",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "839c5c8b-a62d-49b4-b15a-f2240217de70"
+  },
+  {
+    "Title": "Media file metadata",
+    "InternalName": "_ExtractedMetadata",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "f10c6996-ed28-4cac-9fd3-616dda47bce1"
+  },
+  {
+    "Title": "Media Generated Metadata",
+    "InternalName": "MediaGeneratedMetadata",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "dca4e5a0-0887-4480-8f7b-efcf76b76413"
+  },
+  {
+    "Title": "Media User Metadata",
+    "InternalName": "MediaUserMetadata",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "0f17d094-f613-4d33-8031-7b22650aad78"
+  },
+  {
+    "Title": "MediaLengthInSeconds",
+    "InternalName": "MediaLengthInSeconds",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "de38f937-8578-435e-8cd3-50be3ea59253"
+  },
+  {
+    "Title": "MediaServiceDateTaken",
+    "InternalName": "MediaServiceDateTaken",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "f34611d5-65a6-322f-ac39-d880b14ce28f"
+  },
+  {
+    "Title": "MediaServiceEventHashCode",
+    "InternalName": "MediaServiceEventHashCode",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "ae5f3e55-9e2d-4632-9b90-282575c1c1f3"
+  },
+  {
+    "Title": "MediaServiceFastMetadata",
+    "InternalName": "MediaServiceFastMetadata",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "b887b6b2-4dcf-34fc-98b1-d5a42c605755"
+  },
+  {
+    "Title": "MediaServiceGenerationTime",
+    "InternalName": "MediaServiceGenerationTime",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "64ae69b5-5b9d-4ba9-b01c-f0ab72af8b7b"
+  },
+  {
+    "Title": "MediaServiceMetadata",
+    "InternalName": "MediaServiceMetadata",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "617f8947-74b2-36bc-9f7e-21ded7029bb5"
+  },
+  {
+    "Title": "MediaServiceObjectDetectorVersions",
+    "InternalName": "MediaServiceObjectDetectorVersions",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "6e9ab27b-184d-411f-aedb-00386b5f89c2"
+  },
+  {
+    "Title": "MediaServiceSearchProperties",
+    "InternalName": "MediaServiceSearchProperties",
+    "TypeAsString": "Note",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "_Hidden",
+    "Id": "dc412798-e1ac-4884-afa6-3cb4a10dcdda"
+  },
+  {
+    "Title": "Merge",
+    "InternalName": "Combine",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "e52012a0-51eb-4c0c-8dfb-9b8a0ebedcb6"
+  },
+  {
+    "Title": "Modified",
+    "InternalName": "Modified",
+    "TypeAsString": "DateTime",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f"
+  },
+  {
+    "Title": "Modified",
+    "InternalName": "Last_x0020_Modified",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "173f76c8-aebd-446a-9bc9-769a2bd2c18f"
+  },
+  {
+    "Title": "Modified By",
+    "InternalName": "Editor",
+    "TypeAsString": "User",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d31655d1-1d5b-4511-95a1-7a09e9b75bf2"
+  },
+  {
+    "Title": "Name",
+    "InternalName": "BaseName",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "7615464b-559e-4302-b8e2-8f440b913101"
+  },
+  {
+    "Title": "Name",
+    "InternalName": "LinkFilenameNoMenu",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "9d30f126-ba48-446b-b8f9-83745f322ebe"
+  },
+  {
+    "Title": "Name",
+    "InternalName": "LinkFilename",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "5cc6dc79-3710-4374-b433-61cb4a686c12"
+  },
+  {
+    "Title": "Name",
+    "InternalName": "LinkFilename2",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "224ba411-da77-4050-b0eb-62d422f13d3e"
+  },
+  {
+    "Title": "Name",
+    "InternalName": "FileLeafRef",
+    "TypeAsString": "File",
+    "Required": true,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "8553196d-ec8d-4564-9861-3dbe931050c8"
+  },
+  {
+    "Title": "NoExecute",
+    "InternalName": "NoExecute",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "0b16648a-daff-47d4-9fda-c6038b75ed27"
+  },
+  {
+    "Title": "Order",
+    "InternalName": "Order",
+    "TypeAsString": "Number",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "ca4addac-796f-4b23-b093-d2a3f65c0774"
+  },
+  {
+    "Title": "Originator Id",
+    "InternalName": "OriginatorId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "14ee99cd-bed9-474a-bf99-8f753fbad6b4"
+  },
+  {
+    "Title": "owshiddenversion",
+    "InternalName": "owshiddenversion",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d4e44a66-ee3a-4d02-88c9-4ec5ff3f4cd5"
+  },
+  {
+    "Title": "Parsable",
+    "InternalName": "_Parsable",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d1faf7fe-868c-4748-bfee-e608a37721fb"
+  },
+  {
+    "Title": "Path",
+    "InternalName": "FileDirRef",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "56605df6-8fa1-47e4-a04c-5b384d59609f"
+  },
+  {
+    "Title": "Principal Count",
+    "InternalName": "PrincipalCount",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "dcc67ebd-247f-4bee-8626-85ff6f69fbb6"
+  },
+  {
+    "Title": "ProgId",
+    "InternalName": "ProgId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "c5c4b81c-f1d9-4b43-a6a2-090df32ebb68"
+  },
+  {
+    "Title": "Property Bag",
+    "InternalName": "MetaInfo",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "687c7f94-686a-42d3-9b67-2782eac4b4f8"
+  },
+  {
+    "Title": "RansomwareAnomalyMetaInfo",
+    "InternalName": "_RansomwareAnomalyMetaInfo",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "a176c176-bc3a-405b-a1c1-9bec0f56e4d3"
+  },
+  {
+    "Title": "Received Date",
+    "InternalName": "Received_x0020_Date",
+    "TypeAsString": "DateTime",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "a299f963-54ab-4b3d-a8dd-81d5a3e5fe89"
+  },
+  {
+    "Title": "Relink",
+    "InternalName": "RepairDocument",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "5d36727b-bcb2-47d2-a231-1f0bc63b7439"
+  },
+  {
+    "Title": "Restricted",
+    "InternalName": "Restricted",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "786099e5-d20a-4232-86e5-cfc3d6face96"
+  },
+  {
+    "Title": "Retention label",
+    "InternalName": "_ComplianceTag",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "d4b6480a-4bed-4094-9a52-30181ea38f1d"
+  },
+  {
+    "Title": "Retention label Applied",
+    "InternalName": "_ComplianceTagWrittenTime",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "92be610e-ddbb-49f4-b3b1-5c2bc768df8f"
+  },
+  {
+    "Title": "Rights Management Template Id",
+    "InternalName": "_RmsTemplateId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "4fe24c84-f81d-4f97-9bcc-688ae643c086"
+  },
+  {
+    "Title": "ScopeId",
+    "InternalName": "ScopeId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "dddd2420-b270-4735-93b5-92b713d0944d"
+  },
+  {
+    "Title": "Select",
+    "InternalName": "SelectFilename",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "5f47e085-2150-41dc-b661-442f3027f552"
+  },
+  {
+    "Title": "Select",
+    "InternalName": "SelectTitle",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "b1f7969b-ea65-42e1-8b54-b588292635f2"
+  },
+  {
+    "Title": "Sensitivity",
+    "InternalName": "_DisplayName",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "1a53ab5a-11f9-4b92-a377-8cfaaf6ba7be"
+  },
+  {
+    "Title": "Sensitivity Label Assignment Method",
+    "InternalName": "_IpLabelAssignmentMethod",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "522bc266-7077-4b77-92f0-c8e86b856eb0"
+  },
+  {
+    "Title": "Sensitivity Label Id",
+    "InternalName": "_IpLabelId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "45da82c2-f1a1-41f2-b916-ca115dac9364"
+  },
+  {
+    "Title": "Sensitivity Label Metadata",
+    "InternalName": "_IpLabelMetaInfo",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "90b83bb8-3527-4526-8c68-d9dcfe467921"
+  },
+  {
+    "Title": "Server Relative URL",
+    "InternalName": "ServerUrl",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "105f76ce-724a-4bba-aece-f81f2fce58f5"
+  },
+  {
+    "Title": "Shared File Index",
+    "InternalName": "_SharedFileIndex",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "034998e9-bf1c-4288-bbbd-00eacfc64410"
+  },
+  {
+    "Title": "Shortcut Site Id",
+    "InternalName": "_ShortcutSiteId",
+    "TypeAsString": "Guid",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "2662ad77-2410-4938-b01c-e5e43321bad4"
+  },
+  {
+    "Title": "Shortcut Unique Id",
+    "InternalName": "_ShortcutUniqueId",
+    "TypeAsString": "Guid",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "e8fea999-553d-4f45-be52-d941627e9fe5"
+  },
+  {
+    "Title": "Shortcut URL",
+    "InternalName": "_ShortcutUrl",
+    "TypeAsString": "URL",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "47b1b86f-9f8a-4dbe-a75e-ca5d9b0f566c"
+  },
+  {
+    "Title": "Shortcut Web Id",
+    "InternalName": "_ShortcutWebId",
+    "TypeAsString": "Guid",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "e2a3861f-c216-47d7-820f-7cb638862ab2"
+  },
+  {
+    "Title": "Sort Type",
+    "InternalName": "SortBehavior",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "423874f8-c300-4bfb-b7a1-42e2159e3b19"
+  },
+  {
+    "Title": "Source Name (Converted Document)",
+    "InternalName": "ParentLeafName",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "774eab3a-855f-4a34-99da-69dc21043bec"
+  },
+  {
+    "Title": "Source URL",
+    "InternalName": "_SourceUrl",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "c63a459d-54ba-4ab7-933a-dcf1c6fadec2"
+  },
+  {
+    "Title": "Source Version (Converted Document)",
+    "InternalName": "ParentVersionString",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "bc1a8efb-0f4c-49f8-a38f-7fe22af3d3e0"
+  },
+  {
+    "Title": "StreamScenarioIds",
+    "InternalName": "_StreamScenarioIds",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "b3f0ac46-0d7d-477f-bfca-f822414d20d4"
+  },
+  {
+    "Title": "StubFile",
+    "InternalName": "_StubFile",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "aa445880-c723-44f1-ab01-61083d60cb2e"
+  },
+  {
+    "Title": "Subject",
+    "InternalName": "Subject",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Core Document Columns",
+    "Id": "76a81629-44d4-4ce1-8d4d-6d7ebcd885fc"
+  },
+  {
+    "Title": "Taxonomy Catch All Column",
+    "InternalName": "TaxCatchAll",
+    "TypeAsString": "LookupMulti",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "f3b0adf9-c1a2-4b02-920d-943fba4b3611"
+  },
+  {
+    "Title": "Template Link",
+    "InternalName": "TemplateUrl",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "4b1bf6c6-4f39-45ac-acd5-16fe7a214e5e"
+  },
+  {
+    "Title": "Title",
+    "InternalName": "Title",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247"
+  },
+  {
+    "Title": "To",
+    "InternalName": "To",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": false,
+    "Group": "Custom Columns",
+    "Id": "029b4eab-cb4a-47a0-96b3-351db22a2d75"
+  },
+  {
+    "Title": "Total File Count",
+    "InternalName": "SMTotalFileCount",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "a261b12a-8ca2-47fa-a117-05861d637c7e"
+  },
+  {
+    "Title": "Total File Stream Size",
+    "InternalName": "SMTotalFileStreamSize",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "1faa4902-9115-44b9-bba7-791441ca1d6f"
+  },
+  {
+    "Title": "Total Size",
+    "InternalName": "SMTotalSize",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "4df6bfaf-f887-424e-8ea3-fd050113e7a9"
+  },
+  {
+    "Title": "Trigger Flow Info",
+    "InternalName": "TriggerFlowInfo",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "08d89a66-4634-42b8-9d5a-0c27395a48b3"
+  },
+  {
+    "Title": "Type",
+    "InternalName": "DocIcon",
+    "TypeAsString": "Computed",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "081c6e4c-5c14-4f20-b23e-1a71ceb6a67c"
+  },
+  {
+    "Title": "UI Version",
+    "InternalName": "_UIVersion",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "7841bf41-43d0-4434-9f50-a673baef7631"
+  },
+  {
+    "Title": "Unique Id",
+    "InternalName": "UniqueId",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "4b7403de-8d94-43e8-9f0f-137a3e298126"
+  },
+  {
+    "Title": "URL Path",
+    "InternalName": "FileRef",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "94f89715-e097-4e8b-ba79-ea02aa8b7adb"
+  },
+  {
+    "Title": "Version",
+    "InternalName": "_UIVersionString",
+    "TypeAsString": "Text",
+    "Required": false,
+    "Hidden": false,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "dce8262a-3ae9-45aa-aab4-83bd75fb738a"
+  },
+  {
+    "Title": "Virus Status",
+    "InternalName": "VirusStatus",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "4a389cb9-54dd-4287-a71a-90ff362028bc"
+  },
+  {
+    "Title": "VirusInfo",
+    "InternalName": "_VirusInfo",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "c4b1727e-aca8-4bd8-ae83-f554ae3c08eb"
+  },
+  {
+    "Title": "VirusStatus",
+    "InternalName": "_VirusStatus",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "df7ffe41-81d6-46eb-8777-444d1613c803"
+  },
+  {
+    "Title": "VirusVendorID",
+    "InternalName": "_VirusVendorID",
+    "TypeAsString": "Lookup",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "32d407ed-15e1-4ccc-b1d4-c56f5799b256"
+  },
+  {
+    "Title": "Workflow Instance ID",
+    "InternalName": "WorkflowInstanceID",
+    "TypeAsString": "Guid",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "de8beacf-5505-47cd-80a6-aa44e7ffe2f4"
+  },
+  {
+    "Title": "Workflow Version",
+    "InternalName": "WorkflowVersion",
+    "TypeAsString": "Integer",
+    "Required": false,
+    "Hidden": true,
+    "ReadOnlyField": true,
+    "Group": "Custom Columns",
+    "Id": "f1e020bc-ba26-443f-bf2f-b68715017bbc"
+  }
+]

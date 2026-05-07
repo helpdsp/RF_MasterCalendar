@@ -1,0 +1,17 @@
+{
+  "Title": "Fixed Assets",
+  "Id": "b7de741a-49ba-4f2a-a695-0a73b04a9202",
+  "BaseTemplate": 101,
+  "BaseType": 1,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 11985,
+  "DefaultViewUrl": "/sites/InvoiceforTaxTeam/FA/Forms/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/InvoiceforTaxTeam/FA",
+  "Description": "",
+  "ContentTypesEnabled": true,
+  "OnQuickLaunch": true
+}

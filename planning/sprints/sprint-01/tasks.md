@@ -1,187 +1,75 @@
-# Sprint 1 — Tasks
+# Sprint 1 Tasks
 
-| Task | Sección KT Document | Story | Owner | Status |
-|---|---|---|---|---|
-| T-01 | Functional Overview | S-01 | technical-writer | done |
-| T-02 | Architecture & Components | S-02 | technical-writer | done |
-| T-03 | Data Model | S-03 | technical-writer | done |
-| T-04 | Process Flow | S-04 | technical-writer | done |
-| T-05 | List Configuration & Views | S-05 | technical-writer | done |
-| T-06 | Power Automate Flow | S-06 | technical-writer | done |
-| T-07 | SharePoint Pages | S-07 | technical-writer | done |
-| T-08 | Permissions & Access | S-08 | technical-writer | done |
-| T-09 | Operational Runbook | S-09 | technical-writer | done |
-| T-10 | Data Snapshot Evidence | S-10 | technical-writer | done |
-| T-11 | Brand Compliance | S-11 | technical-writer | done |
-
----
-
-## T-01 — Functional Overview
-
-**RF:** RF-01, RF-03, RF-04, RF-05
-**Output:** Sección 1 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Propósito del Praise Program y valor para Ruiz Foods
-- [ ] 4 roles documentados: Employee (submitter), Employee (recognized), HR Manager, IT Admin
-- [ ] Flujo de alto nivel en lenguaje simple (submit → approve → publish)
-- [ ] Entry points del intranet descritos (Landing Page links)
-- [ ] Resumen para IT Leadership sin jargon técnico
-- [ ] Evidencia: mockup Intranet Landing Page.jpg
-
----
-
-## T-02 — Architecture & Components
-
-**RF:** RF-01, RF-02, RF-06, RF-07
-**Output:** Sección 2 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Tabla de 11 componentes con tipo, plataforma y URL/ubicación
-- [ ] Diagrama de arquitectura (texto) mostrando flujo de datos
-- [ ] URL del sitio SharePoint documentado (`/sites/RuizNetPortal/`)
-- [ ] Entorno y nombre del flujo de Power Automate documentados
-- [ ] Confirmado: no hay código personalizado ni dependencias de terceros
-- [ ] Evidencia: Praise-Properties.json, technical-spec.md
-
----
-
-## T-03 — Data Model
-
-**RF:** RF-01, RF-06, RF-07
-**Output:** Sección 3 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Lista Praise: todos los campos custom con Display Title, Internal Name, Type, Required
-- [ ] Lista Praise Cards: todos los campos custom documentados
-- [ ] Lista Praise (Archive): estructura documentada en relación a Praise
-- [ ] Campos de sistema clave documentados (ID, Author, Created, _ModerationStatus)
-- [ ] State machine de content moderation explicado (Pending → Approved/Rejected con valores 0/1/2)
-- [ ] Archivos XML de schema referenciados como fuente autoritativa
-- [ ] Evidencia: Praise-Fields.json, Praise Cards-Fields.json, Praise-Schema.xml, Praise.csv
-
----
-
-## T-04 — Process Flow
-
-**RF:** RF-01, RF-02, RF-03, RF-08
-**Output:** Sección 4 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Flujo step-by-step: submit → trigger PA → Teams approval → branch → moderation update → email → publicación
-- [ ] Cada paso identifica al actor (Employee, HR Manager, Power Automate, SharePoint)
-- [ ] Ruta de aprobación documentada
-- [ ] Ruta de rechazo documentada
-- [ ] Condición de email Congratulations indicada (solo en aprobación)
-- [ ] Mockups referenciados como evidencia de cada paso
-
----
-
-## T-05 — List Configuration & Views
-
-**RF:** RF-03, RF-04, RF-07
-**Output:** Sección 5 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Settings de lista Praise: content moderation ON, versioning ON, content types ON, Quick Launch hidden
-- [ ] Las 7 vistas documentadas: título, URL, default flag, lógica de filtro CAML, row limit
-- [ ] Vista "Approve/reject Items" y su rol para HR documentado
-- [ ] Vista "My submissions" filtro (Author = [Me]) documentado
-- [ ] Vista Top 10 row limit (10) confirmado
-- [ ] Vista oculta "Welcome to the Praise Form!" documentada
-- [ ] Settings de Praise Archive documentados
-- [ ] Evidencia: Praise-Views.json, Praise-Properties.json
-
----
-
-## T-06 — Power Automate Flow
-
-**RF:** RF-02, RF-08
-**Output:** Sección 6 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Trigger documentado: SharePoint — When item is created, en lista Praise
-- [ ] Todas las acciones del flujo documentadas en orden con nombres de connector
-- [ ] Paso de aprobación: quién lo recibe, qué campos se muestran en la tarjeta
-- [ ] Branch de condición: ruta Aprobado y ruta Rechazado ambas documentadas
-- [ ] Acción de actualización de moderation status documentada (valores _ModerationStatus)
-- [ ] Acción de email Congratulations documentada (destinatario, condición)
-- [ ] Ubicación del flujo en Power Automate documentada
-- [ ] Evidencia: Power Automate PDF, mockup Teams Approvals App
-
----
-
-## T-07 — SharePoint Pages
-
-**RF:** RF-03, RF-04, RF-05
-**Output:** Sección 7 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] 3 páginas documentadas: Intranet Landing, View Current Praises, View Submitted Praises
-- [ ] Cada página: URL, propósito, web parts o vistas de lista embebidas
-- [ ] Links de Intranet Landing Page (Submit y View) documentados
-- [ ] Vista embebida en View Current Praises documentada
-- [ ] Vista "My submissions" embebida en View Submitted Praises documentada
-- [ ] Evidencia: mockups de las 3 páginas SharePoint (3 imágenes .jpg)
-
----
-
-## T-08 — Permissions & Access
-
-**RF:** RF-01, RF-02
-**Output:** Sección 8 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Permisos de lista SharePoint por rol (Employee, HR Manager, IT Admin)
-- [ ] Requerimiento de permiso "Approve Items" para HR documentado
-- [ ] Cómo content moderation restringe la vista de no-HR documentado
-- [ ] Ownership y sharing del flujo de Power Automate documentado
-- [ ] Cómo agregar o remover un HR approver del flujo documentado
-- [ ] Cómo HR Managers reciben aprobaciones en Teams documentado
-
----
-
-## T-09 — Operational Runbook
-
-**RF:** RF-02, RF-07
-**Output:** Sección 9 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Cómo aprobar un praise en Teams Approvals App (paso a paso)
-- [ ] Cómo rechazar un praise en Teams Approvals App (paso a paso)
-- [ ] Cómo ver praises pendientes en la lista SharePoint (vista Approve/reject Items)
-- [ ] Cómo archivar praises antiguos (proceso manual a Archive list)
-- [ ] Cómo agregar un nuevo valor al campo Core Value Demonstrated
-- [ ] Cómo agregar/remover un HR approver en el flujo de Power Automate
-- [ ] Cómo revisar el historial de ejecuciones del flujo (fallas)
-- [ ] Cómo actualizar contenido de páginas SharePoint
-
----
-
-## T-10 — Data Snapshot Evidence
-
-**RF:** RF-10
-**Output:** Sección 10 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Praise.csv: headers de columnas documentados
-- [ ] Praise(Archive).csv referenciado y descrito
-- [ ] Item count (9 items en Praise list al momento del export) indicado
-- [ ] Valores del campo Category (Core Values) listados desde los datos
-- [ ] Valores numéricos de _ModerationStatus confirmados desde datos (0, 1, 2)
-- [ ] Rango de fechas de ambos archivos indicado
-
----
-
-## T-11 — Brand Compliance
-
-**RF:** RF-09
-**Output:** Sección 11 de `docs/KT-Praise-Program.md`
-
-Checklist:
-- [ ] Ambos PDFs de brand guidelines citados por nombre
-- [ ] Color palette → componentes que usan colores de marca documentados (pages, emails)
-- [ ] Typography → uso de fuentes por componente documentado (pages, emails)
-- [ ] Logo/icon → placement en páginas intranet documentado; rol del campo Icon documentado
-- [ ] Tone of voice → componentes con copy de marca documentados (form, emails)
-- [ ] Tabla de mapeo: dimensión de marca → componente afectado → documento de referencia
+| Task | Title | RF | Component | Route | Story | Owner role | Points | Status |
+|---|---|---|---|---|---|---|---|---|
+| T-001 | Implementar [ ] Solution purpose stated in 1-2 paragraphs (shared mailbox → SharePoint migration) | — | — | — | [ ] Solution purpose stated in 1-2 paragraphs (shared mailbox → SharePoint migration) | frontend | 3 | done |
+| T-002 | Implementar [ ] Business value articulated (storage relief, read-only enforcement, rich search) | — | — | — | [ ] Business value articulated (storage relief, read-only enforcement, rich search) | backend | 3 | done |
+| T-003 | Implementar [ ] All user roles listed with their access level | — | — | — | [ ] All user roles listed with their access level | qa | 3 | done |
+| T-004 | Implementar [ ] High-level flow described: email arrives → Power Automate → SharePoint → Tax Team searches | — | — | — | [ ] High-level flow described: email arrives → Power Automate → SharePoint → Tax Team searches | pm | 3 | done |
+| T-005 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | deploy | 3 | done |
+| T-006 | Implementar [ ] Site URL confirmed: `https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam` | — | — | — | [ ] Site URL confirmed: `https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam` | frontend | 3 | done |
+| T-007 | Implementar [ ] All 4 libraries listed with URL path and item count | — | — | — | [ ] All 4 libraries listed with URL path and item count | backend | 3 | done |
+| T-008 | Implementar [ ] PnP Modern Search v4 app listed with package name | — | — | — | [ ] PnP Modern Search v4 app listed with package name | qa | 3 | done |
+| T-009 | Implementar [ ] Power Automate flows listed (with gap flag if names unconfirmed) | — | — | — | [ ] Power Automate flows listed (with gap flag if names unconfirmed) | pm | 3 | done |
+| T-010 | Implementar [ ] SharePoint Managed Properties listed as a component | — | — | — | [ ] SharePoint Managed Properties listed as a component | deploy | 3 | done |
+| T-011 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |
+| T-012 | Implementar [ ] Diagram shows: Source Mailboxes → Power Automate → SharePoint Libraries → Search Index → PnP Search UX → Tax Team | — | — | — | [ ] Diagram shows: Source Mailboxes → Power Automate → SharePoint Libraries → Search Index → PnP Search UX → Tax Team | backend | 3 | done |
+| T-013 | Implementar [ ] AP and FA paths both represented | — | — | — | [ ] AP and FA paths both represented | qa | 3 | done |
+| T-014 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | pm | 3 | done |
+| T-015 | Implementar [ ] Table includes: Display Title, Internal Name, Type, Required, Hidden, Read-Only | — | — | — | [ ] Table includes: Display Title, Internal Name, Type, Required, Hidden, Read-Only | deploy | 3 | done |
+| T-016 | Implementar [ ] All 5 custom columns identified and distinguished from system fields | — | — | — | [ ] All 5 custom columns identified and distinguished from system fields | frontend | 3 | done |
+| T-017 | Implementar [ ] Internal names verified against JSON exports (`Fiscal_x0020_Year`, `Received_x0020_Date`, `EMail`, `To`, `Subject`) | — | — | — | [ ] Internal names verified against JSON exports (`Fiscal_x0020_Year`, `Received_x0020_Date`, `EMail`, `To`, `Subject`) | backend | 3 | done |
+| T-018 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | qa | 3 | done |
+| T-019 | Implementar [ ] Base CT `Invoice Document` documented with ID `0x010100E3917FC38B21344BB4F75ADAC1414E19` | — | — | — | [ ] Base CT `Invoice Document` documented with ID `0x010100E3917FC38B21344BB4F75ADAC1414E19` | pm | 3 | done |
+| T-020 | Implementar [ ] Child CTs `Accounts Payable` and `Fixed Asset` documented with their IDs | — | — | — | [ ] Child CTs `Accounts Payable` and `Fixed Asset` documented with their IDs | deploy | 3 | done |
+| T-021 | Implementar [ ] Hierarchy diagram (parent → children) included | — | — | — | [ ] Hierarchy diagram (parent → children) included | frontend | 3 | done |
+| T-022 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | backend | 3 | done |
+| T-023 | Implementar [ ] Each step numbered with actor (Power Automate / SharePoint / System) | — | — | — | [ ] Each step numbered with actor (Power Automate / SharePoint / System) | qa | 3 | done |
+| T-024 | Implementar [ ] All metadata fields mapped: From, To, Subject, Received Date, Fiscal Year, Content Type | — | — | — | [ ] All metadata fields mapped: From, To, Subject, Received Date, Fiscal Year, Content Type | pm | 3 | done |
+| T-025 | Implementar [ ] Flow connector names identified | — | — | — | [ ] Flow connector names identified | deploy | 3 | done |
+| T-026 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |
+| T-027 | Implementar [ ] Step-by-step process for FixedAssets@ruizfoods.com → Fixed Assets library | — | — | — | [ ] Step-by-step process for FixedAssets@ruizfoods.com → Fixed Assets library | backend | 3 | done |
+| T-028 | Implementar [ ] Differences from AP flow noted | — | — | — | [ ] Differences from AP flow noted | qa | 3 | done |
+| T-029 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | pm | 3 | done |
+| T-030 | Implementar [ ] Each library: versioning on/off, moderation on/off, content types on/off, Quick Launch | — | — | — | [ ] Each library: versioning on/off, moderation on/off, content types on/off, Quick Launch | deploy | 3 | done |
+| T-031 | Implementar [ ] All 4 libraries covered | — | — | — | [ ] All 4 libraries covered | frontend | 3 | done |
+| T-032 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | backend | 3 | done |
+| T-033 | Implementar [ ] All 6 views per library documented (All Documents, Bulk Edit, assetLibTemp, Merge, Relink, RssView) | — | — | — | [ ] All 6 views per library documented (All Documents, Bulk Edit, assetLibTemp, Merge, Relink, RssView) | qa | 3 | done |
+| T-034 | Implementar [ ] CAML query for each non-system view included | — | — | — | [ ] CAML query for each non-system view included | pm | 3 | done |
+| T-035 | Implementar [ ] AP "Bulk Edit View" URL typo (`Not PDFs.aspx`) flagged with note | — | — | — | [ ] AP "Bulk Edit View" URL typo (`Not PDFs.aspx`) flagged with note | deploy | 3 | done |
+| T-036 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |
+| T-037 | Implementar [ ] Trigger: email arrives at shared mailbox | — | — | — | [ ] Trigger: email arrives at shared mailbox | backend | 3 | done |
+| T-038 | Implementar [ ] Each action documented in sequence with connector name | — | — | — | [ ] Each action documented in sequence with connector name | qa | 3 | done |
+| T-039 | Implementar [ ] Service account identity documented (or flagged as gap if unconfirmed) | — | — | — | [ ] Service account identity documented (or flagged as gap if unconfirmed) | pm | 3 | done |
+| T-040 | Implementar [ ] Flow run history location documented (Power Automate portal) | — | — | — | [ ] Flow run history location documented (Power Automate portal) | deploy | 3 | done |
+| T-041 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |
+| T-042 | Implementar [ ] Landing page URL documented | — | — | — | [ ] Landing page URL documented | backend | 3 | done |
+| T-043 | Implementar [ ] PnP Modern Search v4 web parts listed: Search Box, Refiners, Results | — | — | — | [ ] PnP Modern Search v4 web parts listed: Search Box, Refiners, Results | qa | 3 | done |
+| T-044 | Implementar [ ] Both mockup screenshots cited as evidence | — | — | — | [ ] Both mockup screenshots cited as evidence | pm | 3 | done |
+| T-045 | Implementar [ ] Managed property mappings for refiners documented | — | — | — | [ ] Managed property mappings for refiners documented | deploy | 3 | done |
+| T-046 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |
+| T-047 | Implementar [ ] Matrix: Tax Team Members = Read; IT Owners = Full Control; Service Account = Contribute | — | — | — | [ ] Matrix: Tax Team Members = Read; IT Owners = Full Control; Service Account = Contribute | backend | 3 | done |
+| T-048 | Implementar [ ] Confirmation that permissions inherit from site (no broken inheritance) | — | — | — | [ ] Confirmation that permissions inherit from site (no broken inheritance) | qa | 3 | done |
+| T-049 | Implementar [ ] No moderation workflow (EnableModeration=false confirmed) | — | — | — | [ ] No moderation workflow (EnableModeration=false confirmed) | pm | 3 | done |
+| T-050 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | deploy | 3 | done |
+| T-051 | Implementar [ ] Step-by-step: how to add a user to the Site Members group (read-only) | — | — | — | [ ] Step-by-step: how to add a user to the Site Members group (read-only) | frontend | 3 | done |
+| T-052 | Implementar [ ] Step-by-step: how to remove a user | — | — | — | [ ] Step-by-step: how to remove a user | backend | 3 | done |
+| T-053 | Implementar [ ] Note on service account dependency for Power Automate | — | — | — | [ ] Note on service account dependency for Power Automate | qa | 3 | done |
+| T-054 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | pm | 3 | done |
+| T-055 | Implementar [ ] Task: Add a user (read-only access) | — | — | — | [ ] Task: Add a user (read-only access) | deploy | 3 | done |
+| T-056 | Implementar [ ] Task: Archive documents to FY library | — | — | — | [ ] Task: Archive documents to FY library | frontend | 3 | done |
+| T-057 | Implementar [ ] Task: Check Power Automate flow run history | — | — | — | [ ] Task: Check Power Automate flow run history | backend | 3 | done |
+| T-058 | Implementar [ ] Task: Troubleshoot — email not appearing in SharePoint | — | — | — | [ ] Task: Troubleshoot — email not appearing in SharePoint | qa | 3 | done |
+| T-059 | Implementar [ ] Task: Create a new fiscal year library | — | — | — | [ ] Task: Create a new fiscal year library | pm | 3 | done |
+| T-060 | Implementar [ ] Task: Update document metadata (admin only) | — | — | — | [ ] Task: Update document metadata (admin only) | deploy | 3 | done |
+| T-061 | Implementar [ ] Task: Access and modify PnP Modern Search configuration | — | — | — | [ ] Task: Access and modify PnP Modern Search configuration | frontend | 3 | done |
+| T-062 | Implementar [ ] Each task has numbered steps executable by a new admin | — | — | — | [ ] Each task has numbered steps executable by a new admin | backend | 3 | done |
+| T-063 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | qa | 3 | done |
+| T-064 | Implementar [ ] Item counts: AP=173,704; FA=11,985; FY2023=16; FY2024=45,933; Total=231,638 | — | — | — | [ ] Item counts: AP=173,704; FA=11,985; FY2023=16; FY2024=45,933; Total=231,638 | pm | 3 | done |
+| T-065 | Implementar [ ] FY2023 low count anomaly noted with hypothesis | — | — | — | [ ] FY2023 low count anomaly noted with hypothesis | deploy | 3 | done |
+| T-066 | Implementar [ ] Custom column presence confirmed from JSON exports | — | — | — | [ ] Custom column presence confirmed from JSON exports | frontend | 3 | done |
+| T-067 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | backend | 3 | done |
+| T-068 | Implementar [ ] Brand dimensions listed: color, typography, logo/icons, tone of voice | — | — | — | [ ] Brand dimensions listed: color, typography, logo/icons, tone of voice | qa | 3 | done |
+| T-069 | Implementar [ ] Each user-facing component mapped to relevant brand dimension | — | — | — | [ ] Each user-facing component mapped to relevant brand dimension | pm | 3 | done |
+| T-070 | Implementar [ ] Brand guideline PDF references cited | — | — | — | [ ] Brand guideline PDF references cited | deploy | 3 | done |
+| T-071 | Implementar [ ] Owner role: `engineering-technical-writer` | — | — | — | [ ] Owner role: `engineering-technical-writer` | frontend | 3 | done |

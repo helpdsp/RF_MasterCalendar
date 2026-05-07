@@ -1,0 +1,519 @@
+[
+  {
+    "GroupName": "_Hidden",
+    "ContentTypeCount": 21,
+    "ContentTypes": [
+      {
+        "Name": "System",
+        "Id": "0x",
+        "FieldCount": 1,
+        "Hidden": false,
+        "Sealed": true
+      },
+      {
+        "Name": "WorkflowServiceDefinition",
+        "Id": "0x01002A2479FF33DD4BC3B1533A012B653717",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Health Analyzer Rule Definition",
+        "Id": "0x01003A8AA7A4F53046158C5ABD98036A01D5",
+        "FieldCount": 10,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "WorkflowServiceSubscription",
+        "Id": "0x0100AA27A923036E459D9EF0D18BBD0B9587",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Health Analyzer Report",
+        "Id": "0x0100F95DB3A97E8046B58C6A54FB31F2BD46",
+        "FieldCount": 11,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Display Template",
+        "Id": "0x0101002039C03B61C64EC4A04F5361F3851066",
+        "FieldCount": 12,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Display Template Code",
+        "Id": "0x0101002039C03B61C64EC4A04F5361F385106605",
+        "FieldCount": 16,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Office Data Connection File",
+        "Id": "0x010100629D00608F814DD6AC8A86903AEE72AA",
+        "FieldCount": 10,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Content Freshness",
+        "Id": "0x0101009D1CB255DA76424F860D91F20E6C411800C57E7DC123744954AACC08D1D5260154",
+        "FieldCount": 28,
+        "Hidden": true,
+        "Sealed": false
+      },
+      {
+        "Name": "Universal Data Connection File",
+        "Id": "0x010100B4CBD48E029A4AD8B62CB0E41868F2B0",
+        "FieldCount": 11,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Design File",
+        "Id": "0x010100C5033D6CFB8447359FB795C8A73A2B19",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": true
+      },
+      {
+        "Name": "InfoPath Form Template",
+        "Id": "0x010100F8EF98760CBA4A94994F13BA881038FA",
+        "FieldCount": 17,
+        "Hidden": true,
+        "Sealed": false
+      },
+      {
+        "Name": "User Workflow Document",
+        "Id": "0x010107",
+        "FieldCount": 15,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Workflow Task",
+        "Id": "0x010801",
+        "FieldCount": 28,
+        "Hidden": true,
+        "Sealed": false
+      },
+      {
+        "Name": "Administrative Task",
+        "Id": "0x010802",
+        "FieldCount": 15,
+        "Hidden": true,
+        "Sealed": false
+      },
+      {
+        "Name": "Workflow History",
+        "Id": "0x0109",
+        "FieldCount": 15,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Person",
+        "Id": "0x010A",
+        "FieldCount": 14,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "SharePointGroup",
+        "Id": "0x010B",
+        "FieldCount": 7,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "DomainGroup",
+        "Id": "0x010C",
+        "FieldCount": 9,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "RootOfList",
+        "Id": "0x012001",
+        "FieldCount": 5,
+        "Hidden": false,
+        "Sealed": true
+      },
+      {
+        "Name": "Document Collection Folder",
+        "Id": "0x0120D5",
+        "FieldCount": 5,
+        "Hidden": false,
+        "Sealed": true
+      }
+    ]
+  },
+  {
+    "GroupName": "Display Template Content Types",
+    "ContentTypeCount": 1,
+    "ContentTypes": [
+      {
+        "Name": "JavaScript Display Template",
+        "Id": "0x0101002039C03B61C64EC4A04F5361F3851068",
+        "FieldCount": 17,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "Document Content Types",
+    "ContentTypeCount": 13,
+    "ContentTypes": [
+      {
+        "Name": "Document",
+        "Id": "0x0101",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "List View Style",
+        "Id": "0x010100734778F2B7DF462491FC91844AE431CF",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Site Page",
+        "Id": "0x0101009D1CB255DA76424F860D91F20E6C4118",
+        "FieldCount": 27,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Repost Page",
+        "Id": "0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B",
+        "FieldCount": 32,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Form",
+        "Id": "0x010101",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Picture",
+        "Id": "0x010102",
+        "FieldCount": 26,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Master Page",
+        "Id": "0x010105",
+        "FieldCount": 11,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Master Page Preview",
+        "Id": "0x010106",
+        "FieldCount": 9,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Wiki Page",
+        "Id": "0x010108",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Basic Page",
+        "Id": "0x010109",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Web Part Page",
+        "Id": "0x01010901",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Link to a Document",
+        "Id": "0x01010A",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Dublin Core Columns",
+        "Id": "0x01010B",
+        "FieldCount": 24,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "Folder Content Types",
+    "ContentTypeCount": 3,
+    "ContentTypes": [
+      {
+        "Name": "Folder",
+        "Id": "0x0120",
+        "FieldCount": 5,
+        "Hidden": false,
+        "Sealed": true
+      },
+      {
+        "Name": "Discussion",
+        "Id": "0x012002",
+        "FieldCount": 49,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Summary Task",
+        "Id": "0x012004",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "Group Work Content Types",
+    "ContentTypeCount": 10,
+    "ContentTypes": [
+      {
+        "Name": "Circulation",
+        "Id": "0x01000F389E14C9CE4CE486270B9D4713A5D6",
+        "FieldCount": 10,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "New Word",
+        "Id": "0x010018F21907ED4E401CB4F14422ABC65304",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Resource",
+        "Id": "0x01004C9F4486FBF54864A7B0A33D02AD19B1",
+        "FieldCount": 3,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Official Notice",
+        "Id": "0x01007CE30DD1206047728BAFD1C39A850120",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Phone Call Memo",
+        "Id": "0x0100807FBAC5EB8A4653B8D24775195B5463",
+        "FieldCount": 14,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Holiday",
+        "Id": "0x01009BE2AB5291BF4C1A986910BD278E4F18",
+        "FieldCount": 5,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "What's New Notification",
+        "Id": "0x0100A2CA87FF01B442AD93F37CD7DD0943EB",
+        "FieldCount": 6,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Timecard",
+        "Id": "0x0100C30DDA8EDB2E434EA22D793D9EE42058",
+        "FieldCount": 20,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Resource Group",
+        "Id": "0x0100CA13F2F8D61541B180952DFB25E3E8E4",
+        "FieldCount": 4,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Users",
+        "Id": "0x0100FBEEE6F0C500489B99CDA6BB16C398F7",
+        "FieldCount": 10,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "Invoice for Tax Team",
+    "ContentTypeCount": 3,
+    "ContentTypes": [
+      {
+        "Name": "Invoice Document",
+        "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E19",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Accounts Payable",
+        "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E1901",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Fixed Asset",
+        "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E1902",
+        "FieldCount": 13,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "List Content Types",
+    "ContentTypeCount": 15,
+    "ContentTypes": [
+      {
+        "Name": "Item",
+        "Id": "0x01",
+        "FieldCount": 2,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Event",
+        "Id": "0x0102",
+        "FieldCount": 20,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Reservations",
+        "Id": "0x0102004F51EFDEA49C49668EF9C6744C8CF87D",
+        "FieldCount": 23,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Schedule and Reservations",
+        "Id": "0x01020072BB2A38F0DB49C3A96CF4FA85529956",
+        "FieldCount": 24,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Schedule",
+        "Id": "0x0102007DBDC1392EAF4EBBBF99E41D8922B264",
+        "FieldCount": 22,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Issue",
+        "Id": "0x0103",
+        "FieldCount": 11,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Announcement",
+        "Id": "0x0104",
+        "FieldCount": 4,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Link",
+        "Id": "0x0105",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Contact",
+        "Id": "0x0106",
+        "FieldCount": 23,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Message",
+        "Id": "0x0107",
+        "FieldCount": 38,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Task",
+        "Id": "0x0108",
+        "FieldCount": 11,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Workflow Task (SharePoint 2013)",
+        "Id": "0x0108003365C4474CAE8C42BCE396314E88E51F",
+        "FieldCount": 13,
+        "Hidden": true,
+        "Sealed": false
+      },
+      {
+        "Name": "Post",
+        "Id": "0x0110",
+        "FieldCount": 5,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "Comment",
+        "Id": "0x0111",
+        "FieldCount": 3,
+        "Hidden": false,
+        "Sealed": false
+      },
+      {
+        "Name": "East Asia Contact",
+        "Id": "0x0116",
+        "FieldCount": 23,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  },
+  {
+    "GroupName": "Special Content Types",
+    "ContentTypeCount": 1,
+    "ContentTypes": [
+      {
+        "Name": "Unknown Document Type",
+        "Id": "0x010104",
+        "FieldCount": 8,
+        "Hidden": false,
+        "Sealed": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "Title": "Accounts Payable",
+  "Id": "0b5cf4df-80d5-4973-a033-a74f3bf66769",
+  "BaseTemplate": 101,
+  "BaseType": 1,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 173704,
+  "DefaultViewUrl": "/sites/InvoiceforTaxTeam/AP/Forms/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/InvoiceforTaxTeam/AP",
+  "Description": "",
+  "ContentTypesEnabled": true,
+  "OnQuickLaunch": true
+}

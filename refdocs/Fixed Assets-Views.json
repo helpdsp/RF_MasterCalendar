@@ -1,0 +1,56 @@
+[
+  {
+    "Title": "All Documents",
+    "Id": "6af8b2d4-efa2-4a97-8d51-d826074e78f0",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/AllItems.aspx",
+    "DefaultView": true,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "assetLibTemp",
+    "Id": "d9d239aa-7297-4d49-b6b8-78ecc0920f4f",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/Thumbnails.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"LinkFilename\" /></OrderBy>",
+    "RowLimit": 20
+  },
+  {
+    "Title": "Merge Documents",
+    "Id": "8f41ad80-4888-4baa-bd7b-2cad4a98baf9",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/Combine.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Raw",
+    "Id": "03886199-c7d5-4782-a203-fef37a3882dc",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/PersonalViews.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Relink Documents",
+    "Id": "b9f3fe36-2500-40fd-873e-c92b998f1306",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/repair.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy><Where><Neq><FieldRef Name=\"xd_Signature\" /><Value Type=\"Boolean\">1</Value></Neq></Where>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "RssView",
+    "Id": "04e6941b-b6c5-44c4-95c4-5f3aacef5408",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FA/Forms/RssView.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "",
+    "RowLimit": 25
+  }
+]

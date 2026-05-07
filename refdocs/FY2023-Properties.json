@@ -1,0 +1,17 @@
+{
+  "Title": "FY2023",
+  "Id": "d1ba2a6e-609d-467f-a9ad-95ad3afeb3fb",
+  "BaseTemplate": 101,
+  "BaseType": 1,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 16,
+  "DefaultViewUrl": "/sites/InvoiceforTaxTeam/FY2023/Forms/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/InvoiceforTaxTeam/FY2023",
+  "Description": "",
+  "ContentTypesEnabled": true,
+  "OnQuickLaunch": true
+}

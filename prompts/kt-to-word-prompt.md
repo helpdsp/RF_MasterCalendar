@@ -8,9 +8,9 @@
 
 ## TASK
 
-Convert the Knowledge Transfer Document at `docs/KT-Praise-Program.md` into a professional Microsoft Word document (`.docx`) that can be shared with IT Leadership and used as an official handover document at Ruiz Foods, Inc.
+Convert the Knowledge Transfer Document at `docs/KT-InvoicesForTaxTeam.md` into a professional Microsoft Word document (`.docx`) that can be shared with IT Leadership and used as an official handover document at Ruiz Foods, Inc.
 
-The output file should be: `docs/KT-Praise-Program.docx`
+The output file should be: `docs/KT-InvoicesForTaxTeam.docx`
 
 ---
 

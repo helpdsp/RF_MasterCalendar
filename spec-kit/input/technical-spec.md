@@ -1,146 +1,155 @@
-# Technical Specification — Ruiz Foods Praise Program (KT Document)
+# Technical Specification — Invoices for Tax Team
 
-## 1. Solution Architecture
-
-The Praise Program is a **Microsoft 365-native, no-code solution**. There are no custom applications, SPFx web parts, or third-party services. All components run within the Ruiz Foods M365 tenant.
-
-```
-Employee (Browser)
-      │
-      ▼
-SharePoint Online — RuizNetPortal (/sites/RuizNetPortal/)
-  ├── Intranet Landing Page          ← entry point links
-  ├── View Current Praises Page      ← approved praise gallery
-  ├── View Submitted Praises Page    ← employee self-service
-  └── Praise List (Recognition)      ← system of record
-        │ (new item trigger)
-        ▼
-Power Automate — Approval Flow
-  ├── Teams Approvals connector ──► Microsoft Teams (HR Manager)
-  │                                  └── Approvals App
-  └── Send Email connector ─────► Microsoft Outlook
-        ├── Praise Alert Email
-        └── Congratulations Email (on approval)
-```
-
-## 2. Component Inventory
-
-| # | Component | Type | Platform | Location / URL pattern |
-|---|---|---|---|---|
-| 1 | Praise List | SharePoint List | SharePoint Online | `/sites/RuizNetPortal/Lists/Recognition/` |
-| 2 | Praise (Archive) List | SharePoint List | SharePoint Online | `/sites/RuizNetPortal/Lists/` |
-| 3 | Praise Cards List | SharePoint List | SharePoint Online | `/sites/RuizNetPortal/Lists/` |
-| 4 | Praise Submission Form | Microsoft List Form | SharePoint Online | `/sites/RuizNetPortal/Lists/Recognition/Untitled Form.aspx` |
-| 5 | Intranet Landing Page | SharePoint Page | SharePoint Online | `/sites/RuizNetPortal/SitePages/` |
-| 6 | View Current Praises Page | SharePoint Page | SharePoint Online | `/sites/RuizNetPortal/SitePages/` |
-| 7 | View Submitted Praises Page | SharePoint Page | SharePoint Online | `/sites/RuizNetPortal/SitePages/` |
-| 8 | Approval Flow | Power Automate Cloud Flow | Power Automate | Ruiz Foods tenant / Default environment |
-| 9 | HR Approval Interface | Teams Approvals App | Microsoft Teams | Approvals tab in Teams |
-| 10 | Praise Alert Email | Outlook email template | Power Automate / Outlook | Sent via flow |
-| 11 | Congratulations Email | Outlook email template | Power Automate / Outlook | Sent via flow on approval |
-
-## 3. SharePoint Site Configuration
+## 1. Platform & Environment
 
 | Attribute | Value |
-|---|---|
-| Site type | Communication site (SharePoint Online) |
-| Site URL | `/sites/RuizNetPortal/` |
-| Site name | RuizNetPortal |
-| Lists on Quick Launch | Praise list is hidden from Quick Launch (accessed via Pages) |
-| Content approval | Enabled on Praise list |
+|-----------|-------|
+| Platform | Microsoft 365 / SharePoint Online |
+| Tenant | `ruizfoods.sharepoint.com` |
+| Site URL | `https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam` |
+| Site type | Communication Site (OOTB) |
+| In production since | 2025 |
+| Custom code | None (zero SPFx development) |
+| Third-party apps | PnP Modern Search v4 (`pnp-modern-search-parts-v4.sppkg`) |
 
-## 4. Power Automate Flow — Specification
+---
 
-### Trigger
-- **Type:** SharePoint — When an item is created
-- **Site:** `/sites/RuizNetPortal/`
-- **List:** Recognition (Praise)
+## 2. Document Libraries
 
-### Flow Steps (documented order)
+All four libraries are SharePoint Document Libraries (`BaseTemplate: 101`, `BaseType: 1`). They share identical configuration except for title, URL, and item count.
 
-| Step | Action | Connector | Notes |
-|---|---|---|---|
-| 1 | When item is created | SharePoint | Trigger on Praise list |
-| 2 | Start and wait for an approval | Teams Approvals | Routes to HR Manager(s); surfaces praised employee details |
-| 3 | Condition: Approval outcome | Control | Branches on Approved / Rejected |
-| 4a (Approved) | Update item — moderation status | SharePoint | Sets `_ModerationStatus` to Approved (0) |
-| 4b (Approved) | Send an email | Outlook / O365 | Congratulations email to recognized employee |
-| 4c (Rejected) | Update item — moderation status | SharePoint | Sets `_ModerationStatus` to Rejected (2) |
+| Library Title | URL Path | Item Count | Root Folder |
+|---------------|----------|------------|-------------|
+| Accounts Payable | `/sites/InvoiceforTaxTeam/AP` | 173,704 | `/AP` |
+| Fixed Assets | `/sites/InvoiceforTaxTeam/FA` | 11,985 | `/FA` |
+| FY2023 | `/sites/InvoiceforTaxTeam/FY2023` | 16 | `/FY2023` |
+| FY2024 | `/sites/InvoiceforTaxTeam/FY2024` | 45,933 | `/FY2024` |
 
-### Approval Card Fields Surfaced to HR
-- Praised employee (Praise for / Recognitionfor)
-- Submitter (Praise from / Author)
-- Core Value Demonstrated (Category)
-- Description
-- Manager
+**Shared library settings (all four):**
 
-## 5. SharePoint List Views — Query Reference
+| Setting | Value |
+|---------|-------|
+| `EnableVersioning` | `true` |
+| `EnableMinorVersions` | `false` |
+| `EnableModeration` | `false` |
+| `ForceCheckout` | `false` |
+| `ContentTypesEnabled` | `true` |
+| `OnQuickLaunch` | `true` |
 
-### Praise List Views
+---
 
-| View | CAML Filter | Order | Row Limit |
-|---|---|---|---|
-| All Items (default) | `_ModerationStatus = Approved` | ID DESC | 30 |
-| Approve/reject Items | GroupBy `_ModerationStatus` | — | 30 |
-| My submissions | `Author = [Me]`, GroupBy `_ModerationStatus` | ID DESC | 30 |
-| Top 10 Recognitions | `Status = Approved` | ID DESC | 10 |
-| Top 10 Recognitions Cards | `Status = Approved` | ID DESC | 10 |
-| HomePage | — (no filter) | — | 30 |
-| Welcome to the Praise Form! | Hidden | — | 30 |
+## 3. Content Type Hierarchy
 
-## 6. Microsoft List Form Configuration
+Group: **Invoice for Tax Team**
 
-- **Form name:** "Welcome to the Praise Form!"
-- **View URL:** `/sites/RuizNetPortal/Lists/Recognition/Untitled Form.aspx`
-- **Type:** Microsoft List custom form (no Power Apps, no SPFx)
-- **Fields shown:** Praise for, Core Value Demonstrated, Description, Manager
-- **Hidden from default navigation:** Yes (linked from SharePoint page)
+```
+Item (0x01)
+└── Document (0x0101)
+    └── Invoice Document (0x010100E3917FC38B21344BB4F75ADAC1414E19)  ← base custom CT
+        ├── Accounts Payable (0x010100E3917FC38B21344BB4F75ADAC1414E1901)
+        └── Fixed Asset (0x010100E3917FC38B21344BB4F75ADAC1414E1902)
+```
 
-## 7. Permissions Model
+Each content type has **13 fields** (including inherited system fields + the 5 custom columns).
 
-| Role | SharePoint List Access | Flow Access | Teams Approvals |
-|---|---|---|---|
-| Employee (all) | Contribute (submit new items); Read approved items only | None | None |
-| HR Manager | Read all items; Approve/reject via moderation | None | Receive & process approvals |
-| IT Administrator | Full Control | Owner/Edit of flow | — |
+---
 
-> Note: The "All Items" default view enforces `_ModerationStatus = Approved` so contributors cannot see pending/rejected items outside of their own "My submissions" view.
+## 4. Custom Site Columns
 
-## 8. Content Moderation Mechanics
+All defined in group **"Custom Columns"** at site level.
 
-The Praise list has **Content Approval** enabled (`EnableModeration: true`). When a new item is created:
-- The item is assigned `_ModerationStatus = Pending (2)`
-- Only users with **Approve Items** permission see all moderation states
-- Regular contributors only see items with `_ModerationStatus = Approved (0)` in the default view
-- The Power Automate flow programmatically sets moderation status after HR decision via SharePoint REST API call (`/_api/web/lists/...`)
+| Display Title | Internal Name | Type | Required | Hidden | Read-Only |
+|---------------|---------------|------|----------|--------|-----------|
+| Fiscal Year | `Fiscal_x0020_Year` | Text | No | No | No |
+| Received Date | `Received_x0020_Date` | DateTime | No | No | No |
+| From | `EMail` | Text | No | No | No |
+| To | `To` | Text | No | No | No |
+| Subject | `Subject` | Text | No | No | No |
 
-## 9. Brand / Theming
+> `From` maps to SharePoint's `EMail` internal name (from "Core Contact and Calendar Columns"). `Subject` maps to the "Core Document Columns" group field.
 
-| Component | Brand Dimension | Reference Document |
-|---|---|---|
-| SharePoint pages | Color palette, typography | Learning Color Brand Guide.pdf |
-| Email templates | Logo, color, tone of voice | RZF003_22 El Monterey_Brand_Guidelines.pdf |
-| Praise submission form copy | Tone of voice | RZF003_22 El Monterey_Brand_Guidelines.pdf |
-| Icon field values | Icon style | RZF003_22 El Monterey_Brand_Guidelines.pdf |
+---
 
-## 10. Licensing Requirements
+## 5. Library Views
 
-| Service | License Required |
-|---|---|
-| SharePoint Online | Microsoft 365 (any plan with SPO) |
-| Power Automate | Microsoft 365 plan with Power Automate included, or Power Automate per-user/per-flow |
-| Teams Approvals App | Microsoft Teams (included with M365) |
-| Outlook / Exchange Online | Microsoft 365 (any plan with Exchange) |
+Each library has the same view set:
 
-No Power Platform premium connectors or Dataverse licenses are required for this solution.
+| View Title | URL Slug | Default | Hidden | CAML Filter | Row Limit |
+|------------|----------|---------|--------|-------------|-----------|
+| All Documents | `Forms/AllItems.aspx` | Yes | No | `ORDER BY ID DESC` | 30 |
+| Bulk Edit View | `Forms/Not PDFs.aspx` (AP) / `Forms/Bulk Edit View.aspx` (others) | No | No | `ContentType = "Invoice Document"` AND `ORDER BY ID DESC` | 4,999 |
+| assetLibTemp | `Forms/Thumbnails.aspx` | No | Yes | `ORDER BY LinkFilename` | 20 |
+| Merge Documents | `Forms/Combine.aspx` | No | Yes | `ORDER BY FileLeafRef` | 30 |
+| Relink Documents | `Forms/repair.aspx` | No | Yes | `xd_Signature != 1` AND `ORDER BY FileLeafRef` | 30 |
+| RssView | `Forms/RssView.aspx` | No | Yes | (none) | 25 |
+| Raw | `Forms/PersonalViews.aspx` | No | No | (none) | 30 |
 
-## 11. Key Admin Tasks
+> **Note:** The Accounts Payable "Bulk Edit View" URL slug is `Forms/Not PDFs.aspx` — this is a production typo/legacy name; do not rename as it would break existing links.
 
-| Task | Where | Frequency |
-|---|---|---|
-| Approve/reject praises | Teams Approvals App | On submission |
-| Add HR approver to flow | Power Automate — approval step | As needed |
-| Archive old praises | Manually export to Praise (Archive) list | Periodically |
-| Update Core Value choices | Praise list column settings — Category field | When values change |
-| Update SharePoint pages | SharePoint page editor | As needed |
-| Monitor flow runs | Power Automate — Run history | On failures |
+> **Note:** "Raw" view exists only on Fixed Assets library.
+
+---
+
+## 6. Search & PnP Modern Search v4
+
+### Installed App
+- Package: `pnp-modern-search-parts-v4.sppkg`
+- Deployed to: App Catalog → Site Collection App
+
+### Web Parts on Landing Page
+The site landing page hosts a faceted search experience composed of PnP Modern Search v4 web parts:
+- **Search Box** — keyword input
+- **Search Refiners** — facet panel (managed properties mapped to custom columns)
+- **Search Results** — paginated results list
+
+### Managed Properties
+SharePoint Search Managed Properties are configured to index the custom columns and expose them as refiners. The exact mappings are visible in `refdocs/Manage Properties.jpg`. Key properties expected (to be verified in Search Admin):
+- Mapped to `Fiscal_x0020_Year` → Text managed property for refinement
+- Mapped to `Received_x0020_Date` → DateTime managed property for date range refinement
+- Mapped to `EMail` (`From`) → Text managed property for sender refinement
+
+---
+
+## 7. Power Automate Flows
+
+Two separate flows are inferred from the solution design:
+
+### Flow 1: AP Invoice Capture
+- **Trigger:** When a new email arrives in `AP@ruizfoods.com` mailbox
+- **Connector:** Office 365 Outlook (shared mailbox)
+- **Actions:**
+  1. Get email metadata (From, To, Subject, Received Time)
+  2. Determine Fiscal Year from Received Time
+  3. Create file in SharePoint `Accounts Payable` library (save email as .eml or body as PDF/HTML)
+  4. Update file metadata: `EMail`, `To`, `Subject`, `Received_x0020_Date`, `Fiscal_x0020_Year`
+  5. Set Content Type to `Accounts Payable`
+
+### Flow 2: FA Invoice Capture
+- Same structure as Flow 1, targeting `FixedAssets@ruizfoods.com` mailbox and `Fixed Assets` library, with Content Type set to `Fixed Asset`
+
+### Service Account
+- **Status: OPEN GAP** — The identity (personal vs. service account) running these flows is not confirmed from refdocs. Must be verified in Power Automate → My Flows / Team Flows.
+
+---
+
+## 8. Permissions Architecture
+
+| Role | SharePoint Group | Permission Level | Scope |
+|------|-----------------|-----------------|-------|
+| Tax Team Members | Site Members | Read | Site (inherited by all libraries) |
+| IT Administrators | Site Owners | Full Control | Site |
+| Power Automate | (service account added directly or via group) | Contribute | Site or Library level — TBD |
+
+- No broken permission inheritance on any library.
+- Members cannot upload, edit, delete, or check out documents.
+- `EnableModeration: false` on all libraries — no approval workflow.
+
+---
+
+## 9. Constraints & Dependencies
+
+- All solution components must remain OOTB-maintainable (no SPFx, no custom code).
+- PnP Modern Search v4 must be re-deployed if the site collection app catalog is reset.
+- Power Automate flows depend on the service account having access to the shared mailboxes AND SharePoint library.
+- SharePoint Search crawl must index the custom columns for the faceted search experience to work — any column added later requires a managed property to be created and a re-crawl.
+- FY archive libraries (FY2023, FY2024) must be created manually for each new fiscal year; this is an admin operational task.

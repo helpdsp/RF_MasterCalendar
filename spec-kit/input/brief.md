@@ -1,204 +1,156 @@
-# Brief — Ruiz Foods Praise Program (Knowledge Transfer Document)
+# Brief — Invoices for Tax Team (SharePoint Online)
 
 ## Executive Summary
 
-The **Praise Program** is an employee recognition solution deployed on Microsoft 365 at Ruiz Foods, Inc., hosted within the **RuizNetPortal** SharePoint Online site (`/sites/RuizNetPortal/`). The system has been in production for multiple years and enables any employee to formally recognize a peer for demonstrating one of the company's core values. Submissions go through an HR approval workflow before being published on the company intranet.
+The **Invoices for Tax Team** site (`https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam`) is a production Microsoft 365 solution for Ruiz Foods, Inc. deployed in 2025. It consolidates invoice-related emails from two high-volume shared mailboxes — `AP@ruizfoods.com` (Accounts Payable) and `FixedAssets@ruizfoods.com` (Fixed Assets) — into structured, searchable SharePoint document libraries.
 
-**Purpose of this project:** Produce a complete Knowledge Transfer (KT) Document that describes the existing production system — its components, data model, process flows, configuration, and administrative tasks — so that a new IT Administrator or developer can assume ownership and support/extend the solution without loss of knowledge.
+The solution was designed to replace a shared mailbox (`InvoicesforTaxTeam@ruizfoods.com`) that was approaching Microsoft 365 storage limits. Power Automate flows monitor the two source mailboxes and automatically route each incoming email — along with its metadata (sender, recipient, subject, received date, fiscal year) — into the appropriate SharePoint document library. Tax Team members receive read-only access and interact with the content through a faceted search experience built on the **PnP Modern Search v4** web part, providing an Outlook-like browsing and filtering experience within SharePoint.
 
-**KT Document audience:**
-- **New IT Admin / Developer:** Full technical ownership transfer (lists, flows, permissions, configuration)
-- **IT Leadership / Management:** Scope and value of the solution, operational overview
+The site holds over **231,600 documents** across four document libraries and is the authoritative archive of invoice correspondence for the Finance / Tax team.
 
-## System Overview
+## Context
 
-| Attribute | Value |
-|---|---|
-| Solution name | Praise Program (Recognition) |
-| Organization | Ruiz Foods, Inc. |
-| Platform | Microsoft 365 (SharePoint Online, Power Automate, Teams, Outlook) |
-| SharePoint site | `/sites/RuizNetPortal/` |
-| Status | In production (active) |
-| Document type | Knowledge Transfer (KT) — existing system documentation |
+Ruiz Foods' Tax Team received and archived invoice-related emails using a shared mailbox (`InvoicesforTaxTeam@ruizfoods.com`). As the volume of emails from `AP@ruizfoods.com` and `FixedAssets@ruizfoods.com` grew, the shared mailbox approached its Microsoft 365 storage capacity limit, threatening the team's ability to receive and retain new correspondence.
 
-## Business Context
+The IT team designed this SharePoint-based solution to:
+1. Eliminate the storage constraint by moving archived emails and attachments into SharePoint Online document libraries (which have significantly higher capacity limits).
+2. Enforce strict read-only access so that Tax Team members can view invoices without modifying or deleting them.
+3. Reproduce and improve on the email search experience by deploying PnP Modern Search v4 — enabling faceted filtering by sender, fiscal year, received date, and other metadata fields.
+4. Maintain organizational separation between Accounts Payable and Fixed Assets invoice streams, and provide fiscal-year-based archive libraries (FY2023, FY2024) alongside active incoming libraries.
 
-The Praise Program allows Ruiz Foods employees to recognize their peers for demonstrating **Core Values**. The recognition process is moderated — HR managers approve each submission before it is published on the intranet. Approved praises are visible to the entire organization on a dedicated SharePoint page and displayed as cards on the site's home page.
+The solution is 100% Microsoft 365 out-of-the-box (plus PnP Modern Search v4 as an installable SPFx app). No custom code, no SPFx development, no Dataverse.
 
-## Components Inventory
+## Goals
 
-### 1. SharePoint Lists
+- **Resolve storage limit:** Move invoice email archival from a near-capacity shared mailbox to SharePoint Online document libraries with ample capacity.
+- **Maintain read-only access:** All Tax Team site members have read-only access; only IT Administrators can add, edit, or delete documents.
+- **Provide rich search:** Enable faceted search (by sender, fiscal year, date range, subject, content type) using PnP Modern Search v4 — replicating and improving on the Outlook search experience.
+- **Auto-classify incoming mail:** Power Automate flows capture email metadata into structured SharePoint columns (`Received Date`, `From`, `To`, `Subject`, `Fiscal Year`) and tag documents with the correct content type (`Accounts Payable` or `Fixed Asset`).
+- **Support fiscal-year archival:** Maintain separate archive libraries (FY2023, FY2024) for completed fiscal years alongside active inboxes for AP and FA.
+- **Zero custom code:** Remain maintainable by IT staff without SPFx developers or external vendors.
 
-| List | Internal Name | Description |
-|---|---|---|
-| **Praise** | Recognition | Active praise submissions. Content moderation enabled. |
-| **Praise (Archive)** | — | Historical archive of older praises. |
-| **Praise Cards** | — | Companion list for gallery/card-view rendering of approved praises. |
+## Target Users / Roles
 
-**Praise List — Key Custom Fields (non-system):**
+| Role | Description | Access |
+|------|-------------|--------|
+| Tax Team Member | Finance/Tax staff who need to search and view invoice documents | Read-only (site Members group) |
+| IT Administrator | IT staff who configure the site, manage flows, update permissions | Full control / Owner |
+| Power Automate Service Account | Automated agent that routes emails to libraries | Contributor (write to libraries) |
+| AP / FA Mailbox Users | Senders to `AP@ruizfoods.com` and `FixedAssets@ruizfoods.com` — they trigger the flow indirectly | No direct site access |
 
-| Display Title | Internal Name | Type | Required |
-|---|---|---|---|
-| Praise for | Recognitionfor | User | Yes |
-| Core Value Demonstrated | Category | Choice | Yes |
-| Description | Description | Note | Yes |
-| Manager | Manager | User | Yes |
-| Status | Status | Choice | No |
-| Department | Department | Text | No |
-| Icon | Icon | Text | No |
-| Comments | Comments | Note | No |
-| Likes | Likes | User | No |
-| Praise from2 | Recognition_x0020_from | User | No |
+> **Open question:** Is the Power Automate flow running under a personal account or a dedicated service account? Personal accounts cause flow failures when the employee leaves Ruiz Foods.
 
-**Praise Cards List — Key Custom Fields:**
+## Scope — In
 
-| Display Title | Internal Name | Type | Required |
-|---|---|---|---|
-| Title | Title | Text | Yes |
-| To | To | User | Yes |
-| From | From | User | Yes |
-| Icon | Icon | Text | No |
-| Description | Description | Note | No |
-| Likes | Likes | UserMulti | No |
+- **SharePoint Online Site:** `https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam`
+- **4 Document Libraries:**
+  - `Accounts Payable` (AP) — active AP inbox, 173,704 documents, URL: `/sites/InvoiceforTaxTeam/AP`
+  - `Fixed Assets` (FA) — active FA inbox, 11,985 documents, URL: `/sites/InvoiceforTaxTeam/FA`
+  - `FY2023` — archive for fiscal year 2023, 16 documents, URL: `/sites/InvoiceforTaxTeam/FY2023`
+  - `FY2024` — archive for fiscal year 2024, 45,933 documents, URL: `/sites/InvoiceforTaxTeam/FY2024`
+- **Custom Content Type Hierarchy** (group: "Invoice for Tax Team"):
+  - `Invoice Document` (base, `0x010100E3917FC38B21344BB4F75ADAC1414E19`) — 13 fields
+  - `Accounts Payable` (child, `0x010100E3917FC38B21344BB4F75ADAC1414E1901`) — 13 fields
+  - `Fixed Asset` (child, `0x010100E3917FC38B21344BB4F75ADAC1414E1902`) — 13 fields
+- **Custom Site Columns** (Group: "Custom Columns"):
+  - `Fiscal Year` (`Fiscal_x0020_Year`, Text)
+  - `Received Date` (`Received_x0020_Date`, DateTime)
+  - `From` (`EMail`, Text) — email sender
+  - `To` (`To`, Text) — email recipient
+  - `Subject` (`Subject`, Text) — from "Core Document Columns" group
+- **PnP Modern Search v4** (`pnp-modern-search-parts-v4.sppkg`) — faceted search experience on the site landing page
+- **Power Automate Cloud Flows** — email-to-SharePoint routing for AP and FA mailboxes
+- **SharePoint Pages** — intranet landing page with PnP Modern Search web part (search refiners and results panels shown in mockups)
+- **SharePoint Managed Properties** — configured for PnP Modern Search faceted filtering (documented in `Manage Properties.jpg`)
+- **Read-only permissions** for site Members group
 
-**List Configuration (Praise):**
-- Content types enabled: Yes
-- Versioning: Enabled (major versions)
-- Content moderation: **Enabled** (approval required before items appear in default view)
-- Quick Launch: Hidden (accessed via SharePoint pages)
+## Scope — Out / Non-goals
 
-### 2. SharePoint List Views
+- No Microsoft Teams channels, tabs, or Approvals
+- No Power Apps or custom forms
+- No Power BI dashboards
+- No Microsoft Forms
+- No Dataverse
+- No SPFx custom code or custom web parts (PnP Modern Search is a packaged OOTB app)
+- No email composition or outbound notifications from SharePoint
+- No document editing by Tax Team members (strict read-only)
+- No content moderation (all four libraries have `EnableModeration: false`)
+- No required check-out (`ForceCheckout: false` on all libraries)
 
-| View Title | Default | Visibility | Purpose |
-|---|---|---|---|
-| All Items | Yes | Visible | Shows approved praises (moderation filter), ordered newest first |
-| Approve/reject Items | No | Visible | HR managers — grouped by moderation status |
-| My submissions | No | Visible | Employee's own submissions, grouped by status |
-| Top 10 Recognitions | No | Visible | Latest 10 approved praises (list format) |
-| Top 10 Recognitions Cards | No | Visible | Latest 10 approved praises (card format) |
-| HomePage | No | Visible | Home page embedded view |
-| Welcome to the Praise Form! | No | **Hidden** | Custom form entry point |
+## Functional Requirements Summary
 
-### 3. Microsoft List Form (Praise Submission)
+### Epic 1: Email Capture & Classification
+- Power Automate flow monitors `AP@ruizfoods.com` inbox; on new email arrival, creates a document in the **Accounts Payable** library, populating: `From` (EMail), `To`, `Subject`, `Received Date`, `Fiscal Year`, content type = `Accounts Payable`.
+- Separate Power Automate flow does the same for `FixedAssets@ruizfoods.com` → **Fixed Assets** library, content type = `Fixed Asset`.
+- Documents are stored as email files or email body extracts; attachments may be included.
 
-A custom Microsoft List Form ("Welcome to the Praise Form!") is used as the submission interface. Employees fill in:
-- Who they are praising (Praise for)
-- Core Value Demonstrated (dropdown)
-- Description of the recognition
-- Manager of the recognized employee
+### Epic 2: Document Library Structure
+- Four document libraries, each with `BaseTemplate: 101` (document library), versioning enabled, content types enabled, Quick Launch visibility on.
+- All libraries share the same custom column set and content type hierarchy.
+- Default view: ordered by ID descending, 30 rows.
+- **Bulk Edit View:** filters to `ContentType = "Invoice Document"`, 4,999 rows — allows bulk metadata editing by administrators.
 
-### 4. SharePoint Pages
+### Epic 3: Faceted Search Experience
+- SharePoint site page hosts PnP Modern Search v4 web parts: a search input, refiners panel (facets by sender, fiscal year, date, content type), and results panel.
+- Mockups show two states: empty state (no results) and populated state (with search refiners visible).
+- Managed Properties are configured in SharePoint Search to enable faceted filtering on the custom columns.
 
-| Page | Purpose |
-|---|---|
-| Intranet Landing Page | Contains links to "Submit a Praise" and "View Praises" |
-| View Current Praises | Displays approved praises as a gallery/list |
-| View Submitted Praises | Shows the employee's own submitted praises |
+### Epic 4: Access Control & Governance
+- Site Members group = read-only; no edit, delete, or upload capability for Tax Team users.
+- Site Owners / IT = full control.
+- Service account (Power Automate) = contributor access to write documents.
 
-### 5. Power Automate — Approval Flow
+### Epic 5: Fiscal Year Archiving
+- Completed fiscal years are archived into dedicated libraries (FY2023, FY2024).
+- Active fiscal year traffic routes to AP and FA libraries.
+- Migration process for moving documents from active to archive libraries is an operational admin task.
 
-A Power Automate flow is triggered when a new praise is submitted. Flow behavior:
-1. New item created in the Praise list triggers the flow
-2. Flow creates an approval request via the **Microsoft Teams Approvals** connector
-3. Approval request is sent to HR Manager(s)
-4. HR Manager receives the request in **Teams Approvals App**
-5. On approval: content moderation status on the list item is updated to Approved; Congratulations email is sent to the recognized employee
-6. On rejection: item is rejected/moderated out; submitter may be notified
+## Technical Stack & Constraints
 
-### 6. Microsoft Teams — Approvals App
+| Component | Technology | Notes |
+|-----------|------------|-------|
+| Platform | SharePoint Online (Microsoft 365) | Tenant: `ruizfoods.sharepoint.com` |
+| Document Libraries | SharePoint Document Library (BaseTemplate 101) | 4 libraries, versioning on, moderation off |
+| Content Types | SharePoint Site Content Types | Custom group "Invoice for Tax Team"; 3 types in hierarchy |
+| Email Routing | Power Automate Cloud Flows | Monitors AP and FA mailboxes; service account TBD |
+| Search UX | PnP Modern Search v4 | SPFx app package `pnp-modern-search-parts-v4.sppkg` installed on site |
+| Search Configuration | SharePoint Managed Properties | Configured to expose custom columns for refiners |
+| Permissions | SharePoint groups (OOTB) | Members = read only; Owners = full control |
+| Brand | Ruiz Foods / El Monterey brand guidelines | Applied to page design and any user-facing text |
 
-HR Managers use the **Microsoft Teams Approvals App** to review and approve or reject praise submissions. The approval card includes:
-- Praised employee name
-- Submitter (Praise from)
-- Core Value Demonstrated
-- Description
-- Manager information
+**Constraints:**
+- No custom code — all components must remain maintainable via SharePoint Admin Center and Power Automate UI.
+- Storage: AP library alone has 173,704 documents; KT documentation must note growth trajectory.
+- Read-only enforcement: no list-level permissions required (site-level inheritance); Members group permission level is "Read."
 
-### 7. Microsoft Outlook — Email Notifications
+## Success Criteria
 
-Two email templates are in use:
-- **Praise Alert Email:** Notifies relevant parties of a new pending praise submission
-- **Congratulations Email:** Sent to the recognized employee upon HR approval of their praise
+- A new IT Administrator can assume full ownership of the site without prior knowledge, using only this KT document.
+- Tax Team members can search for any invoice by sender, fiscal year, date range, or keyword using the PnP Modern Search interface.
+- Power Automate flows continue routing emails to the correct library after administrator changes (no personal-account dependency).
+- All four document libraries are documented with full field tables and operational runbook steps.
+- The solution remains compliant with Ruiz Foods read-only access requirements for Tax Team members.
 
-## User Roles and Responsibilities
+## Open Questions / Risks
 
-| Role | Responsibilities |
-|---|---|
-| **Employee (submitter)** | Submits praise for a peer via the intranet form |
-| **Employee (recognized)** | Receives Congratulations email on approval |
-| **HR Manager** | Reviews and approves/rejects praise submissions via Teams Approvals |
-| **IT Admin** | Manages SharePoint lists, Power Automate flows, permissions, and list configuration |
+1. **Power Automate service account:** The identity running the flows is undocumented. If it is a personal employee account, the flow will fail when that employee leaves. Must confirm and potentially migrate to a service account.
+2. **PDF request details (`#87823`):** The original IT ticket PDF could not be parsed in this session. Additional context from that ticket may reveal flow configuration details, approval chain, or stakeholder contacts not captured in the schema exports.
+3. **Managed Properties screenshot only:** `Manage Properties.jpg` is a visual screenshot — exact managed property names mapped to custom columns are not in machine-readable form. Admin must verify current configuration in SharePoint Admin Center > Search > Manage Search Schema.
+4. **FY2023 low document count (16):** FY2023 has only 16 documents vs. FY2024's 45,933. This may indicate the migration to SharePoint started mid-2023 or that FY2023 was partially migrated. Admin should verify if migration is complete.
+5. **Brand PDF files not parseable in this session:** The two brand guideline PDFs (`Learning Color Brand Guide.pdf`, `El Monterey Brand Guidelines`) were removed from refdocs. Brand compliance section of the KT will need to be informed by those documents if re-provided.
+6. **`Ruiz_Foods_TaxTeam.docx`** and **`RuizFoods-Finance-TaxTeam-Invoices_20260507192205.zip`:** These refdoc files were not parsed (binary formats); they may contain additional architecture or flow documentation.
 
-## Data Model Summary
+## Input Sources
 
-Three SharePoint lists form the data backbone:
-- **Praise** — system of record for submissions (with approval workflow)
-- **Praise (Archive)** — historical data
-- **Praise Cards** — display-optimized companion list for card views
-
-The `Category` (Core Value Demonstrated) field is a Choice column on the Praise list and is the primary classification dimension for recognitions.
-
-## KT Document Scope
-
-The KT Document to be produced must cover:
-
-1. **Functional Overview** — What the system does, who uses it, business value
-2. **Architecture & Components** — All M365 components, how they connect
-3. **Data Model** — All three SharePoint lists with field inventory, types, and constraints
-4. **Process Flow** — End-to-end submission-to-publication workflow with approval gates
-5. **Configuration Reference** — List settings, view configurations, moderation settings
-6. **Power Automate Flow** — Trigger, actions, approval logic, email notifications
-7. **SharePoint Pages** — Page inventory, web parts, embedded views
-8. **Permissions & Access** — Who has access to what (lists, views, flows, approval)
-9. **Operational Runbook** — How to approve/reject, archive, add/remove users
-10. **Data Snapshot** — CSV archives (Praise.csv, Praise Archive.csv) as evidence
-11. **Brand Compliance** — Color palette, typography, logo/icon usage, and tone of voice mapped to each solution component
-
-## Brand Guidelines
-
-The solution's visual design and communication must comply with two official Ruiz Foods brand references provided in `refdocs/`:
-
-| Document | Scope |
-|---|---|
-| `Learning Color Brand Guide.pdf` | Corporate color system — primary and secondary palette |
-| `RZF003_22 El Monterey_Brand_Guidelines_10_27_22_v3.pdf` | El Monterey sub-brand guidelines (logo, typography, tone, icons) |
-
-### Relevant Dimensions for the KT Document
-
-| Dimension | Relevance to Praise Program |
-|---|---|
-| **Color palette** | SharePoint page theming, Power Automate email templates, Praise Card visual design |
-| **Typography / fonts** | Font choices in SharePoint pages and email body |
-| **Logo & icon usage** | Logo placement on intranet pages; `Icon` field values on Praise and Praise Cards lists |
-| **Tone of voice / messaging** | Copy in the submission form, approval emails, and congratulations email must reflect brand voice |
-
-The KT Document must include a Brand Compliance section that references both guidelines and maps each brand dimension to the specific component where it applies (pages, emails, form copy, icons).
-
-## Non-Goals / Out of Scope
-
-- No new development or feature additions
-- No migration to other platforms
-- No changes to existing list structure, flows, or permissions
-- No PowerApps or custom SPFx development
-
-## Evidence / Reference Inputs
-
-| File | Type | Used for |
-|---|---|---|
-| Praise-Fields.json | JSON | Praise list field inventory |
-| Praise-Properties.json | JSON | Praise list configuration |
-| Praise-Views.json | JSON | Praise list views |
-| Praise(Archive)-Fields/Properties/Views.json | JSON | Archive list configuration |
-| Praise Cards-Fields/Properties/Views.json | JSON | Praise Cards list configuration |
-| Praise-Schema.xml | XML | Full list schema |
-| Praise(Archive)-Schema.xml | XML | Archive list schema |
-| Praise Cards-Schema.xml | XML | Cards list schema |
-| Praise.csv | CSV | Live data sample |
-| Praise(Archive).csv | CSV | Historical data |
-| Praise Program.pptx | PPTX | Program presentation/overview |
-| Power Automate - Approvals - Praise Submission (...).pdf | PDF | Approval flow evidence |
-| Mirosoft Outlook - Congratulations Email.pdf | PDF | Email notification evidence |
-| mockups/*.jpg | Images | UI evidence for all system screens |
-| HumanResources-PraiseProgram_*.zip | ZIP | Additional HR artifacts |
-| Learning Color Brand Guide.pdf | PDF | Corporate color palette reference |
-| RZF003_22 El Monterey_Brand_Guidelines_*.pdf | PDF | El Monterey brand: logo, typography, tone of voice, icons |
+- refdocs: `Accounts Payable-Fields.json`, `Accounts Payable-Properties.json`, `Accounts Payable-Views.json`
+- refdocs: `Fixed Assets-Fields.json`, `Fixed Assets-Properties.json`, `Fixed Assets-Views.json`
+- refdocs: `FY2023-Properties.json`, `FY2023-Views.json`, `FY2024-Properties.json`, `FY2024-Views.json`
+- refdocs: `Custom Columns-SiteColumns.json`, `ContentTypes-ByGroup.json`
+- refdocs: `pnp-modern-search-parts-v4.sppkg` (presence confirms PnP Modern Search v4 in use)
+- refdocs: `Manage Properties.jpg` (visual — search managed properties configuration)
+- refdocs: `mockups/SharePoint_Landing Page - Faceted Search Experience - No Data.jpg`
+- refdocs: `mockups/SharePoint_Landing Page - Faceted Search Experience - With Data and Search refiners.jpg`
+- refdocs: `#87823 Request Details - RuizFoodProductsInc.pdf` (not parseable in this session)
+- refdocs: `Ruiz_Foods_TaxTeam.docx`, `RuizFoods-Finance-TaxTeam-Invoices_20260507192205.zip` (binary — not parsed)
+- source-code: N/A (reverse engineering = false)
+- kt-master-prompt: `prompts/kt-master-prompt.md` (solution description and component checklist)

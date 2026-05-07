@@ -1,0 +1,7187 @@
+[
+  {
+    "Id": "0x",
+    "Name": "System",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": true,
+    "DocumentTemplate": "",
+    "FieldCount": 1,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01",
+    "Name": "Item",
+    "Group": "List Content Types",
+    "Description": "Create a new list item.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 2,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01000F389E14C9CE4CE486270B9D4713A5D6",
+    "Name": "Circulation",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new Circulation.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 10,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "c1e86ea6-7603-493c-ab5d-db4bbfe8f96a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Confidential",
+        "Id": "9b0e6471-c5c5-42ef-9ade-63170bf28819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AllowEditing",
+        "Id": "7266b59c-030b-4ca3-bc09-bb8e76ad969b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "V4SendTo",
+        "Id": "e0f298a5-7e3e-4895-9ff8-90d88ec4526d",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Confirmations",
+        "Id": "ef7465d3-5d54-487b-b081-ade80acae88e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WhatsNew",
+        "Id": "cf68a174-123b-413e-9ec1-b43e3a3175d7",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010018F21907ED4E401CB4F14422ABC65304",
+    "Name": "New Word",
+    "Group": "Group Work Content Types",
+    "Description": "Add a New Word to this list.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEDisplay",
+        "Id": "90244050-709c-4837-9316-93863fbd3da6",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEComment1",
+        "Id": "d2433b20-3f02-4432-817d-369f104a2dcd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEComment2",
+        "Id": "e2c93917-cf32-4b29-be5c-d71f1bac7714",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEComment3",
+        "Id": "7c52f61a-e1e0-4341-9e2f-9b36cddfdd7c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEUrl",
+        "Id": "84b0fe85-6b16-40c3-8507-e56c5bbc482e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IMEPos",
+        "Id": "f3cdbcfd-f456-45f4-9000-b6f34bb95d84",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01002A2479FF33DD4BC3B1533A012B653717",
+    "Name": "WorkflowServiceDefinition",
+    "Group": "_Hidden",
+    "Description": "WorkflowServiceDefinition",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSGUID",
+        "Id": "6391dc7e-e7f3-4faf-9890-550fd5d3022f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSPublishState",
+        "Id": "40270da4-0a34-4c14-8c30-59e065a28a4d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSPublishError",
+        "Id": "321a8c3c-0ec7-473b-bcc6-67f3c2dae20d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSDisplayName",
+        "Id": "9b590294-0151-44cf-9d56-24d8bb80f802",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSDescription",
+        "Id": "f519008d-1b5b-42a8-8dab-e1a642fe5787",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormData",
+        "Id": "78eae64a-f5f2-49af-b416-3247b76f46a1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01003A8AA7A4F53046158C5ABD98036A01D5",
+    "Name": "Health Analyzer Rule Definition",
+    "Group": "_Hidden",
+    "Description": "Create a New Health Analyzer Rule",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 10,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleScope",
+        "Id": "e59f08c9-fa34-4f94-a00a-f6458b1d3c56",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleService",
+        "Id": "2d6e61d0-be31-460c-ab8b-77d8b369f517",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleType",
+        "Id": "7dd0a092-8704-4ed2-8253-ac309150ac59",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportCategory",
+        "Id": "a63505f2-f42c-4d94-b03b-78ba2c73d40e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleSchedule",
+        "Id": "26761ba3-729d-4bfc-9658-77b55e01f8d5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleCheckEnabled",
+        "Id": "7b2b1712-a73d-4ad7-a9d0-662f0291713d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleAutoRepairEnabled",
+        "Id": "1e41a55e-ef71-4740-b65a-d11e24c1d00d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleVersion",
+        "Id": "6b6b1455-09ee-43b7-beea-4dc97456de2f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01004C9F4486FBF54864A7B0A33D02AD19B1",
+    "Name": "Resource",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new resource.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 3,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "3f155110-a6a2-4d70-926c-94648101f0e8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01007CE30DD1206047728BAFD1C39A850120",
+    "Name": "Official Notice",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new Official Notice.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "c1e86ea6-7603-493c-ab5d-db4bbfe8f96a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Confidential",
+        "Id": "9b0e6471-c5c5-42ef-9ade-63170bf28819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "V4SendTo",
+        "Id": "e0f298a5-7e3e-4895-9ff8-90d88ec4526d",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Confirmations",
+        "Id": "ef7465d3-5d54-487b-b081-ade80acae88e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WhatsNew",
+        "Id": "cf68a174-123b-413e-9ec1-b43e3a3175d7",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100807FBAC5EB8A4653B8D24775195B5463",
+    "Name": "Phone Call Memo",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new Phone Call Memo.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 14,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "V4CallTo",
+        "Id": "7111aa1b-e7ae-4b69-acaf-db669b76e03a",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ConfirmedTo",
+        "Id": "1b89212c-1c67-487a-8c14-4d30bf4ef223",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Confidential",
+        "Id": "9b0e6471-c5c5-42ef-9ade-63170bf28819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CallBack",
+        "Id": "274b7e21-284a-4c49-bec6-f1f2cb6fc344",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CallbackNumber",
+        "Id": "344e9657-b17f-4344-a834-ff7c056bcc5e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Detail",
+        "Id": "6529a881-d745-4117-a552-3dcc7110e9b8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CallTime",
+        "Id": "63fc6806-db53-4d0d-b18b-eaf90e96ddf5",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Resolved",
+        "Id": "a6fd2bb9-c701-4168-99cc-242e42f7671a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ResolvedBy",
+        "Id": "b4fa187b-eb65-478e-8bc6-93b0da320f03",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ResolvedDate",
+        "Id": "c4995c71-4c5c-4e9f-afc1-a9033f2bfde5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WhatsNew",
+        "Id": "cf68a174-123b-413e-9ec1-b43e3a3175d7",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01009BE2AB5291BF4C1A986910BD278E4F18",
+    "Name": "Holiday",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new holiday.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 5,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "V4HolidayDate",
+        "Id": "492b1ac0-c594-4013-a2b6-ea70f5a8a506",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsNonWorkingDay",
+        "Id": "baf7091c-01fb-4831-a975-08254f87f234",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100A2CA87FF01B442AD93F37CD7DD0943EB",
+    "Name": "What's New Notification",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new What's New notification.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 6,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ListType",
+        "Id": "81dde544-1e25-4765-b5fd-ba613198d850",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Content",
+        "Id": "7650d41a-fa26-4c72-a641-af4e93dc7053",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MobileContent",
+        "Id": "53a2a512-d395-4852-8714-d4c27e7585f3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100AA27A923036E459D9EF0D18BBD0B9587",
+    "Name": "WorkflowServiceSubscription",
+    "Group": "_Hidden",
+    "Description": "WorkflowServiceSubscription",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSGUID",
+        "Id": "6391dc7e-e7f3-4faf-9890-550fd5d3022f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSPublishState",
+        "Id": "40270da4-0a34-4c14-8c30-59e065a28a4d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSPublishError",
+        "Id": "321a8c3c-0ec7-473b-bcc6-67f3c2dae20d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSEventContextKeys",
+        "Id": "4ca54ab8-9667-427e-b1ec-b1fb4a9f3e19",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSEventSourceGUID",
+        "Id": "73d6d2b7-4ff3-46b4-95e1-0ab6c9b1ec9c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSDisplayName",
+        "Id": "9b590294-0151-44cf-9d56-24d8bb80f802",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSDescription",
+        "Id": "f519008d-1b5b-42a8-8dab-e1a642fe5787",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSEventSource",
+        "Id": "d8225d68-5ddb-4e66-8069-2694e8f628fb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSEventType",
+        "Id": "b4ba57c8-ab73-49fa-b6af-a4f824d84c14",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WSEnabled",
+        "Id": "a569e161-e19e-4360-9ae1-20dfda097cb3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormData",
+        "Id": "78eae64a-f5f2-49af-b416-3247b76f46a1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100C30DDA8EDB2E434EA22D793D9EE42058",
+    "Name": "Timecard",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new timecard data.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 20,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UserName",
+        "Id": "211a8cfc-93b7-4173-9254-0bfe2d1643da",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Date",
+        "Id": "2139e5cc-6c75-4a65-b84c-00fe93027db3",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DayOfWeek",
+        "Id": "61fc45dd-b33d-4679-8646-be9e6584fadd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Start",
+        "Id": "05e6336c-d22e-478e-9414-366762883b3f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "End",
+        "Id": "04b29608-b1e8-4ff9-90d5-5328096dd5ac",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "In",
+        "Id": "ee394fd4-4c11-4d8e-baff-83270c1921aa",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Out",
+        "Id": "fde05b9b-52bf-43dc-9b96-bb35fa7aa05d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Break",
+        "Id": "9b12fb06-254e-43b3-bfc8-8eea422ebc9f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ScheduledWork",
+        "Id": "3bdf7bd3-f229-419e-8e12-3dfecb49ed38",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Overtime",
+        "Id": "35d79e8b-3701-4659-9c27-c070ed3c2bfa",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "NightWork",
+        "Id": "aaa68c08-6276-4337-9bce-b9cd852c7328",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HolidayNightWork",
+        "Id": "dc9100ec-251d-4e81-a6cb-d967a065ba24",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Late",
+        "Id": "df7f27a4-d87b-4a97-947b-13d1d4f7e6de",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LeaveEarly",
+        "Id": "a2a86efe-c28e-4dde-ab56-0afa31664bbc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Oof",
+        "Id": "63c1c608-df6f-4cfa-bcab-fdbf9c223e31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Vacation",
+        "Id": "dfd58778-bf8e-4769-8265-09ac03159eed",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "NumberOfVacation",
+        "Id": "44e16d52-da1b-4e72-8bdb-89a3b77ec8b0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortComment",
+        "Id": "691b9a4b-512e-4341-b3f1-68914130d5b2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100CA13F2F8D61541B180952DFB25E3E8E4",
+    "Name": "Resource Group",
+    "Group": "Group Work Content Types",
+    "Description": "Add a new resource group.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 4,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Facilities",
+        "Id": "a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "3f155110-a6a2-4d70-926c-94648101f0e8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100F95DB3A97E8046B58C6A54FB31F2BD46",
+    "Name": "Health Analyzer Report",
+    "Group": "_Hidden",
+    "Description": "A report from the health analyzer",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 11,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportSeverityIcon",
+        "Id": "89efcbd9-9796-41f0-b569-65325f1882dc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportSeverity",
+        "Id": "505423c5-f085-48b9-9432-12073d643ba5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportCategory",
+        "Id": "a63505f2-f42c-4d94-b03b-78ba2c73d40e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportExplanation",
+        "Id": "b4c8faec-5d60-49ee-a5fb-6165f5c3e6a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportRemedy",
+        "Id": "8aa22caa-8000-44c9-b343-a7705bbed863",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportServers",
+        "Id": "84a318aa-9035-4529-98b9-e08bb20a5da0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthReportServices",
+        "Id": "e2b0b450-6795-4b86-86b7-3c21ab1797fb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleReportLink",
+        "Id": "cf4ff575-f1f5-4c5b-b595-54bbcccd0c62",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HealthRuleType",
+        "Id": "7dd0a092-8704-4ed2-8253-ac309150ac59",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0100FBEEE6F0C500489B99CDA6BB16C398F7",
+    "Name": "Users",
+    "Group": "Group Work Content Types",
+    "Description": "Add new users to this list.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 10,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Name",
+        "Id": "bfc6f32c-668c-43c4-a903-847cca2f9b3c",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Whereabout",
+        "Id": "e2a07293-596a-4c59-9089-5c4f9339077f",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "From",
+        "Id": "4cd541b9-c8ee-468f-bee6-33f3b9baa722",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "GoFromHome",
+        "Id": "6570d35e-7f0a-4123-93c9-f53ffa5810d3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Until",
+        "Id": "fe3344ab-b468-471f-8fa5-9b506c7d1557",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "GoingHome",
+        "Id": "2ead592e-f05c-41a2-9817-e06dac25bc19",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ContactInfo",
+        "Id": "e1a85174-b8d0-4962-9ce6-758f8b612725",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comment",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101",
+    "Name": "Document",
+    "Group": "Document Content Types",
+    "Description": "Create a new document.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101002039C03B61C64EC4A04F5361F3851066",
+    "Name": "Display Template",
+    "Group": "_Hidden",
+    "Description": "Base Content Type containing common Display Template columns. Use one of Control, Group, Item or Filter Display Template content types to create a display type. ",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 12,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TemplateHidden",
+        "Id": "0a9ec8f0-0340-4e24-9b35-ca86a6ded5ab",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TargetControlType",
+        "Id": "cab85295-b195-4ac2-8323-87c602e6ac9d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CrawlerXSLFile",
+        "Id": "3c318a40-0d51-408d-ba71-16fa845b9fe5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101002039C03B61C64EC4A04F5361F385106605",
+    "Name": "Display Template Code",
+    "Group": "_Hidden",
+    "Description": "Display Template Code javascript that registers and executes Display Template rendering logic.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 16,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TemplateHidden",
+        "Id": "0a9ec8f0-0340-4e24-9b35-ca86a6ded5ab",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TargetControlType",
+        "Id": "cab85295-b195-4ac2-8323-87c602e6ac9d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CrawlerXSLFile",
+        "Id": "3c318a40-0d51-408d-ba71-16fa845b9fe5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateLevel",
+        "Id": "fa181e85-8465-42fd-bd81-4afea427d3fe",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ManagedPropertyMapping",
+        "Id": "a0dd6c22-0988-453e-b3e2-77479dc9f014",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CompatibleSearchDataTypes",
+        "Id": "dcb8e2a9-42d1-495f-9fda-4bf9c706bc46",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CompatibleManagedProperties",
+        "Id": "bab0a619-d1ec-40d7-847b-3e4408080c17",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101002039C03B61C64EC4A04F5361F3851068",
+    "Name": "JavaScript Display Template",
+    "Group": "Display Template Content Types",
+    "Description": "Create a new custom CSR JavaScript Display Template.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 17,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTemplateHidden",
+        "Id": "3d0684f7-ca97-413d-9d03-d00f480059ae",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTargetControlType",
+        "Id": "0e49b273-3102-4b7d-b609-2e05dd1a17d9",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSIconUrl",
+        "Id": "57468ccb-0c02-422c-ba0a-61a44ba41784",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTemplateType",
+        "Id": "d63173ac-b914-4f90-9cf8-4ff4352e41a3",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTargetScope",
+        "Id": "df8bd7e5-b3db-4a94-afb4-7296397d829d",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTargetListTemplate",
+        "Id": "9f927425-78e9-49c3-b03b-65e1211394e1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSTargetContentType",
+        "Id": "ed095cf7-534e-460b-965f-f14269e70f5a",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "DisplayTemplateJSConfigurationUrl",
+        "Id": "0f2f686a-3921-432e-85fd-9c535bf671b2",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100629D00608F814DD6AC8A86903AEE72AA",
+    "Name": "Office Data Connection File",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": true,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/upload.aspx",
+    "FieldCount": 10,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Keywords",
+        "Id": "b66e9b50-a28e-469b-b1a0-af0e45486874",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100734778F2B7DF462491FC91844AE431CF",
+    "Name": "List View Style",
+    "Group": "Document Content Types",
+    "Description": "Create a new List View Style",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XSLStyleCategory",
+        "Id": "dfffbbfb-0cc3-4ce7-8cb3-a2958fb726a1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XSLStyleWPType",
+        "Id": "4499086f-9ac1-41df-86c3-d8c1f8fc769a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XSLStyleIconUrl",
+        "Id": "3dfb3e11-9ccd-4404-b44a-a71f6399ea56",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XSLStyleBaseView",
+        "Id": "4630e6ac-e543-4667-935a-2cc665e9b755",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XSLStyleRequiredFields",
+        "Id": "acb9088a-a171-4b99-aa7a-10388586bc74",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101009D1CB255DA76424F860D91F20E6C4118",
+    "Name": "Site Page",
+    "Group": "Document Content Types",
+    "Description": "Create a new site page.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/CreateSitePage.aspx",
+    "FieldCount": 27,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ClientSideApplicationId",
+        "Id": "7efc33c1-b56b-490e-9c9b-1097e971ba96",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PageLayoutType",
+        "Id": "daef58d7-ccfd-43fc-b776-2e292cc66bba",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CanvasContent1",
+        "Id": "4966388e-6e12-4bc6-8990-5b5b66153eae",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageUrl",
+        "Id": "5baf6db5-9d25-4738-b15e-db5789298e82",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageOffset",
+        "Id": "fb3259ac-bd07-4397-b7aa-03e885b0838e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "3f155110-a6a2-4d70-926c-94648101f0e8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PromotedState",
+        "Id": "f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstPublishedDate",
+        "Id": "c84f8697-331e-457d-884a-c4fb8f30ea74",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LayoutWebpartsContent",
+        "Id": "261075db-0525-4fb8-a6ea-772014186599",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_AuthorByline",
+        "Id": "1a7348e7-1bb7-4a47-9790-088e7cb20b58",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_TopicHeader",
+        "Id": "d60d65ff-ff42-4044-a684-ac3f7a5e598c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPSitePageFlags",
+        "Id": "9de685c5-fdf5-4319-b987-3edf55efb36f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAssetFolderId",
+        "Id": "ff41708b-e251-4237-a060-bea44657e8dc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCallToAction",
+        "Id": "9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCollaborators",
+        "Id": "86ebe41f-255f-4170-b040-9977528a8bf5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAuthoringMetadata",
+        "Id": "031c92fd-9cb6-4ac8-8f5f-636d28e37079",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHiddenHighlightsMetadata",
+        "Id": "46e6583c-87b2-4560-87e6-734a34780746",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHideListEditorMetadata",
+        "Id": "b03d6d98-defb-4047-9d2d-a741eb0b4c68",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101009D1CB255DA76424F860D91F20E6C4118002A50BFCFB7614729B56886FADA02339B",
+    "Name": "Repost Page",
+    "Group": "Document Content Types",
+    "Description": "Used to create a News link post. If deleted, the News link option will be disabled for users.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/CreateSitePage.aspx",
+    "FieldCount": 32,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ClientSideApplicationId",
+        "Id": "7efc33c1-b56b-490e-9c9b-1097e971ba96",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PageLayoutType",
+        "Id": "daef58d7-ccfd-43fc-b776-2e292cc66bba",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CanvasContent1",
+        "Id": "4966388e-6e12-4bc6-8990-5b5b66153eae",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageUrl",
+        "Id": "5baf6db5-9d25-4738-b15e-db5789298e82",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageOffset",
+        "Id": "fb3259ac-bd07-4397-b7aa-03e885b0838e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "3f155110-a6a2-4d70-926c-94648101f0e8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PromotedState",
+        "Id": "f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstPublishedDate",
+        "Id": "c84f8697-331e-457d-884a-c4fb8f30ea74",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LayoutWebpartsContent",
+        "Id": "261075db-0525-4fb8-a6ea-772014186599",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_AuthorByline",
+        "Id": "1a7348e7-1bb7-4a47-9790-088e7cb20b58",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_TopicHeader",
+        "Id": "d60d65ff-ff42-4044-a684-ac3f7a5e598c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPSitePageFlags",
+        "Id": "9de685c5-fdf5-4319-b987-3edf55efb36f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAssetFolderId",
+        "Id": "ff41708b-e251-4237-a060-bea44657e8dc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCallToAction",
+        "Id": "9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCollaborators",
+        "Id": "86ebe41f-255f-4170-b040-9977528a8bf5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAuthoringMetadata",
+        "Id": "031c92fd-9cb6-4ac8-8f5f-636d28e37079",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_OriginalSourceUrl",
+        "Id": "0e7b982f-698a-4d0c-aacb-f16906f66d30",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_OriginalSourceSiteId",
+        "Id": "36193413-dd5c-4096-8c1e-1b40098b9ba3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_OriginalSourceWebId",
+        "Id": "3477a5bc-c605-4b2e-a7c1-8db8f13c017e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_OriginalSourceListId",
+        "Id": "139da674-dbf6-439f-98e0-4eb05fa9a669",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_OriginalSourceItemId",
+        "Id": "91e86a43-75f2-426f-80da-35edfb47d55d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHiddenHighlightsMetadata",
+        "Id": "46e6583c-87b2-4560-87e6-734a34780746",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHideListEditorMetadata",
+        "Id": "b03d6d98-defb-4047-9d2d-a741eb0b4c68",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0101009D1CB255DA76424F860D91F20E6C411800C57E7DC123744954AACC08D1D5260154",
+    "Name": "Content Freshness",
+    "Group": "_Hidden",
+    "Description": "Used to create a dynamic page related to contentfreshness.",
+    "Hidden": true,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/CreateSitePage.aspx",
+    "FieldCount": 28,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ClientSideApplicationId",
+        "Id": "7efc33c1-b56b-490e-9c9b-1097e971ba96",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PageLayoutType",
+        "Id": "daef58d7-ccfd-43fc-b776-2e292cc66bba",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CanvasContent1",
+        "Id": "4966388e-6e12-4bc6-8990-5b5b66153eae",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageUrl",
+        "Id": "5baf6db5-9d25-4738-b15e-db5789298e82",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BannerImageOffset",
+        "Id": "fb3259ac-bd07-4397-b7aa-03e885b0838e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "3f155110-a6a2-4d70-926c-94648101f0e8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PromotedState",
+        "Id": "f5ad16a2-85be-46b2-b5f0-2bb8b4a5074a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstPublishedDate",
+        "Id": "c84f8697-331e-457d-884a-c4fb8f30ea74",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LayoutWebpartsContent",
+        "Id": "261075db-0525-4fb8-a6ea-772014186599",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_AuthorByline",
+        "Id": "1a7348e7-1bb7-4a47-9790-088e7cb20b58",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_TopicHeader",
+        "Id": "d60d65ff-ff42-4044-a684-ac3f7a5e598c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPSitePageFlags",
+        "Id": "9de685c5-fdf5-4319-b987-3edf55efb36f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAssetFolderId",
+        "Id": "ff41708b-e251-4237-a060-bea44657e8dc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCallToAction",
+        "Id": "9889a80f-c9ec-41d8-a359-ac5fb5c4cfa2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPCollaborators",
+        "Id": "86ebe41f-255f-4170-b040-9977528a8bf5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPAuthoringMetadata",
+        "Id": "031c92fd-9cb6-4ac8-8f5f-636d28e37079",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SourceDynamicSectionId",
+        "Id": "4c321a6d-2a91-428b-8296-59408b35901a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHiddenHighlightsMetadata",
+        "Id": "46e6583c-87b2-4560-87e6-734a34780746",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "_SPHideListEditorMetadata",
+        "Id": "b03d6d98-defb-4047-9d2d-a741eb0b4c68",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100B4CBD48E029A4AD8B62CB0E41868F2B0",
+    "Name": "Universal Data Connection File",
+    "Group": "_Hidden",
+    "Description": "Provide a standard place for applications, such as Microsoft InfoPath, to store data connection information.",
+    "Hidden": false,
+    "ReadOnly": true,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/upload.aspx",
+    "FieldCount": 11,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Purpose",
+        "Id": "8ee23f39-e2d1-4b46-8945-42386b24829d",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ConnectionType",
+        "Id": "939dfb93-3107-44c6-a98f-dd88dca3f8cf",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100C5033D6CFB8447359FB795C8A73A2B19",
+    "Name": "Design File",
+    "Group": "_Hidden",
+    "Description": "HTML, JavaScript, CSS, images, and other supporting files in the Master Page Gallery used by HTML Master Pages, HTML Page Layouts, and Display Templates.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": true,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E19",
+    "Name": "Invoice Document",
+    "Group": "Invoice for Tax Team",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Subject",
+        "Id": "76a81629-44d4-4ce1-8d4d-6d7ebcd885fc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "To",
+        "Id": "029b4eab-cb4a-47a0-96b3-351db22a2d75",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Received_x0020_Date",
+        "Id": "a299f963-54ab-4b3d-a8dd-81d5a3e5fe89",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Fiscal_x0020_Year",
+        "Id": "3c0179ca-7f48-4d30-84d9-db772d5b3da6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E1901",
+    "Name": "Accounts Payable",
+    "Group": "Invoice for Tax Team",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Subject",
+        "Id": "76a81629-44d4-4ce1-8d4d-6d7ebcd885fc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "To",
+        "Id": "029b4eab-cb4a-47a0-96b3-351db22a2d75",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Received_x0020_Date",
+        "Id": "a299f963-54ab-4b3d-a8dd-81d5a3e5fe89",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Fiscal_x0020_Year",
+        "Id": "3c0179ca-7f48-4d30-84d9-db772d5b3da6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100E3917FC38B21344BB4F75ADAC1414E1902",
+    "Name": "Fixed Asset",
+    "Group": "Invoice for Tax Team",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Subject",
+        "Id": "76a81629-44d4-4ce1-8d4d-6d7ebcd885fc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "To",
+        "Id": "029b4eab-cb4a-47a0-96b3-351db22a2d75",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Received_x0020_Date",
+        "Id": "a299f963-54ab-4b3d-a8dd-81d5a3e5fe89",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Fiscal_x0020_Year",
+        "Id": "3c0179ca-7f48-4d30-84d9-db772d5b3da6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010100F8EF98760CBA4A94994F13BA881038FA",
+    "Name": "InfoPath Form Template",
+    "Group": "_Hidden",
+    "Description": "A Microsoft InfoPath Form Template.",
+    "Hidden": true,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 17,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormName",
+        "Id": "66b691cf-07a3-4ca6-ac6d-27fa969c8569",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormCategory",
+        "Id": "65572d4d-445a-43f1-9c77-3358222a2c93",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormVersion",
+        "Id": "94ad6f7c-09a1-42ca-974f-d24e080160c2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormId",
+        "Id": "1a03fa74-8c63-40cc-bd06-73b580bd8744",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormLocale",
+        "Id": "96c27c9d-33f5-4f8e-893e-684014bc7090",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormDescription",
+        "Id": "1fff255c-6c88-4a76-957b-ae24bf07b78c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CusomContentTypeId",
+        "Id": "58eb8694-8bd6-4f98-8097-374bd97ffec4",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShowInCatalog",
+        "Id": "4ef69ca4-4179-4d27-9e6c-f9544d45dfdc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTemplateName",
+        "Id": "1a03fa74-8c63-40cc-bd06-73b580bd8743",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010101",
+    "Name": "Form",
+    "Group": "Document Content Types",
+    "Description": "Fill out this form.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Combine",
+        "Id": "e52012a0-51eb-4c0c-8dfb-9b8a0ebedcb6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShowCombineView",
+        "Id": "086f2b30-460c-4251-b75a-da88a5b205c1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RepairDocument",
+        "Id": "5d36727b-bcb2-47d2-a231-1f0bc63b7439",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShowRepairView",
+        "Id": "11851948-b05e-41be-9d9f-bc3bf55d1de3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TemplateUrl",
+        "Id": "4b1bf6c6-4f39-45ac-acd5-16fe7a214e5e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "xd_ProgID",
+        "Id": "cd1ecb9f-dd4e-4f29-ab9e-e9ff40048d64",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010102",
+    "Name": "Picture",
+    "Group": "Document Content Types",
+    "Description": "Upload an image or a photograph.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/upload.aspx",
+    "FieldCount": 26,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PreviewOnForm",
+        "Id": "8c0d0aac-9b76-4951-927a-2490abe13c0b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileType",
+        "Id": "c53a03f3-f930-4ef2-b166-e0f2210c13c0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ImageSize",
+        "Id": "922551b8-c7e0-46a6-b7e3-3cf02917f68a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ImageWidth",
+        "Id": "7e68a0f9-af76-404c-9613-6f82bc6dc28c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ImageHeight",
+        "Id": "1944c034-d61b-42af-aa84-647f2e74ca70",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ImageCreateDate",
+        "Id": "a5d2f824-bc53-422e-87fd-765939d863a5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EncodedAbsThumbnailUrl",
+        "Id": "b9e6f3ae-5632-4b13-b636-9d1a2bd67120",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EncodedAbsWebImgUrl",
+        "Id": "a1ca0063-779f-49f9-999c-a4a2e3645b07",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectedFlag",
+        "Id": "7ebf72ca-a307-4c18-9e5b-9d89e1dae74f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "NameOrTitle",
+        "Id": "76d1cc87-56de-432c-8a2a-16e5ba5331b3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RequiredField",
+        "Id": "de1baa4b-2117-473b-aa0c-4d824034142d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Keywords",
+        "Id": "b66e9b50-a28e-469b-b1a0-af0e45486874",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Thumbnail",
+        "Id": "ac7bb138-02dc-40eb-b07a-84c15575b6e9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Preview",
+        "Id": "bd716b26-546d-43f2-b229-62699581fa9f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThumbnailExists",
+        "Id": "1f43cd21-53c5-44c5-8675-b8bb86083244",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PreviewExists",
+        "Id": "3ca8efcd-96e8-414f-ba90-4c8c4a8bfef8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AlternateThumbnailUrl",
+        "Id": "f39d44af-d3f3-4ae6-b43f-ac7330b5e9bd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010104",
+    "Name": "Unknown Document Type",
+    "Group": "Special Content Types",
+    "Description": "Allows users to upload documents of any content type to a library. Unknown documents will be treated as their original content type in client applications.",
+    "Hidden": false,
+    "ReadOnly": true,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010105",
+    "Name": "Master Page",
+    "Group": "Document Content Types",
+    "Description": "Create a new master page.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/upload.aspx",
+    "FieldCount": 11,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UIVersion",
+        "Id": "8e334549-c2bd-4110-9f61-672971be6504",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DefaultCssFile",
+        "Id": "cc10b158-50b4-4f02-8f3a-b9b6c3102628",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010106",
+    "Name": "Master Page Preview",
+    "Group": "Document Content Types",
+    "Description": "Create a new master page preview.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/upload.aspx",
+    "FieldCount": 9,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UIVersion",
+        "Id": "8e334549-c2bd-4110-9f61-672971be6504",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010107",
+    "Name": "User Workflow Document",
+    "Group": "_Hidden",
+    "Description": "Items for use in user defined workflows.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 15,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BaseAssociationGuid",
+        "Id": "e9359d15-261b-48f6-a302-01419a68d4de",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XomlUrl",
+        "Id": "566da236-762b-4a76-ad1f-b08b3c703fce",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RulesUrl",
+        "Id": "ad97fbac-70af-4860-a078-5ee704946f93",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Visibility",
+        "Id": "a05a8639-088a-4aea-b8a9-afc888971c81",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssociatedListId",
+        "Id": "b75067a2-e23b-499f-aa07-4ceb6c79e0b3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RestrictContentTypeId",
+        "Id": "8b02a33c-accd-4b73-bcae-6932c7aab812",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowDisplayName",
+        "Id": "5263cd09-a770-4549-b012-d9f3df3d8df6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010108",
+    "Name": "Wiki Page",
+    "Group": "Document Content Types",
+    "Description": "Create a new wiki page.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/CreateWebPage.aspx",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WikiField",
+        "Id": "c33527b4-d920-4587-b791-45024d00068a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010109",
+    "Name": "Basic Page",
+    "Group": "Document Content Types",
+    "Description": "Create a new basic page.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/bpcf.aspx",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01010901",
+    "Name": "Web Part Page",
+    "Group": "Document Content Types",
+    "Description": "Create a new Web Part page.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/spcf.aspx",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01010A",
+    "Name": "Link to a Document",
+    "Group": "Document Content Types",
+    "Description": "Create a link to a document in a different location.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "/_layouts/15/NewLink.aspx",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "URL",
+        "Id": "c29e077d-f466-4d8e-8bbe-72b66c5f205c",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01010B",
+    "Name": "Dublin Core Columns",
+    "Group": "Document Content Types",
+    "Description": "The Dublin Core metadata element set.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 24,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SelectFilename",
+        "Id": "5f47e085-2150-41dc-b661-442f3027f552",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created",
+        "Id": "8c06beca-0777-48f7-91c7-6da68bc07b69",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified",
+        "Id": "28cf69c5-fa48-462a-b5cd-27b6f9d2bd5f",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "Modified_x0020_By",
+        "Id": "822c78e3-1ea9-4943-b449-57863ad33ca9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Created_x0020_By",
+        "Id": "4dd7e525-8d6b-4cb4-9d3e-44ee25f973eb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Contributor",
+        "Id": "370b7779-0344-4b9f-8f2d-dc1c62eae801",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Coverage",
+        "Id": "3b1d59c0-26b1-4de6-abbd-3edb4e2c6eca",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Author",
+        "Id": "246d0907-637c-46b7-9aa0-0bb914daa832",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_DCDateCreated",
+        "Id": "9f8b4ee0-84b7-42c6-a094-5cbde2115eb9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_DCDateModified",
+        "Id": "810dbd02-bbf5-4c67-b1ce-5ad7c5a512b2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Comments",
+        "Id": "52578fc3-1f01-4f4d-b016-94ccbcf428cf",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Format",
+        "Id": "36111fdd-2c65-41ac-b7ef-48b9b8da4526",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Identifier",
+        "Id": "3c76805f-ad45-483a-9c85-7ac24506ce1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Language",
+        "Id": "d81529e8-384c-4ca6-9c43-c86a256e6a44",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Publisher",
+        "Id": "2eedd0ae-4281-4b77-99be-68f8b3ad8a7a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Relation",
+        "Id": "5e75c854-6e9d-405d-b6c1-f8725bae5822",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_RightsManagement",
+        "Id": "ada3f0cb-6f95-4588-bb08-d97cc0623522",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_Source",
+        "Id": "b0a3c1db-faf1-48f0-9be1-47d2fc8cb5d6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Keywords",
+        "Id": "b66e9b50-a28e-469b-b1a0-af0e45486874",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Subject",
+        "Id": "76a81629-44d4-4ce1-8d4d-6d7ebcd885fc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_ResourceType",
+        "Id": "edecec70-f6e2-4c3c-a4c7-f61a515dfaa9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0102",
+    "Name": "Event",
+    "Group": "List Content Types",
+    "Description": "Create a new meeting, deadline or other event.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 20,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Location",
+        "Id": "288f5f32-8462-4175-8f09-dd7ba29359a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EndDate",
+        "Id": "2684f9f2-54be-429f-ba06-76754fc056bf",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fAllDayEvent",
+        "Id": "7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fRecurrence",
+        "Id": "f2e63656-135e-4f1c-8fc2-ccbe74071901",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkspaceLink",
+        "Id": "08fc65f9-48eb-4e99-bd61-5946c439e691",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventType",
+        "Id": "5d1d4e76-091a-4e03-ae83-6a59847731c0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UID",
+        "Id": "63055d04-01b5-48f3-9e1e-e564e7c6b23b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceID",
+        "Id": "dfcc8fff-7c4c-45d6-94ed-14ce0719efef",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventCanceled",
+        "Id": "b8bbe503-bb22-4237-8d9e-0587756a2176",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Duration",
+        "Id": "4d54445d-1c84-4a6d-b8db-a51ded4e1acc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceData",
+        "Id": "d12572d0-0a1e-4438-89b5-4d0430be7603",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TimeZone",
+        "Id": "6cc1c612-748a-48d8-88f2-944f477f301b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XMLTZone",
+        "Id": "c4b72ed6-45aa-4422-bff1-2b6750d30819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MasterSeriesItemID",
+        "Id": "9b2bed84-7769-40e3-9b1d-7954a4053834",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Workspace",
+        "Id": "881eac4a-55a5-48b6-a28e-8329d7486120",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0102004F51EFDEA49C49668EF9C6744C8CF87D",
+    "Name": "Reservations",
+    "Group": "List Content Types",
+    "Description": "Reserve resource.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 23,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Location",
+        "Id": "288f5f32-8462-4175-8f09-dd7ba29359a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EndDate",
+        "Id": "2684f9f2-54be-429f-ba06-76754fc056bf",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Facilities",
+        "Id": "a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FreeBusy",
+        "Id": "393003f9-6ccb-4ea9-9623-704aa4748dec",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Overbook",
+        "Id": "d8cd5bcf-3768-4d6c-a8aa-fefa3c793d8d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fAllDayEvent",
+        "Id": "7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fRecurrence",
+        "Id": "f2e63656-135e-4f1c-8fc2-ccbe74071901",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkspaceLink",
+        "Id": "08fc65f9-48eb-4e99-bd61-5946c439e691",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventType",
+        "Id": "5d1d4e76-091a-4e03-ae83-6a59847731c0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UID",
+        "Id": "63055d04-01b5-48f3-9e1e-e564e7c6b23b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceID",
+        "Id": "dfcc8fff-7c4c-45d6-94ed-14ce0719efef",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventCanceled",
+        "Id": "b8bbe503-bb22-4237-8d9e-0587756a2176",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Duration",
+        "Id": "4d54445d-1c84-4a6d-b8db-a51ded4e1acc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceData",
+        "Id": "d12572d0-0a1e-4438-89b5-4d0430be7603",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TimeZone",
+        "Id": "6cc1c612-748a-48d8-88f2-944f477f301b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XMLTZone",
+        "Id": "c4b72ed6-45aa-4422-bff1-2b6750d30819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MasterSeriesItemID",
+        "Id": "9b2bed84-7769-40e3-9b1d-7954a4053834",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Workspace",
+        "Id": "881eac4a-55a5-48b6-a28e-8329d7486120",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x01020072BB2A38F0DB49C3A96CF4FA85529956",
+    "Name": "Schedule and Reservations",
+    "Group": "List Content Types",
+    "Description": "Create a new appointment and reserve a resource.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 24,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Location",
+        "Id": "288f5f32-8462-4175-8f09-dd7ba29359a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EndDate",
+        "Id": "2684f9f2-54be-429f-ba06-76754fc056bf",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParticipantsPicker",
+        "Id": "8137f7ad-9170-4c1d-a17b-4ca7f557bc88",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Facilities",
+        "Id": "a4e7b3e1-1b0a-4ffa-8426-c94d4cb8cc57",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FreeBusy",
+        "Id": "393003f9-6ccb-4ea9-9623-704aa4748dec",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Overbook",
+        "Id": "d8cd5bcf-3768-4d6c-a8aa-fefa3c793d8d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fAllDayEvent",
+        "Id": "7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fRecurrence",
+        "Id": "f2e63656-135e-4f1c-8fc2-ccbe74071901",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkspaceLink",
+        "Id": "08fc65f9-48eb-4e99-bd61-5946c439e691",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventType",
+        "Id": "5d1d4e76-091a-4e03-ae83-6a59847731c0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UID",
+        "Id": "63055d04-01b5-48f3-9e1e-e564e7c6b23b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceID",
+        "Id": "dfcc8fff-7c4c-45d6-94ed-14ce0719efef",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventCanceled",
+        "Id": "b8bbe503-bb22-4237-8d9e-0587756a2176",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Duration",
+        "Id": "4d54445d-1c84-4a6d-b8db-a51ded4e1acc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceData",
+        "Id": "d12572d0-0a1e-4438-89b5-4d0430be7603",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TimeZone",
+        "Id": "6cc1c612-748a-48d8-88f2-944f477f301b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XMLTZone",
+        "Id": "c4b72ed6-45aa-4422-bff1-2b6750d30819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MasterSeriesItemID",
+        "Id": "9b2bed84-7769-40e3-9b1d-7954a4053834",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Workspace",
+        "Id": "881eac4a-55a5-48b6-a28e-8329d7486120",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0102007DBDC1392EAF4EBBBF99E41D8922B264",
+    "Name": "Schedule",
+    "Group": "List Content Types",
+    "Description": "Create new appointment.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 22,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Location",
+        "Id": "288f5f32-8462-4175-8f09-dd7ba29359a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EndDate",
+        "Id": "2684f9f2-54be-429f-ba06-76754fc056bf",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParticipantsPicker",
+        "Id": "8137f7ad-9170-4c1d-a17b-4ca7f557bc88",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FreeBusy",
+        "Id": "393003f9-6ccb-4ea9-9623-704aa4748dec",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fAllDayEvent",
+        "Id": "7d95d1f4-f5fd-4a70-90cd-b35abc9b5bc8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "fRecurrence",
+        "Id": "f2e63656-135e-4f1c-8fc2-ccbe74071901",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkspaceLink",
+        "Id": "08fc65f9-48eb-4e99-bd61-5946c439e691",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventType",
+        "Id": "5d1d4e76-091a-4e03-ae83-6a59847731c0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "UID",
+        "Id": "63055d04-01b5-48f3-9e1e-e564e7c6b23b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceID",
+        "Id": "dfcc8fff-7c4c-45d6-94ed-14ce0719efef",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EventCanceled",
+        "Id": "b8bbe503-bb22-4237-8d9e-0587756a2176",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Duration",
+        "Id": "4d54445d-1c84-4a6d-b8db-a51ded4e1acc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RecurrenceData",
+        "Id": "d12572d0-0a1e-4438-89b5-4d0430be7603",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TimeZone",
+        "Id": "6cc1c612-748a-48d8-88f2-944f477f301b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "XMLTZone",
+        "Id": "c4b72ed6-45aa-4422-bff1-2b6750d30819",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MasterSeriesItemID",
+        "Id": "9b2bed84-7769-40e3-9b1d-7954a4053834",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Workspace",
+        "Id": "881eac4a-55a5-48b6-a28e-8329d7486120",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0103",
+    "Name": "Issue",
+    "Group": "List Content Types",
+    "Description": "Track an issue or problem.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 11,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IssueStatus",
+        "Id": "3f277a5c-c7ae-4bbe-9d44-0456fb548f94",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "a8eb573e-9e11-481a-a8c9-1104a54b2fbd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comment",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Category",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelatedIssues",
+        "Id": "875fab27-6e95-463b-a4a6-82544f1027fb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "V3Comments",
+        "Id": "6df9bd52-550e-4a30-bc31-a4366832a87e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkIssueIDNoMenu",
+        "Id": "03f89857-27c9-4b58-aaab-620647deda9b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0104",
+    "Name": "Announcement",
+    "Group": "List Content Types",
+    "Description": "Create a new news item, status or other short piece of information.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 4,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Expires",
+        "Id": "6a09e75b-8d17-4698-94a8-371eda1af1ac",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0105",
+    "Name": "Link",
+    "Group": "List Content Types",
+    "Description": "Create a new link to a Web page or other resource.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 8,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitleNoMenu",
+        "Id": "bc91a437-52e7-49e1-8c4e-4698904b2b6d",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "URL",
+        "Id": "c29e077d-f466-4d8e-8bbe-72b66c5f205c",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "URLwMenu",
+        "Id": "2a9ab6d3-268a-4c1c-9897-e5f018f87e64",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "URLNoMenu",
+        "Id": "aeaf07ee-d2fb-448b-a7a3-cf7e062d6c2a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0106",
+    "Name": "Contact",
+    "Group": "List Content Types",
+    "Description": "Store information about a business or personal contact.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 23,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitleNoMenu",
+        "Id": "bc91a437-52e7-49e1-8c4e-4698904b2b6d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LastNamePhonetic",
+        "Id": "fdc8216d-dabf-441d-8ac0-f6c626fbdc24",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstName",
+        "Id": "4a722dd4-d406-4356-93f9-2550b8f50dd0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstNamePhonetic",
+        "Id": "ea8f7ca9-2a0e-4a89-b8bf-c51a6af62c73",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FullName",
+        "Id": "475c2610-c157-4b91-9e2d-6855031b3538",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Email",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Company",
+        "Id": "038d1503-4629-40f6-adaf-b47d1ab2d4fe",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CompanyPhonetic",
+        "Id": "034aae88-6e9a-4e41-bc8a-09b6c15fcdf4",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "JobTitle",
+        "Id": "c4e0f350-52cc-4ede-904c-dd71a3d11f7d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkPhone",
+        "Id": "fd630629-c165-4513-b43c-fdb16b86a14d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HomePhone",
+        "Id": "2ab923eb-9880-4b47-9965-ebf93ae15487",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CellPhone",
+        "Id": "2a464df1-44c1-4851-949d-fcd270f0ccf2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkFax",
+        "Id": "9d1cacc8-f452-4bc1-a751-050595ad96e1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkAddress",
+        "Id": "fc2e188e-ba91-48c9-9dd3-16431afddd50",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkCity",
+        "Id": "6ca7bd7f-b490-402e-af1b-2813cf087b1e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkState",
+        "Id": "ceac61d3-dda9-468b-b276-f4a6bb93f14f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkZip",
+        "Id": "9a631556-3dac-49db-8d2f-fb033b0fdc24",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkCountry",
+        "Id": "3f3a5c85-9d5a-4663-b925-8b68a678ea3a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WebPage",
+        "Id": "a71affd2-dcc7-4529-81bc-2fe593154a5f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0107",
+    "Name": "Message",
+    "Group": "List Content Types",
+    "Description": "Create a new message.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 38,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParentFolderId",
+        "Id": "a9ec25bf-5a22-4658-bd19-484e52efbe1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DiscussionSubjectLookup",
+        "Id": "f0218b98-d0d6-4fc1-b15b-aabeb89f32a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DiscussionTitle",
+        "Id": "c5abfdc7-3435-4183-9207-3d1146895cf8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_UIVersionString",
+        "Id": "dce8262a-3ae9-45aa-aab4-83bd75fb738a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TrimmedBody",
+        "Id": "6d0f8993-5050-41f3-be6c-18902d282357",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CorrectBodyToShow",
+        "Id": "b0204f69-2253-43d2-99ad-c0df00031b66",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BodyWasExpanded",
+        "Id": "af82aa75-3039-4573-84a8-73ffdfd22733",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "QuotedTextWasExpanded",
+        "Id": "e393d344-2e8c-425b-a8c3-89ac3144c9a2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ToggleQuotedText",
+        "Id": "e451420d-4e62-43e3-af83-010d36e353a2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ReplyNoGif",
+        "Id": "87cda0e2-fc57-4eec-a696-b0de2f61f361",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MessageId",
+        "Id": "2ef29342-2f5f-4052-90d3-8192e0705e51",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadTopic",
+        "Id": "769b99d9-d361-4948-b687-f01332391629",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadIndex",
+        "Id": "cef73bf1-edf6-4dd9-9098-a07d83984700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EmailReferences",
+        "Id": "124527a9-fc10-48ff-8d44-960a7db405f8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadingControls",
+        "Id": "c55a4674-640b-4bae-8738-ce0439e6f6d4",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IndentLevel",
+        "Id": "68227570-72dd-4816-b6b6-4b81ff99a393",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Indentation",
+        "Id": "26c4f53e-733a-4202-814b-377492b6c841",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StatusBar",
+        "Id": "f90bce56-87dc-4d73-bfcb-03fcaf670500",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BodyAndMore",
+        "Id": "c7e9537e-bde4-4923-a100-adbd9e0a0a0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FullBody",
+        "Id": "9c4be348-663a-4172-a38a-9714b2634c17",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LimitedBody",
+        "Id": "61b97279-cbc0-4aa9-a362-f1ff249c1706",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MoreLink",
+        "Id": "fb6c2494-1b14-49b0-a7ca-0506d6e85a62",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LessLink",
+        "Id": "076193bd-865b-4de7-9633-1f12069a6fff",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Threading",
+        "Id": "58ca6516-51cd-41fb-a908-dd2a4aeea8bc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MyEditor",
+        "Id": "078b9dba-eb8c-4ec5-bfdd-8d220a3fcc5d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PersonImage",
+        "Id": "adfe65ee-74bb-4771-bec5-d691d9a6a14e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PersonViewMinimal",
+        "Id": "b4ab471e-0262-462a-8b3f-c1dfc9e2d5fd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitleNoMenu",
+        "Id": "bc91a437-52e7-49e1-8c4e-4698904b2b6d",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "EmailSender",
+        "Id": "4ce600fb-a927-4911-bfc1-11076b76b522",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndex",
+        "Id": "4753e73b-5b5d-4bbc-8e09-c9683b0d40a7",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndexId",
+        "Id": "2bec4782-695f-406d-9e50-f1d39a2b8eb6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndexLookup",
+        "Id": "8ffccefe-998b-4896-a6df-32d566f69141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsRootPost",
+        "Id": "bd2216c1-a2f3-48c0-b21c-dc297d0cc658",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParentItemEditor",
+        "Id": "ff90fecb-7f46-44f5-9698-db44a81b2a8b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParentItemID",
+        "Id": "7d014138-1886-41f0-834f-ba9f4e72f33b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0108",
+    "Name": "Task",
+    "Group": "List Content Types",
+    "Description": "Track a work item that you or your team needs to complete.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 11,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StartDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PercentComplete",
+        "Id": "d2311440-1ed6-46ea-b46d-daa643dc3886",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Predecessors",
+        "Id": "c3a92d97-2b77-4a25-9698-3ab54874bc6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "a8eb573e-9e11-481a-a8c9-1104a54b2fbd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Status",
+        "Id": "c15b34c3-ce7d-490a-b133-3f4de8801b76",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelatedItems",
+        "Id": "d2a04afc-9a05-48c8-a7fa-fa98f9496141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0108003365C4474CAE8C42BCE396314E88E51F",
+    "Name": "Workflow Task (SharePoint 2013)",
+    "Group": "List Content Types",
+    "Description": "Create a SharePoint 2013 Workflow Task",
+    "Hidden": true,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StartDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PercentComplete",
+        "Id": "d2311440-1ed6-46ea-b46d-daa643dc3886",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Predecessors",
+        "Id": "c3a92d97-2b77-4a25-9698-3ab54874bc6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "a8eb573e-9e11-481a-a8c9-1104a54b2fbd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Status",
+        "Id": "c15b34c3-ce7d-490a-b133-3f4de8801b76",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelatedItems",
+        "Id": "d2a04afc-9a05-48c8-a7fa-fa98f9496141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TaskOutcome",
+        "Id": "55b29417-1042-47f0-9dff-ce8156667f96",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowInstanceId",
+        "Id": "1f30d200-0d4e-4c8a-a7eb-2e49815bf2be",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010801",
+    "Name": "Workflow Task",
+    "Group": "_Hidden",
+    "Description": "A work item created by a workflow that you or your team needs to complete.",
+    "Hidden": true,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 28,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StartDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PercentComplete",
+        "Id": "d2311440-1ed6-46ea-b46d-daa643dc3886",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Predecessors",
+        "Id": "c3a92d97-2b77-4a25-9698-3ab54874bc6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "a8eb573e-9e11-481a-a8c9-1104a54b2fbd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Status",
+        "Id": "c15b34c3-ce7d-490a-b133-3f4de8801b76",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelatedItems",
+        "Id": "d2a04afc-9a05-48c8-a7fa-fa98f9496141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Link",
+        "Id": "58ddda52-c2a3-4650-9178-3bbc1f6e36da",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "OffsiteParticipant",
+        "Id": "16b6952f-3ce6-45e0-8f4e-42dac6e12441",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "OffsiteParticipantReason",
+        "Id": "4a799ba5-f449-4796-b43e-aa5186c3c414",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowOutcome",
+        "Id": "18e1c6fa-ae37-4102-890a-cfb0974ef494",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowName",
+        "Id": "e506d6ca-c2da-4164-b858-306f1c41c9ec",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "GUID",
+        "Id": "ae069f25-3ac2-4256-b9c3-15dbc15da0e0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TaskType",
+        "Id": "8d96aa48-9dff-46cf-8538-84c747ffa877",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormURN",
+        "Id": "17ca3a22-fdfe-46eb-99b5-9646baed3f16",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FormData",
+        "Id": "78eae64a-f5f2-49af-b416-3247b76f46a1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EmailBody",
+        "Id": "8cbb9252-1035-4156-9c35-f54e9056c65a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HasCustomEmailBody",
+        "Id": "47f68c3b-8930-406f-bde2-4a8c669ee87c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SendEmailNotification",
+        "Id": "cb2413f2-7de9-4afc-8587-1ca3f563f624",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PendingModTime",
+        "Id": "4d2444c2-0e97-476c-a2a3-e9e4a9c73009",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Completed",
+        "Id": "35363960-d998-4aad-b7e8-058dfe2c669e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowListId",
+        "Id": "1bfee788-69b7-4765-b109-d4d9c31d1ac1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowItemId",
+        "Id": "8e234c69-02b0-42d9-8046-d5f49bf0174f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ExtendedProperties",
+        "Id": "1c5518e2-1e99-49fe-bfc6-1a8de3ba16e2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010802",
+    "Name": "Administrative Task",
+    "Group": "_Hidden",
+    "Description": "An administrative work item that an administrator needs to complete.",
+    "Hidden": true,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 15,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Predecessors",
+        "Id": "c3a92d97-2b77-4a25-9698-3ab54874bc6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelatedItems",
+        "Id": "d2a04afc-9a05-48c8-a7fa-fa98f9496141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Action",
+        "Id": "7b016ee5-70aa-4abb-8aa3-01795b4efe6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "93490584-b6a8-4996-aa00-ead5f59aae0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "cf935cc2-a00c-4ad3-bca1-0865ab15afc1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Status",
+        "Id": "c15b34c3-ce7d-490a-b133-3f4de8801b76",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Service",
+        "Id": "48b4a73e-8853-44ac-83a8-3a4bd59ce9ec",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SystemTask",
+        "Id": "af0a3d4b-3ceb-449e-9bf4-51103f2032e3",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PercentComplete",
+        "Id": "d2311440-1ed6-46ea-b46d-daa643dc3886",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StartDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0109",
+    "Name": "Workflow History",
+    "Group": "_Hidden",
+    "Description": "The history of a workflow.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 15,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Event",
+        "Id": "20a1a5b1-fddf-4420-ac68-9701490e09af",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowInstance",
+        "Id": "de21c770-a12b-4f88-af4b-aeebd897c8c2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowAssociation",
+        "Id": "8d426880-8d96-459b-ae48-e8b3836d8b9d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkflowTemplate",
+        "Id": "bfb1589e-2016-4b98-ae62-e91979c3224f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "List",
+        "Id": "f44e428b-61c8-4100-a911-a3a635f43bb5",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Item",
+        "Id": "92b8e9d0-a11b-418f-bf1c-c44aaa73075d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "User",
+        "Id": "5928ff1f-daa1-406c-b4a9-190485a448cb",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Occurred",
+        "Id": "5602dc33-a60a-4dec-bd23-d18dfcef861d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Group",
+        "Id": "c86a2f7f-7680-4a0b-8907-39c4f4855a35",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Outcome",
+        "Id": "dcde7b1f-918b-4ed5-819f-9798f8abac37",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Duration",
+        "Id": "4d54445d-1c84-4a6d-b8db-a51ded4e1acc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Description",
+        "Id": "2fd53156-ff9d-4cc3-b0ac-fe8a7bc82283",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Data",
+        "Id": "38269294-165e-448a-a6b9-f0e09688f3f9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010A",
+    "Name": "Person",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 14,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Name",
+        "Id": "bfc6f32c-668c-43c4-a903-847cca2f9b3c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MobilePhone",
+        "Id": "bf03d3ca-aa6e-4845-809a-b4378b37ce08",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Notes",
+        "Id": "e241f186-9b94-415c-9f66-255ce7f86235",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsSiteAdmin",
+        "Id": "9ba260b2-85a1-4a32-ad7a-63eaceffe6b4",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Deleted",
+        "Id": "4ed6dfdf-86a8-4894-bd1b-4fa28042be53",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Picture",
+        "Id": "d9339777-b964-489a-bf09-2ac3c3fe5f0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Department",
+        "Id": "05fdf852-4b64-4096-9b2b-d2a62a86bc59",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "JobTitle",
+        "Id": "c4e0f350-52cc-4ede-904c-dd71a3d11f7d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SipAddress",
+        "Id": "829c275d-8744-4d9b-a42f-53f53eb60559",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsActive",
+        "Id": "af5036db-36f4-46c8-bde7-a677bd0ef280",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "OtherMail",
+        "Id": "9dc5bba2-9c3e-4f46-a845-e25330b5eaf6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010B",
+    "Name": "SharePointGroup",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 7,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Name",
+        "Id": "bfc6f32c-668c-43c4-a903-847cca2f9b3c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Notes",
+        "Id": "e241f186-9b94-415c-9f66-255ce7f86235",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Picture",
+        "Id": "d9339777-b964-489a-bf09-2ac3c3fe5f0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SipAddress",
+        "Id": "829c275d-8744-4d9b-a42f-53f53eb60559",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x010C",
+    "Name": "DomainGroup",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 9,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Name",
+        "Id": "bfc6f32c-668c-43c4-a903-847cca2f9b3c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EMail",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Notes",
+        "Id": "e241f186-9b94-415c-9f66-255ce7f86235",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsSiteAdmin",
+        "Id": "9ba260b2-85a1-4a32-ad7a-63eaceffe6b4",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Deleted",
+        "Id": "4ed6dfdf-86a8-4894-bd1b-4fa28042be53",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Picture",
+        "Id": "d9339777-b964-489a-bf09-2ac3c3fe5f0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "SipAddress",
+        "Id": "829c275d-8744-4d9b-a42f-53f53eb60559",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0110",
+    "Name": "Post",
+    "Group": "List Content Types",
+    "Description": "Create a new blog post.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 5,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PostCategory",
+        "Id": "38bea83b-350a-1a6e-f34a-93a6af31338b",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PublishedDate",
+        "Id": "b1b53d80-23d6-e31b-b235-3a286b9f10ea",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0111",
+    "Name": "Comment",
+    "Group": "List Content Types",
+    "Description": "Create a new blog comment.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 3,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0116",
+    "Name": "East Asia Contact",
+    "Group": "List Content Types",
+    "Description": "Store information about a business or personal contact.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 23,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitleNoMenu",
+        "Id": "bc91a437-52e7-49e1-8c4e-4698904b2b6d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LastNamePhonetic",
+        "Id": "fdc8216d-dabf-441d-8ac0-f6c626fbdc24",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstName",
+        "Id": "4a722dd4-d406-4356-93f9-2550b8f50dd0",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FirstNamePhonetic",
+        "Id": "ea8f7ca9-2a0e-4a89-b8bf-c51a6af62c73",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FullName",
+        "Id": "475c2610-c157-4b91-9e2d-6855031b3538",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Email",
+        "Id": "fce16b4c-fe53-4793-aaab-b4892e736d15",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Company",
+        "Id": "038d1503-4629-40f6-adaf-b47d1ab2d4fe",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CompanyPhonetic",
+        "Id": "034aae88-6e9a-4e41-bc8a-09b6c15fcdf4",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "JobTitle",
+        "Id": "c4e0f350-52cc-4ede-904c-dd71a3d11f7d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkPhone",
+        "Id": "fd630629-c165-4513-b43c-fdb16b86a14d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "HomePhone",
+        "Id": "2ab923eb-9880-4b47-9965-ebf93ae15487",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CellPhone",
+        "Id": "2a464df1-44c1-4851-949d-fcd270f0ccf2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkFax",
+        "Id": "9d1cacc8-f452-4bc1-a751-050595ad96e1",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkState",
+        "Id": "ceac61d3-dda9-468b-b276-f4a6bb93f14f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkCity",
+        "Id": "6ca7bd7f-b490-402e-af1b-2813cf087b1e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkAddress",
+        "Id": "fc2e188e-ba91-48c9-9dd3-16431afddd50",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkZip",
+        "Id": "9a631556-3dac-49db-8d2f-fb033b0fdc24",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WorkCountry",
+        "Id": "3f3a5c85-9d5a-4663-b925-8b68a678ea3a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "WebPage",
+        "Id": "a71affd2-dcc7-4529-81bc-2fe593154a5f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Comments",
+        "Id": "9da97a8a-1da5-4a77-98d3-4bc10456e700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0120",
+    "Name": "Folder",
+    "Group": "Folder Content Types",
+    "Description": "Create a new folder.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": true,
+    "DocumentTemplate": "",
+    "FieldCount": 5,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ItemChildCount",
+        "Id": "b824e17e-a1b3-426e-aecf-f0184d900485",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FolderChildCount",
+        "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x012001",
+    "Name": "RootOfList",
+    "Group": "_Hidden",
+    "Description": "",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": true,
+    "DocumentTemplate": "",
+    "FieldCount": 5,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ItemChildCount",
+        "Id": "b824e17e-a1b3-426e-aecf-f0184d900485",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FolderChildCount",
+        "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x012002",
+    "Name": "Discussion",
+    "Group": "Folder Content Types",
+    "Description": "Create a new discussion topic.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 49,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FolderChildCount",
+        "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ParentFolderId",
+        "Id": "a9ec25bf-5a22-4658-bd19-484e52efbe1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DiscussionTitleLookup",
+        "Id": "f0218b98-d0d6-4fc1-b15b-aabeb89f32a9",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DiscussionTitle",
+        "Id": "c5abfdc7-3435-4183-9207-3d1146895cf8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "_UIVersionString",
+        "Id": "dce8262a-3ae9-45aa-aab4-83bd75fb738a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "TrimmedBody",
+        "Id": "6d0f8993-5050-41f3-be6c-18902d282357",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "CorrectBodyToShow",
+        "Id": "b0204f69-2253-43d2-99ad-c0df00031b66",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BodyWasExpanded",
+        "Id": "af82aa75-3039-4573-84a8-73ffdfd22733",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "QuotedTextWasExpanded",
+        "Id": "e393d344-2e8c-425b-a8c3-89ac3144c9a2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ToggleQuotedText",
+        "Id": "e451420d-4e62-43e3-af83-010d36e353a2",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ReplyNoGif",
+        "Id": "87cda0e2-fc57-4eec-a696-b0de2f61f361",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MessageId",
+        "Id": "2ef29342-2f5f-4052-90d3-8192e0705e51",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadTopic",
+        "Id": "769b99d9-d361-4948-b687-f01332391629",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadIndex",
+        "Id": "cef73bf1-edf6-4dd9-9098-a07d83984700",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EmailReferences",
+        "Id": "124527a9-fc10-48ff-8d44-960a7db405f8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ThreadingControls",
+        "Id": "c55a4674-640b-4bae-8738-ce0439e6f6d4",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IndentLevel",
+        "Id": "68227570-72dd-4816-b6b6-4b81ff99a393",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Indentation",
+        "Id": "26c4f53e-733a-4202-814b-377492b6c841",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StatusBar",
+        "Id": "f90bce56-87dc-4d73-bfcb-03fcaf670500",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BodyAndMore",
+        "Id": "c7e9537e-bde4-4923-a100-adbd9e0a0a0d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FullBody",
+        "Id": "9c4be348-663a-4172-a38a-9714b2634c17",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LimitedBody",
+        "Id": "61b97279-cbc0-4aa9-a362-f1ff249c1706",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MoreLink",
+        "Id": "fb6c2494-1b14-49b0-a7ca-0506d6e85a62",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LessLink",
+        "Id": "076193bd-865b-4de7-9633-1f12069a6fff",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Threading",
+        "Id": "58ca6516-51cd-41fb-a908-dd2a4aeea8bc",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "MyEditor",
+        "Id": "078b9dba-eb8c-4ec5-bfdd-8d220a3fcc5d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PersonImage",
+        "Id": "adfe65ee-74bb-4771-bec5-d691d9a6a14e",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PersonViewMinimal",
+        "Id": "b4ab471e-0262-462a-8b3f-c1dfc9e2d5fd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitleNoMenu",
+        "Id": "bc91a437-52e7-49e1-8c4e-4698904b2b6d",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkTitle",
+        "Id": "82642ec8-ef9b-478f-acf9-31f7d45fbc31",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkDiscussionTitleNoMenu",
+        "Id": "3ac9353f-613f-42bd-98e1-530e9fd1cbf6",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "LinkDiscussionTitle",
+        "Id": "46045bc4-283a-4826-b3dd-7a78d790b266",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "RelevantMessages",
+        "Id": "9161f6cb-a8e6-47b8-9d24-89415de691f7",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "ItemChildCount",
+        "Id": "b824e17e-a1b3-426e-aecf-f0184d900485",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DiscussionLastUpdated",
+        "Id": "59956c56-30dd-4cb1-bf12-ef693b42679c",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "EmailSender",
+        "Id": "4ce600fb-a927-4911-bfc1-11076b76b522",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndex",
+        "Id": "4753e73b-5b5d-4bbc-8e09-c9683b0d40a7",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndexId",
+        "Id": "2bec4782-695f-406d-9e50-f1d39a2b8eb6",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ShortestThreadIndexLookup",
+        "Id": "8ffccefe-998b-4896-a6df-32d566f69141",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsRootPost",
+        "Id": "bd2216c1-a2f3-48c0-b21c-dc297d0cc658",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "LastReplyBy",
+        "Id": "7f15088c-1448-41c7-a125-18a3a90ce543",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsQuestion",
+        "Id": "7aead996-f9f9-4682-9e0e-f5634ab352c8",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsAnswered",
+        "Id": "32b1ca82-a25b-48d1-b78d-3a956ba07c41",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "BestAnswerId",
+        "Id": "a8b93fba-7396-443d-9884-ee332caa4560",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "IsFeatured",
+        "Id": "5a034ff8-d7a4-4d69-ab26-5f5a043b572d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x012004",
+    "Name": "Summary Task",
+    "Group": "Folder Content Types",
+    "Description": "Group and describe related tasks that you or your team needs to complete.",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": false,
+    "DocumentTemplate": "",
+    "FieldCount": 13,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ItemChildCount",
+        "Id": "b824e17e-a1b3-426e-aecf-f0184d900485",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FolderChildCount",
+        "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Predecessors",
+        "Id": "c3a92d97-2b77-4a25-9698-3ab54874bc6f",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Priority",
+        "Id": "a8eb573e-9e11-481a-a8c9-1104a54b2fbd",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Status",
+        "Id": "c15b34c3-ce7d-490a-b133-3f4de8801b76",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "PercentComplete",
+        "Id": "d2311440-1ed6-46ea-b46d-daa643dc3886",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "AssignedTo",
+        "Id": "53101f38-dd2e-458c-b245-0c236cc13d1a",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Body",
+        "Id": "7662cd2c-f069-4dba-9e35-082cf976e170",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "StartDate",
+        "Id": "64cd368d-2f95-4bfc-a1f9-8d4324ecb007",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "DueDate",
+        "Id": "cd21b4c2-6841-4f9e-a23a-738a65f99889",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  },
+  {
+    "Id": "0x0120D5",
+    "Name": "Document Collection Folder",
+    "Group": "_Hidden",
+    "Description": "Create a new Document Collection Folder",
+    "Hidden": false,
+    "ReadOnly": false,
+    "Sealed": true,
+    "DocumentTemplate": "",
+    "FieldCount": 5,
+    "Fields": [
+      {
+        "Name": "ContentType",
+        "Id": "c042a256-787d-4a6f-8a8a-cf6ab767f12d",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "ItemChildCount",
+        "Id": "b824e17e-a1b3-426e-aecf-f0184d900485",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "FolderChildCount",
+        "Id": "960ff01f-2b6d-4f1b-9c3f-e19ad8927341",
+        "Required": false,
+        "Hidden": false,
+        "DisplayName": null
+      },
+      {
+        "Name": "Title",
+        "Id": "fa564e0f-0c70-4ab9-b863-0177e6ddd247",
+        "Required": false,
+        "Hidden": true,
+        "DisplayName": null
+      },
+      {
+        "Name": "FileLeafRef",
+        "Id": "8553196d-ec8d-4564-9861-3dbe931050c8",
+        "Required": true,
+        "Hidden": false,
+        "DisplayName": null
+      }
+    ]
+  }
+]

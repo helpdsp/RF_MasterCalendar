@@ -1,70 +1,47 @@
-# Sprint Plan — Ruiz Foods Praise Program (KT Document)
+# Sprint Plan — Invoices for Tax Team KT Document
 
-## Overview
+## Summary
 
-User decision: **single sprint** — all KT document sections produced in one iteration.
+| Sprint | Scope | Stories | Deliverable |
+|--------|-------|---------|-------------|
+| Sprint 1 | All 11 KT sections | 1.1, 2.1, 2.2, 3.1, 3.2, 4.1, 4.2, 5.1, 5.2, 6.1, 7.1, 8.1, 8.2, 9.1, 10.1, 11.1 | `docs/KT-InvoicesForTaxTeam.md` |
 
-| Attribute | Value |
-|---|---|
-| Total sprints | 1 |
-| Total stories | 11 |
-| Sprint goal | Complete all 11 KT Document sections: functional overview through brand compliance |
-| Audience | New IT Admin (technical) + IT Leadership (functional) |
-| Output | Complete Knowledge Transfer Document in Markdown, committed to repository |
+Single sprint — all 11 KT sections written in one session. The solution has 4 document libraries and 2 Power Automate flows, which is within the single-sprint threshold defined in the KT Master Prompt.
 
 ---
 
-## Sprint 1 — Complete KT Document
+## Sprint 1 — Full KT Document
 
-**Goal:** Author, review, and finalize all 11 sections of the Praise Program Knowledge Transfer Document, validated against all refdocs evidence (schemas, CSVs, mockups, PDFs).
+**Goal:** Produce a complete, accurate, and operational KT Document for the Invoices for Tax Team SharePoint Online solution at Ruiz Foods. Zero placeholders. All fields documented with internal names.
 
-### Story Schedule
+**Duration:** 1 sprint
 
-| Order | Story | Section | Epic | Effort |
-|---|---|---|---|---|
-| 1 | S-01 | Functional Overview | E-01 | M |
-| 2 | S-02 | Architecture & Components | E-01 | M |
-| 3 | S-03 | Data Model | E-01 | L |
-| 4 | S-04 | Process Flow | E-01 | M |
-| 5 | S-05 | List Configuration & Views | E-02 | L |
-| 6 | S-06 | Power Automate Flow | E-02 | M |
-| 7 | S-07 | SharePoint Pages | E-02 | S |
-| 8 | S-08 | Permissions & Access | E-02 | M |
-| 9 | S-09 | Operational Runbook | E-03 | L |
-| 10 | S-10 | Data Snapshot Evidence | E-03 | S |
-| 11 | S-11 | Brand Compliance | E-03 | M |
+**Stories included:**
 
-*Effort: S = Small, M = Medium, L = Large (relative to documentation complexity)*
+| Story | KT Section | Effort |
+|-------|-----------|--------|
+| 1.1 | Section 1: Functional Overview | Low |
+| 2.1, 2.2 | Section 2: Architecture & Components | Medium |
+| 3.1, 3.2 | Section 3: Data Model | High — 4 libraries × field tables |
+| 4.1, 4.2 | Section 4: Process Flow | Medium |
+| 5.1, 5.2 | Section 5: Configuration Reference | High — all views with CAML |
+| 6.1 | Section 6: Automation / Integration | Medium — flag service account gap |
+| 7.1 | Section 7: Interface Documentation | Medium — mockup citations |
+| 8.1, 8.2 | Section 8: Permissions & Access | Low |
+| 9.1 | Section 9: Operational Runbook | High — 7 tasks, numbered steps |
+| 10.1 | Section 10: Data Snapshot Evidence | Low — from JSON exports |
+| 11.1 | Section 11: Brand Compliance | Low |
 
-### Dependencies
+**Execution order:** Write sections 1 → 2 → 3 → 5 → 4 → 6 → 7 → 8 → 9 → 10 → 11 (data model before process flow; configuration before automation).
 
-```
-S-01 (Functional) ──► S-02 (Architecture) ──► S-03 (Data Model) ──► S-04 (Process Flow)
-                                                      │
-                                              S-05 (List Config)
-                                              S-06 (PA Flow)
-                                              S-07 (Pages)
-                                              S-08 (Permissions)
-                                                      │
-                                              S-09 (Runbook) ──► S-10 (Data)
-                                                                  S-11 (Brand)
-```
-
-### Acceptance Gate
-
-Sprint 1 is complete when:
-- All 11 stories have status `done` in `tasks.md`
-- All 11 KT sections exist in the output document with no `TBD` or placeholder text
-- Each section references at least one refdoc as evidence
-- Brand compliance section cites both brand guide PDFs
-- Document reviewed against refdocs by author and stakeholder
-
-### Output Artifact
-
-The KT Document should be committed to the repository as a single Markdown file:
-
-```
-docs/KT-Praise-Program.md
-```
-
-or equivalent path agreed with the stakeholder.
+**Definition of done:**
+- [ ] `docs/KT-InvoicesForTaxTeam.md` written with all 11 sections
+- [ ] Zero instances of `TBD`, `TODO`, `[fill in]`, or placeholder text
+- [ ] All custom fields documented with internal names from JSON exports
+- [ ] AP "Bulk Edit View" URL typo (`Not PDFs.aspx`) flagged
+- [ ] Power Automate service account gap explicitly called out
+- [ ] FY2023 low count anomaly documented
+- [ ] PnP Modern Search mockups cited by filename as evidence
+- [ ] All 4 library views documented with CAML queries
+- [ ] Runbook has numbered steps for all 7 admin tasks
+- [ ] All tasks in `planning/sprints/sprint-01/tasks.md` marked `done`

@@ -1,87 +1,74 @@
-# Sprint 1 — Stories
+# Sprint 1 Stories
 
-## S-01 — Functional Overview (T-01)
+- [ ] Solution purpose stated in 1-2 paragraphs (shared mailbox → SharePoint migration)
+- [ ] Business value articulated (storage relief, read-only enforcement, rich search)
+- [ ] All user roles listed with their access level
+- [ ] High-level flow described: email arrives → Power Automate → SharePoint → Tax Team searches
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Site URL confirmed: `https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam`
+- [ ] All 4 libraries listed with URL path and item count
+- [ ] PnP Modern Search v4 app listed with package name
+- [ ] Power Automate flows listed (with gap flag if names unconfirmed)
+- [ ] SharePoint Managed Properties listed as a component
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Diagram shows: Source Mailboxes → Power Automate → SharePoint Libraries → Search Index → PnP Search UX → Tax Team
+- [ ] AP and FA paths both represented
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Table includes: Display Title, Internal Name, Type, Required, Hidden, Read-Only
+- [ ] All 5 custom columns identified and distinguished from system fields
+- [ ] Internal names verified against JSON exports (`Fiscal_x0020_Year`, `Received_x0020_Date`, `EMail`, `To`, `Subject`)
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Base CT `Invoice Document` documented with ID `0x010100E3917FC38B21344BB4F75ADAC1414E19`
+- [ ] Child CTs `Accounts Payable` and `Fixed Asset` documented with their IDs
+- [ ] Hierarchy diagram (parent → children) included
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Each step numbered with actor (Power Automate / SharePoint / System)
+- [ ] All metadata fields mapped: From, To, Subject, Received Date, Fiscal Year, Content Type
+- [ ] Flow connector names identified
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Step-by-step process for FixedAssets@ruizfoods.com → Fixed Assets library
+- [ ] Differences from AP flow noted
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Each library: versioning on/off, moderation on/off, content types on/off, Quick Launch
+- [ ] All 4 libraries covered
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] All 6 views per library documented (All Documents, Bulk Edit, assetLibTemp, Merge, Relink, RssView)
+- [ ] CAML query for each non-system view included
+- [ ] AP "Bulk Edit View" URL typo (`Not PDFs.aspx`) flagged with note
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Trigger: email arrives at shared mailbox
+- [ ] Each action documented in sequence with connector name
+- [ ] Service account identity documented (or flagged as gap if unconfirmed)
+- [ ] Flow run history location documented (Power Automate portal)
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Landing page URL documented
+- [ ] PnP Modern Search v4 web parts listed: Search Box, Refiners, Results
+- [ ] Both mockup screenshots cited as evidence
+- [ ] Managed property mappings for refiners documented
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Matrix: Tax Team Members = Read; IT Owners = Full Control; Service Account = Contribute
+- [ ] Confirmation that permissions inherit from site (no broken inheritance)
+- [ ] No moderation workflow (EnableModeration=false confirmed)
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Step-by-step: how to add a user to the Site Members group (read-only)
+- [ ] Step-by-step: how to remove a user
+- [ ] Note on service account dependency for Power Automate
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Task: Add a user (read-only access)
+- [ ] Task: Archive documents to FY library
+- [ ] Task: Check Power Automate flow run history
+- [ ] Task: Troubleshoot — email not appearing in SharePoint
+- [ ] Task: Create a new fiscal year library
+- [ ] Task: Update document metadata (admin only)
+- [ ] Task: Access and modify PnP Modern Search configuration
+- [ ] Each task has numbered steps executable by a new admin
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Item counts: AP=173,704; FA=11,985; FY2023=16; FY2024=45,933; Total=231,638
+- [ ] FY2023 low count anomaly noted with hypothesis
+- [ ] Custom column presence confirmed from JSON exports
+- [ ] Owner role: `engineering-technical-writer`
+- [ ] Brand dimensions listed: color, typography, logo/icons, tone of voice
+- [ ] Each user-facing component mapped to relevant brand dimension
+- [ ] Brand guideline PDF references cited
+- [ ] Owner role: `engineering-technical-writer`
 
-Como lector del KT Document (IT Admin o IT Leadership), quiero un resumen funcional claro del Praise Program para entender qué hace, por qué existe y quién lo usa — sin necesitar acceso al sistema.
-
-**RF:** RF-01, RF-03, RF-04, RF-05 | **Epic:** E-01
-
----
-
-## S-02 — Architecture & Components (T-02)
-
-Como nuevo IT Admin, quiero un inventario completo de todos los componentes M365 y cómo se conectan para saber exactamente qué existe en el tenant y dónde encontrar cada pieza.
-
-**RF:** RF-01, RF-02, RF-06, RF-07 | **Epic:** E-01
-
----
-
-## S-03 — Data Model (T-03)
-
-Como nuevo IT Admin, quiero una referencia completa a nivel de campo para las tres listas de SharePoint para poder dar soporte, mantener o recrear la estructura de datos si es necesario.
-
-**RF:** RF-01, RF-06, RF-07 | **Epic:** E-01
-
----
-
-## S-04 — Process Flow (T-04)
-
-Como lector del KT Document, quiero un flujo de proceso paso a paso desde la presentación del praise hasta su publicación para entender la secuencia de eventos, las puertas de aprobación y las interacciones del sistema.
-
-**RF:** RF-01, RF-02, RF-03, RF-08 | **Epic:** E-01
-
----
-
-## S-05 — List Configuration & Views (T-05)
-
-Como nuevo IT Admin, quiero la configuración completa de las listas y vistas para las tres listas para poder reconfigurar, auditar o solucionar problemas de comportamiento.
-
-**RF:** RF-03, RF-04, RF-07 | **Epic:** E-02
-
----
-
-## S-06 — Power Automate Flow (T-06)
-
-Como nuevo IT Admin, quiero una documentación paso a paso del flujo de aprobación de Power Automate para poder mantenerlo, solucionar problemas y modificarlo.
-
-**RF:** RF-02, RF-08 | **Epic:** E-02
-
----
-
-## S-07 — SharePoint Pages (T-07)
-
-Como nuevo IT Admin, quiero un inventario de todas las páginas de SharePoint del Praise Program para saber qué páginas existen, qué muestran y cómo mantenerlas.
-
-**RF:** RF-03, RF-04, RF-05 | **Epic:** E-02
-
----
-
-## S-08 — Permissions & Access (T-08)
-
-Como nuevo IT Admin, quiero una matriz de permisos clara del Praise Program para poder gestionar el acceso, incorporar nuevos aprobadores de HR y garantizar la seguridad de los datos.
-
-**RF:** RF-01, RF-02 | **Epic:** E-02
-
----
-
-## S-09 — Operational Runbook (T-09)
-
-Como nuevo IT Admin o HR Manager, quiero instrucciones paso a paso para todas las tareas operativas comunes para poder administrar el sistema día a día sin capacitación especializada.
-
-**RF:** RF-02, RF-07 | **Epic:** E-03
-
----
-
-## S-10 — Data Snapshot Evidence (T-10)
-
-Como lector del KT Document, quiero snapshots de datos de producción incluidos como evidencia para poder validar la estructura documentada contra datos reales.
-
-**RF:** RF-10 | **Epic:** E-03
-
----
-
-## S-11 — Brand Compliance (T-11)
-
-Como nuevo IT Admin o responsable de contenido, quiero una referencia de cumplimiento de marca para saber qué brand guidelines aplican a qué componentes y mantener la consistencia de marca.
-
-**RF:** RF-09 | **Epic:** E-03

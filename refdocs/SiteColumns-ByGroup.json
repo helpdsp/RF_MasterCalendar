@@ -1,0 +1,156 @@
+{
+  "GroupName": "Custom Columns",
+  "ColumnCount": 30,
+  "Columns": [
+    {
+      "Title": "Color",
+      "InternalName": "_ColorHex",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Color Tag",
+      "InternalName": "_ColorTag",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Comment count",
+      "InternalName": "_CommentCount",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Compliance Asset Id",
+      "InternalName": "ComplianceAssetId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Emoji",
+      "InternalName": "_Emoji",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Fiscal Year",
+      "InternalName": "Fiscal_x0020_Year",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Is Featured Discussion",
+      "InternalName": "IsFeatured",
+      "TypeAsString": "Boolean"
+    },
+    {
+      "Title": "Item is a Record",
+      "InternalName": "_IsRecord",
+      "TypeAsString": "Computed"
+    },
+    {
+      "Title": "Label applied by",
+      "InternalName": "_ComplianceTagUserId",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Label applied by App Id",
+      "InternalName": "ComplianceTagAppId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Label Event Date",
+      "InternalName": "TagEventDate",
+      "TypeAsString": "DateTime"
+    },
+    {
+      "Title": "Label setting",
+      "InternalName": "_ComplianceFlags",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Like count",
+      "InternalName": "_LikeCount",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Modified By",
+      "InternalName": "MyEditor",
+      "TypeAsString": "User"
+    },
+    {
+      "Title": "Parent Folder Id",
+      "InternalName": "ParentFolderId",
+      "TypeAsString": "Integer"
+    },
+    {
+      "Title": "Parent ID",
+      "InternalName": "ParentID",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Parent Item Editor",
+      "InternalName": "ParentItemEditor",
+      "TypeAsString": "User"
+    },
+    {
+      "Title": "Parent Item ID",
+      "InternalName": "ParentItemID",
+      "TypeAsString": "Integer"
+    },
+    {
+      "Title": "Received Date",
+      "InternalName": "Received_x0020_Date",
+      "TypeAsString": "DateTime"
+    },
+    {
+      "Title": "Retention label",
+      "InternalName": "_ComplianceTag",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Retention label Applied",
+      "InternalName": "_ComplianceTagWrittenTime",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Shortest Thread-Index Id",
+      "InternalName": "ShortestThreadIndexId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Task Outcome",
+      "InternalName": "TaskOutcome",
+      "TypeAsString": "OutcomeChoice"
+    },
+    {
+      "Title": "TaxKeywordTaxHTField",
+      "InternalName": "TaxKeywordTaxHTField",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Taxonomy Catch All Column",
+      "InternalName": "TaxCatchAll",
+      "TypeAsString": "LookupMulti"
+    },
+    {
+      "Title": "Taxonomy Catch All Column1",
+      "InternalName": "TaxCatchAllLabel",
+      "TypeAsString": "LookupMulti"
+    },
+    {
+      "Title": "To",
+      "InternalName": "To",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Trigger Flow Info",
+      "InternalName": "TriggerFlowInfo",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "WSEnabled",
+      "InternalName": "WSEnabled",
+      "TypeAsString": "Boolean"
+    },
+    {
+      "Title": "WSPublishState",
+      "InternalName": "WSPublishState",
+      "TypeAsString": "Integer"
+    }
+  ]
+}

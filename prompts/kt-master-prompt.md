@@ -19,14 +19,16 @@ This is **not a development project** — the solution already exists in product
 Fill in before sending:
 
 - **Solution name:** `[SOLUTION_NAME]` *(e.g., "IT Helpdesk Ticket System", "Holiday Calendar", "Employee Onboarding Portal")*
-- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/[SITE_NAME]/`
-- **In production since:** `[YEAR OR DATE]`
-- **Brief description:** `[1-2 sentences describing what the solution does and who uses it]`
+- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/InvoiceForTaxTeam/`
+- **In production since:** `2025`
+- **Brief description:** `This project involves the creation and configuration of a SharePoint Online site named Invoices for Tax Team to consolidate invoice-related emails coming from FixedAssets@ruizfoods.com and AP@ruizfoods.com. Currently, the reliance on a shared mailbox (InvoicesforTaxTeam@ruizfoods.com) is presenting challenges due to imminent storage space limitations. This SharePoint solution will resolve the storage limit, establish strict access rules (read-only for members), and offer an enriched search engine similar to MS Outlook, all by leveraging out-of-the-box (OOTB) capabilities of the platform.`
 - **Primary M365 components used:** `[check all that apply]`
   - [ ] SharePoint Online Lists
-  - [ ] SharePoint Pages / Intranet
+  - [ x ] SharePoint Pages / Intranet
+   [ x ] SharePoint Document Libraries
+    [ x ] SharePoint Content Types
   - [ ] Microsoft List Forms
-  - [ ] Power Automate Cloud Flows
+  - [ x ] Power Automate Cloud Flows
   - [ ] Microsoft Teams (Approvals / Channels / Tabs)
   - [ ] Microsoft Outlook / Email notifications
   - [ ] Power Apps

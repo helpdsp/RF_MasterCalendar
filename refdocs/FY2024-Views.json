@@ -1,0 +1,56 @@
+[
+  {
+    "Title": "All Documents",
+    "Id": "573fe6bf-05ff-49b2-a8dd-50da4aab8036",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/AllItems.aspx",
+    "DefaultView": true,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "assetLibTemp",
+    "Id": "731d02eb-96a7-4c89-93ec-0074a671511e",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/Thumbnails.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"LinkFilename\" /></OrderBy>",
+    "RowLimit": 20
+  },
+  {
+    "Title": "Bulk Edit View",
+    "Id": "1825b060-5a15-4d96-aab1-cdcef53bb826",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/Bulk Edit View.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy><Where><Eq><FieldRef Name=\"ContentType\" /><Value Type=\"Computed\">Invoice Document</Value></Eq></Where>",
+    "RowLimit": 4999
+  },
+  {
+    "Title": "Merge Documents",
+    "Id": "473aec6d-4295-4a72-bade-529e8f996804",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/Combine.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Relink Documents",
+    "Id": "9dfb5e1f-1481-4119-894c-4ee7e5329017",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/repair.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"FileLeafRef\" /></OrderBy><Where><Neq><FieldRef Name=\"xd_Signature\" /><Value Type=\"Boolean\">1</Value></Neq></Where>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "RssView",
+    "Id": "8080ffb1-87c6-4a03-960e-8201a7b8315c",
+    "ServerRelativeUrl": "/sites/InvoiceforTaxTeam/FY2024/Forms/RssView.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "",
+    "RowLimit": 25
+  }
+]
