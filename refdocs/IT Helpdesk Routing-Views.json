@@ -1,9 +1,0 @@
-{
-  "Title": "All Items",
-  "Id": "97c377a6-8d59-4a89-ab7a-76b6e03a5e62",
-  "ServerRelativeUrl": "/sites/ITHelpdesk/Lists/IT Helpdesk Routing/AllItems.aspx",
-  "DefaultView": true,
-  "Hidden": false,
-  "ViewQuery": "<OrderBy><FieldRef Name=\"Category\" Ascending=\"TRUE\" /></OrderBy>",
-  "RowLimit": 30
-}

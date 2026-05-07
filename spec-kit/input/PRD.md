@@ -2,362 +2,323 @@
 
 ## Product PRD (input)
 
-# Product PRD - IT Issue Tracking Platform V2 Phase 2
+# Product PRD — Ruiz Foods Praise Program (Knowledge Transfer Document)
 
 ## 1. Product Summary
 
-Phase 2 enhances the City of Rancho Cordova's existing Microsoft 365-native IT Issue Tracking Platform. It adds a Phase 1 audit, a branded Microsoft Teams app package named **IT Helpdesk**, role-based Power BI dashboards, a Copilot Studio IT Helpdesk Agent, a SharePoint-managed FAQ knowledge base, human agent handoff, and deployment/testing/handoff materials.
+The **Praise Program** is an employee recognition solution built on Microsoft 365 at Ruiz Foods, Inc. It enables any employee to formally recognize a peer for demonstrating one of the company's Core Values. Submissions are routed through an HR approval workflow (Power Automate + Teams Approvals) before being published on the RuizNetPortal intranet.
 
-The solution must preserve the existing Phase 1 architecture: SharePoint Online remains the system of record, the IT Ticket Intake Queue remains the primary ticket database, and existing Power Automate intake/provisioning/SLA/notification flows remain operational.
+This PRD defines the scope of the **Knowledge Transfer (KT) Document** to be produced — a comprehensive technical and functional reference that enables a new IT Administrator or developer to fully assume ownership of the production system.
+
+The solution uses no custom code. All components are Microsoft 365-native: SharePoint Online Lists, Microsoft List Forms, Power Automate flows, Microsoft Teams Approvals App, and Outlook email notifications.
 
 ## 2. Users and Roles
 
-- City employee / requester: submits support requests, checks status, views ticket history, asks FAQs, and requests human help.
-- Helpdesk agent: monitors assigned tickets, SLA risk, closure metrics, and ticket distribution.
-- IT leadership / manager: reviews team performance, volume trends, SLA compliance, category patterns, and staffing signals.
-- IT administrator: maintains SharePoint lists, Teams app deployment, Power BI access, Copilot publishing, and knowledge content.
-- Microsoft 365 / Teams administrator: approves custom app upload, app setup policy, app pinning, Power BI access, Copilot deployment, and connector licensing.
+- **Employee (submitter):** Any Ruiz Foods employee who submits a praise for a peer via the Microsoft List Form on the intranet.
+- **Employee (recognized):** The employee being praised; receives a Congratulations email upon HR approval.
+- **HR Manager:** Reviews and approves or rejects praise submissions via the Microsoft Teams Approvals App.
+- **IT Administrator:** Manages SharePoint lists, list settings, Power Automate flows, permissions, and the intranet pages.
 
 ## 3. Functional Requirements
 
-### RF-01 - Phase 1 Feature Audit and Gap Analysis
+### RF-01 — Praise Submission
 
-- The delivery shall produce a Phase 1 feature inventory covering Forms, Teams tabs, SharePoint lists/views/fields, Power Automate flows, notifications, routing, SLA behavior, permissions, and user-facing ticket views.
-- The delivery shall compare original Phase 1 SOW commitments against actual delivered capabilities.
-- The delivery shall document enhancements or configuration work completed beyond the original quote.
-- The delivery shall produce a gap analysis and recommendations for Phase 2 and future phases.
+- The system shall allow any employee to submit a praise for a peer via the intranet entry point.
+- The submission form shall collect: Praise for (employee), Core Value Demonstrated, Description, and Manager of the recognized employee.
+- Submissions shall be stored in the **Praise** SharePoint list (internal name: Recognition) on the `/sites/RuizNetPortal/` site.
+- The list shall enforce content moderation — submitted items are placed in Pending status until approved by HR.
 
-### RF-02 - Branded IT Helpdesk Teams App Package
+### RF-02 — HR Approval Workflow
 
-- The delivery shall create a branded Microsoft Teams app package named **IT Helpdesk**.
-- The package shall include app manifest, app color icon, app outline icon, short description, long description, and package ZIP.
-- The app shall use personal/static tabs where appropriate so it can support app rail pinning when approved by administrators.
-- The app shall provide deployment guidance and app setup policy guidance for Teams administrators.
+- A Power Automate flow shall trigger on each new Praise list item.
+- The flow shall create an approval request in **Microsoft Teams Approvals App** and route it to HR Manager(s).
+- The approval card shall surface: praised employee, submitter, Core Value Demonstrated, description, and manager.
+- On **approval**: the list item moderation status shall be set to Approved; a Congratulations email shall be sent to the recognized employee.
+- On **rejection**: the list item shall remain in a rejected/moderated state; the submitter may be notified.
 
-### RF-03 - Teams App Navigation and Support Entry Points
+### RF-03 — Published Praise Visibility
 
-- The IT Helpdesk app shall surface approved entry points for Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About.
-- The app shall link tabs to approved Microsoft 365 assets such as SharePoint, Microsoft Forms, Power BI, and Copilot Studio where tenant policy permits.
-- The app shall not replace the existing Teams/channel-based Phase 1 experience.
-- The app shall remain subject to Rancho Cordova app catalog, app permission, and app setup policy approval.
+- Approved praises shall be visible on the **View Current Praises** SharePoint page.
+- The default list view ("All Items") shall filter to show only Approved items, ordered newest first.
+- The **Top 10 Recognitions** view shall display the 10 most recent approved praises in list format.
+- The **Top 10 Recognitions Cards** view shall display the 10 most recent approved praises in card format.
 
-### RF-04 - Submit Ticket Experience
+### RF-04 — Employee Self-Service Views
 
-- The Submit Ticket entry point shall provide or link to a Teams-friendly ticket intake experience.
-- The intake experience shall support issue title, category, subcategory, priority, location, description, attachment upload, and submit action where the selected Microsoft 365 surface supports those fields.
-- Submissions shall continue to create tickets in the existing IT Ticket Intake Queue and trigger the existing provisioning flow.
+- The **My submissions** view shall allow the submitting employee to see their own submissions grouped by moderation status.
+- The **View Submitted Praises** SharePoint page shall surface this self-service view.
 
-### RF-05 - My Tickets Employee Visibility
+### RF-05 — Intranet Navigation
 
-- The My Tickets entry point shall provide a user-scoped view of ticket number, issue title, priority, status, assigned agent, SLA target, and last updated.
-- Employees shall only see tickets associated with their own account.
-- The experience shall preserve the Phase 1 item-level security model and shall not expose other employees' ticket data.
+- The **Intranet Landing Page** shall provide links to both "Submit a Praise" and "View Praises" entry points.
+- Navigation shall require no special permissions for read access to approved praises.
 
-### RF-06 - Agent Workload and Performance Dashboard
+### RF-06 — Praise Cards Display
 
-- The Agent dashboard shall display assigned open tickets sorted by SLA target.
-- The dashboard shall include ticket number, title, priority, status, SLA target, and hours remaining.
-- The dashboard shall highlight breached tickets and tickets with fewer than two hours remaining before breach.
-- The dashboard shall include KPI cards for tickets closed this week, tickets closed this month, average resolution time, and SLA compliance percentage.
-- The dashboard shall include filters for agent, priority, and date range plus ticket volume by category.
+- The **Praise Cards** SharePoint list shall serve as the display-optimized companion list for card-layout rendering.
+- Praise Cards fields: Title (Required), To (User, Required), From (User, Required), Icon (Text), Description (Note), Likes (UserMulti).
 
-### RF-07 - Employee Self-Service Ticket History Dashboard
+### RF-07 — Praise Archive
 
-- The Employee dashboard shall show the logged-in employee's open tickets and ticket history.
-- The dashboard shall include open ticket count, closed-this-year count, average resolution time, assigned agent, SLA target, submitted date, closed date, final status, and date/status filters.
-- The dashboard shall enforce user-scoped visibility through Power BI permissions and RLS where implemented.
+- The **Praise (Archive)** SharePoint list shall store historical praises migrated from the active Praise list.
+- The Archive list shall maintain the same core field structure as the active list.
 
-### RF-08 - IT Leadership Executive Dashboard
+### RF-08 — Email Notifications
 
-- The Executive dashboard shall show total tickets this month, average resolution time, weekly volume trend, monthly volume trend, and SLA compliance scorecard.
-- The dashboard shall include a sortable agent performance table.
-- The dashboard shall include average resolution time by category, top issue categories, and ticket submission heatmap by day of week and hour of day.
-- The dashboard shall support leadership visibility across all relevant ticket data.
+- A **Praise Alert Email** shall notify relevant parties of a new praise pending approval.
+- A **Congratulations Email** shall be sent to the recognized employee upon HR approval.
+- Both email templates shall comply with Ruiz Foods / El Monterey brand guidelines (colors, typography, logo, tone of voice).
 
-### RF-09 - Power BI Publishing, Embedding, and Access
+### RF-09 — Brand Compliance
 
-- Power BI reports shall be published to an agreed Power BI workspace.
-- Reports shall be embedded or linked from Microsoft Teams where tenant policy and licensing permit.
-- Dashboard access shall respect Power BI permissions, workspace/app permissions, and RLS behavior where implemented.
-- Report rollout shall validate that unauthorized users cannot view data outside their role.
+- All user-facing components (SharePoint pages, email templates, form copy) shall comply with:
+  - Ruiz Foods corporate color palette (Learning Color Brand Guide)
+  - El Monterey brand guidelines (logo usage, typography, tone of voice, icon style)
+- The `Icon` field on Praise and Praise Cards lists stores brand-compliant icon identifiers.
 
-### RF-10 - Copilot Agent Welcome and Onboarding
+### RF-10 — KT Document Coverage
 
-- The Copilot Agent shall provide a welcome/onboarding response for first-time users or users who type "help".
-- The welcome response shall summarize supported actions such as ticket status lookup, creating a new ticket, asking FAQ questions, viewing open tickets, and talking to a person.
-
-### RF-11 - Copilot Ticket Status Lookup
-
-- Employees shall be able to ask natural-language status questions such as "What is the status of my ticket?" or "Any update on INC-00042?"
-- The Copilot Agent shall return ticket status, assigned agent, and SLA target where available.
-- The lookup shall be scoped to tickets associated with the requesting user.
-- The response shall explicitly avoid exposing tickets owned by other employees.
-
-### RF-12 - Copilot Guided Ticket Submission
-
-- The Copilot Agent shall guide users through ticket submission by collecting issue title, category, subcategory, priority, description, and location.
-- The agent shall call a Power Automate integration to create the ticket in the IT Ticket Intake Queue.
-- Created Copilot tickets shall trigger the existing Provision Ticket Flow.
-- The final confirmation shall return a ticket number when available or a pending confirmation if ticket number generation is asynchronous.
-
-### RF-13 - SharePoint FAQ Knowledge Base
-
-- The delivery shall create a SharePoint FAQ list with recommended fields: Question, Answer, Category, Keywords, Status, Last Reviewed Date, Owner, Related Link, and Escalation Required.
-- The knowledge base shall include an initial category structure for Password Reset, VPN Access, Microsoft Teams, Outlook, Hardware, Software Requests, Printer Support, Account Access, Shared Drives, Security, and MFA.
-- IT administrators shall be able to maintain FAQ content without developer involvement.
-
-### RF-14 - Copilot FAQ Answering
-
-- The Copilot Agent shall answer common IT questions using the SharePoint FAQ knowledge base.
-- If no useful FAQ answer is available, the agent shall offer ticket creation or human handoff.
-- FAQ behavior shall be tested for answer accuracy and escalation paths.
-
-### RF-15 - Human Agent Handoff
-
-- If the Copilot Agent cannot resolve a request after two attempts, it shall summarize the conversation and notify helpdesk agents.
-- The handoff notification shall be posted to the Agents Private Channel in Teams.
-- The employee shall be informed that a human agent will follow up.
-- The handoff card should include employee name/email, request summary, priority, conversation summary, source, timestamp, pending request ID or ticket number, and links where available.
-
-### RF-16 - Licensing and Governance Documentation
-
-- The delivery shall document Microsoft licensing exclusions and dependencies for Teams app, Copilot Studio, Power Automate, Power BI, Power Platform premium connectors, Fabric, and Microsoft 365 Copilot.
-- The delivery shall document required administrator approvals, including custom app approval, app setup policy, app pinning, Power BI workspace/report permissions, Copilot Studio publishing, and connector licensing approval.
-- The delivery shall make clear that Microsoft subscription costs are outside the professional services investment unless separately agreed in writing.
-
-### RF-17 - Testing, Training, and Handoff
-
-- The delivery shall include a test plan and test results summary.
-- Testing shall cover Teams app loading, tab navigation, Submit Ticket, My Tickets, Power BI access/RLS, Copilot welcome, status lookup, guided submission, FAQ responses, human handoff, notifications, and permissions.
-- The delivery shall include Teams app usage guide, Copilot Agent usage guide, Power BI dashboard overview, knowledge base maintenance guide, admin deployment guidance, and handoff documentation.
+The KT Document produced by this project shall document:
+1. Functional overview and business value
+2. Architecture and all M365 component inventory
+3. Full data model for all three SharePoint lists (field names, internal names, types, constraints)
+4. End-to-end process flow (submission → approval → publication)
+5. List configuration (moderation, versioning, views, content types)
+6. Power Automate flow logic (trigger, actions, approval connector, email actions)
+7. SharePoint Pages inventory (pages, web parts, embedded views)
+8. Permissions and access model (lists, views, flows, approvals)
+9. Operational runbook (how to approve/reject, archive, onboard/offboard HR approvers)
+10. Data snapshot evidence (CSV archives)
+11. Brand compliance mapping (guidelines → component)
 
 ## 4. Non-Functional Requirements
 
-- Preserve the existing Phase 1 IT Ticket Intake Queue as the system of record.
-- Preserve item-level permission assumptions and avoid cross-user ticket data leakage.
-- Use Microsoft 365-native services and avoid unnecessary third-party systems.
-- Avoid full custom web application development, custom React/SPFx/full-code Teams app development, and custom APIs unless separately scoped.
-- Support Microsoft 365 Government tenant constraints and administrator approval processes.
-- Keep Power BI, Copilot, Teams app, and Power Automate behavior dependent on confirmed licensing and permissions.
+- No new development: this is a documentation project only.
+- All documented components are Microsoft 365-native — no custom code, SPFx, or third-party services.
+- Document must be usable as a standalone reference without access to the production environment.
+- KT Document must be maintained in Markdown format for version control.
+- Brand guidelines must be cited by document name and section where referenced.
 
-## 5. Acceptance Summary
+## 5. Data Model Overview
 
-Phase 2 is complete when the audit, Teams app package, dashboards, Copilot Agent, FAQ list, handoff workflow, testing evidence, documentation, licensing dependency notes, and admin approval requirements have been delivered or prepared for deployment according to agreed scope.
+| List | Internal Name | Key Custom Fields | Moderation |
+|---|---|---|---|
+| Praise | Recognition | Praise for, Core Value Demonstrated, Description, Manager, Status, Department, Icon, Comments, Likes | Enabled |
+| Praise (Archive) | — | Same core fields as Praise | — |
+| Praise Cards | — | Title, To, From, Icon, Description, Likes | — |
+
+SharePoint site: `/sites/RuizNetPortal/`
+
+## 6. Acceptance Summary
+
+The KT Document is complete when all 11 sections defined in RF-10 have been authored, reviewed against the refdocs evidence, and committed to the repository. Brand compliance must be documented for all user-facing components referencing both brand guide PDFs.
 
 ## Executive brief
 
-# Brief - IT Issue Tracking Platform V2 Phase 2
+# Brief — Ruiz Foods Praise Program (Knowledge Transfer Document)
 
 ## Executive Summary
 
-The IT Issue Tracking Platform V2 Phase 2 project enhances the City of Rancho Cordova's existing Microsoft 365-native helpdesk platform with operational audit, stronger visibility, a branded Microsoft Teams app experience, role-based Power BI dashboards, a Copilot Studio IT Helpdesk Agent, a curated SharePoint knowledge base, and human handoff automation. Phase 2 does not replace the Phase 1 architecture; it packages and extends the existing SharePoint, Teams, Microsoft Forms, Outlook, Power Automate, AI Builder, and managed taxonomy foundation into a more unified support experience.
+The **Praise Program** is an employee recognition solution deployed on Microsoft 365 at Ruiz Foods, Inc., hosted within the **RuizNetPortal** SharePoint Online site (`/sites/RuizNetPortal/`). The system has been in production for multiple years and enables any employee to formally recognize a peer for demonstrating one of the company's core values. Submissions go through an HR approval workflow before being published on the company intranet.
 
-The primary value of Phase 2 is to make IT support easier to access, easier to monitor, and easier to manage. Employees get a clearer Teams-based entry point for submitting tickets, viewing their own ticket history, asking common IT questions, and using natural language to check ticket status. Helpdesk agents get operational dashboards that highlight open workload, SLA risk, closure metrics, and ticket distribution. IT leadership gets executive reporting for ticket volume, SLA compliance, resolution time, issue categories, and support demand patterns.
+**Purpose of this project:** Produce a complete Knowledge Transfer (KT) Document that describes the existing production system — its components, data model, process flows, configuration, and administrative tasks — so that a new IT Administrator or developer can assume ownership and support/extend the solution without loss of knowledge.
 
-The updated SOW consolidates licensing and governance assumptions. The $4,999 professional services cost covers delivery work only. Microsoft licenses, Copilot Studio capacity, Power BI licenses, Power Platform premium licenses, Fabric capacity, Microsoft 365 Copilot licensing, and other subscription costs are excluded unless separately approved in writing. Production rollout depends on Rancho Cordova administrator approval for Teams custom apps, app setup policies, Copilot Studio availability, Power BI access, Power Automate connector licensing, and Microsoft 365 Government tenant constraints.
+**KT Document audience:**
+- **New IT Admin / Developer:** Full technical ownership transfer (lists, flows, permissions, configuration)
+- **IT Leadership / Management:** Scope and value of the solution, operational overview
 
-## Context
+## System Overview
 
-Phase 1 is already implemented using Microsoft 365 services. The current platform includes a Teams-based support workspace, Microsoft Forms ticket intake, a SharePoint Online IT Ticket Intake Queue, supporting SharePoint configuration lists, a Tickets document library, Power Automate flows, Outlook shared mailbox intake, 8x8 voicemail-to-ticket processing, AI Builder description cleanup, and Teams/email lifecycle notifications. The IT Ticket Intake Queue is the authoritative ticket database and is backed by item-level permissions so employees see only their own tickets while agents and managers receive broader operational access according to role.
+| Attribute | Value |
+|---|---|
+| Solution name | Praise Program (Recognition) |
+| Organization | Ruiz Foods, Inc. |
+| Platform | Microsoft 365 (SharePoint Online, Power Automate, Teams, Outlook) |
+| SharePoint site | `/sites/RuizNetPortal/` |
+| Status | In production (active) |
+| Document type | Knowledge Transfer (KT) — existing system documentation |
 
-The existing Phase 1 architecture includes five Power Automate flows: Provision Ticket, Intake On Change, Forms-to-Ticket, Email-to-Ticket, and SLA Breach. These flows generate `INC-XXXXX` ticket numbers, route tickets using category/subcategory metadata, calculate business-hours-aware SLA targets using settings and holiday lists, apply item-level security, transfer attachments, correlate email replies, process 8x8 voicemail transcripts, and flag overdue tickets every 15 minutes.
+## Business Context
 
-Phase 2 adds a formal audit of what Phase 1 delivered, then improves discoverability and usability through a branded Teams app package named `IT Helpdesk`. The updated experience is intended to surface Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About tabs through Teams personal/static tabs where tenant policy allows. The dashboard mockups show a polished Teams-integrated UI with the IT Helpdesk app in the Teams app rail, a horizontal product nav, refresh/bookmark/filter controls, KPI cards, dense data tables, role-specific dashboard pages, and Power BI-style visuals.
+The Praise Program allows Ruiz Foods employees to recognize their peers for demonstrating **Core Values**. The recognition process is moderated — HR managers approve each submission before it is published on the intranet. Approved praises are visible to the entire organization on a dedicated SharePoint page and displayed as cards on the site's home page.
 
-## Goals
+## Components Inventory
 
-- Audit the existing Phase 1 platform and compare original SOW commitments against actual delivered features, enhancements, configuration, and support work.
-- Create a branded Microsoft Teams app package named `IT Helpdesk` as a unified entry point for ticket submission, ticket visibility, dashboards, knowledge resources, and Copilot support.
-- Provide employees with self-service ticket visibility through a user-scoped My Tickets experience and an Employee Self-Service Ticket History dashboard.
-- Build role-based Power BI dashboards for helpdesk agents, employees, and IT leadership.
-- Configure an IT Helpdesk Copilot Agent in Microsoft Copilot Studio for ticket status lookup, guided ticket submission, FAQ answering, onboarding/help, and human handoff.
-- Establish a SharePoint-managed FAQ knowledge base that IT administrators can maintain without developer involvement.
-- Support human agent handoff when Copilot cannot resolve or route a request after the defined attempt threshold.
-- Improve notification, reporting, and operational visibility while preserving the Phase 1 system of record and Microsoft 365-native architecture.
-- Document licensing dependencies, administrator approvals, deployment guidance, testing results, and handoff instructions.
+### 1. SharePoint Lists
 
-## Target Users / Roles
+| List | Internal Name | Description |
+|---|---|---|
+| **Praise** | Recognition | Active praise submissions. Content moderation enabled. |
+| **Praise (Archive)** | — | Historical archive of older praises. |
+| **Praise Cards** | — | Companion list for gallery/card-view rendering of approved praises. |
 
-- City employees / requesters: need a simple Teams-based way to submit tickets, check ticket status, review open tickets and history, ask common IT questions, and request a human when self-service is not enough.
-- Helpdesk agents: need a daily workload dashboard showing assigned open tickets, SLA target urgency, breached and near-breach tickets, closure metrics, resolution time, and category distribution.
-- IT leadership / managers: need executive reporting for volume trends, SLA compliance, agent performance, average resolution time, top issue categories, submission heatmaps, and resource planning.
-- IT administrators: need maintainable SharePoint lists, Teams app deployment guidance, Power BI workspace/RLS guidance, Copilot publishing guidance, FAQ maintenance documentation, and clear licensing/admin dependency notes.
-- Rancho Cordova Teams / M365 administrators: approve or configure custom Teams app upload, organizational app catalog availability, app setup policies, app pinning, Power BI access, Copilot Studio publishing, and connector licensing.
-- Delivery team: performs the audit, configures the Teams app package, dashboards, Copilot topics, Power Automate integrations, handoff notifications, testing, training, and documentation.
+**Praise List — Key Custom Fields (non-system):**
 
-## Scope - In
+| Display Title | Internal Name | Type | Required |
+|---|---|---|---|
+| Praise for | Recognitionfor | User | Yes |
+| Core Value Demonstrated | Category | Choice | Yes |
+| Description | Description | Note | Yes |
+| Manager | Manager | User | Yes |
+| Status | Status | Choice | No |
+| Department | Department | Text | No |
+| Icon | Icon | Text | No |
+| Comments | Comments | Note | No |
+| Likes | Likes | User | No |
+| Praise from2 | Recognition_x0020_from | User | No |
 
-- Phase 1 feature audit covering Forms intake, Teams tabs, SharePoint lists and views, fields and metadata, ticket lifecycle, Power Automate flows, notifications, routing, SLA behavior, permissions, and delivered enhancements beyond original scope.
-- V1 SOW vs. actual delivered comparison, enhancement log, gap analysis, recommendations, and optional future backlog.
-- Branded Microsoft Teams app package named `IT Helpdesk`, including app name, descriptions, icons, manifest, app package ZIP, personal/static tab configuration, deployment guidance, and app setup policy guidance.
-- Teams app tabs or entry points for Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About, subject to tenant policy and approved Microsoft 365 URLs.
-- Submit Ticket experience showing issue title, category, subcategory, priority, location, description, attachment upload, and submit action.
-- My Tickets experience showing ticket number, issue title, priority, status, assigned agent, SLA target, and last updated for the logged-in employee.
-- Power BI Dashboard Suite with Agent Workload & Performance, Employee Self-Service Ticket History, and IT Leadership Executive dashboards.
-- Power BI workspace publishing support, Teams tab embedding support, and Row-Level Security configuration guidance or implementation as agreed.
-- Agent dashboard with KPI cards for tickets closed this week/month, average resolution time, SLA compliance, assigned open ticket priority table, SLA breach/near-breach warning, filters, and ticket volume by category.
-- Employee dashboard with open ticket count, closed-this-year count, average resolution time, open ticket table, full ticket history, date/status filters, assigned agent, SLA target, and user-scoped ticket data.
-- Executive dashboard with total tickets this month, average resolution time, weekly/monthly volume trend, SLA compliance scorecard, sortable agent performance table, average resolution time matrix, top issue categories, and ticket submission heatmap.
-- IT Helpdesk Copilot Agent in Copilot Studio with welcome/help topic, ticket status lookup, guided ticket submission, FAQ response topic, human handoff topic, Power Automate integrations, and Teams publishing support.
-- SharePoint FAQ knowledge base list with recommended metadata: Question, Answer, Category, Keywords, Status, Last Reviewed Date, Owner, Related Link, and Escalation Required.
-- Initial FAQ category structure, including Password Reset, VPN Access, Microsoft Teams, Outlook, Hardware, Software Requests, Printer Support, Account Access, Shared Drives, Security, and MFA.
-- Human handoff workflow, Teams private channel notification, handoff card template, and user confirmation messages.
-- Testing for Teams app loading, tab navigation, submit ticket, My Tickets, Power BI access/RLS, Copilot welcome, status lookup, guided submission, FAQ accuracy, handoff, notifications, and permissions.
-- Training and handoff materials: admin deployment guidance, Teams app usage guide, Copilot usage guide, Power BI overview, knowledge base maintenance guide, testing checklist, and handoff documentation.
+**Praise Cards List — Key Custom Fields:**
 
-## Scope - Out / Non-goals
+| Display Title | Internal Name | Type | Required |
+|---|---|---|---|
+| Title | Title | Text | Yes |
+| To | To | User | Yes |
+| From | From | User | Yes |
+| Icon | Icon | Text | No |
+| Description | Description | Note | No |
+| Likes | Likes | UserMulti | No |
 
-- Full custom web application development.
-- Custom React, SPFx, or full-code Teams application development.
-- Custom APIs outside approved Microsoft 365 connectors and Power Automate patterns.
-- Mobile-specific custom application development.
-- Replacing SharePoint as the system of record.
-- Replacing existing Power Automate flows with custom code.
-- Advanced ITSM processes such as Problem Management or Change Management.
-- Asset management, CMDB, or inventory tracking.
-- AI model training or custom language model development.
-- Tenant-wide Teams deployment without Rancho Cordova administrator approval.
-- Complex custom authentication beyond Microsoft 365 / Teams authentication.
-- Data migration from other ticketing platforms.
-- Advanced Power BI data warehouse architecture.
-- Long-term production support after handoff.
-- Ongoing FAQ content maintenance after initial configuration.
-- Microsoft licensing procurement, subscription purchase, or payment of Copilot Studio, Power BI, Power Platform, Fabric, Microsoft 365 Copilot, or other Microsoft service costs.
-- Reactivating the reserved Document Set/PDF ticket summary architecture unless separately scoped.
+**List Configuration (Praise):**
+- Content types enabled: Yes
+- Versioning: Enabled (major versions)
+- Content moderation: **Enabled** (approval required before items appear in default view)
+- Quick Launch: Hidden (accessed via SharePoint pages)
 
-## Functional Requirements Summary
+### 2. SharePoint List Views
 
-### Existing Phase 1 behavior to preserve
+| View Title | Default | Visibility | Purpose |
+|---|---|---|---|
+| All Items | Yes | Visible | Shows approved praises (moderation filter), ordered newest first |
+| Approve/reject Items | No | Visible | HR managers — grouped by moderation status |
+| My submissions | No | Visible | Employee's own submissions, grouped by status |
+| Top 10 Recognitions | No | Visible | Latest 10 approved praises (list format) |
+| Top 10 Recognitions Cards | No | Visible | Latest 10 approved praises (card format) |
+| HomePage | No | Visible | Home page embedded view |
+| Welcome to the Praise Form! | No | **Hidden** | Custom form entry point |
 
-- The IT Ticket Intake Queue remains the central ticket database and single source of truth.
-- Existing intake channels remain available: Teams/Form tab, Outlook shared mailbox, Teams/SharePoint list views, and 8x8 voicemail-to-email.
-- Provision Ticket Flow creates ticket numbers, detects source, routes tickets, calculates SLA targets, applies item-level security, and sends notifications.
-- Intake On Change detects ticket lifecycle changes, sends employee/agent notifications, records closed dates, and reroutes tickets after category/subcategory changes.
-- Forms-to-Ticket maps submitted form data to SharePoint, resolves managed metadata, runs AI Builder cleanup, and transfers attachments.
-- Email-to-Ticket creates or updates tickets from shared mailbox messages, extracts voicemail transcripts, cleans email bodies, resolves sender identity, and preserves original email content.
-- SLA Breach Flow monitors open tickets and flags breached items on a scheduled recurrence.
+### 3. Microsoft List Form (Praise Submission)
 
-### Audit and Teams app requirements
+A custom Microsoft List Form ("Welcome to the Praise Form!") is used as the submission interface. Employees fill in:
+- Who they are praising (Praise for)
+- Core Value Demonstrated (dropdown)
+- Description of the recognition
+- Manager of the recognized employee
 
-- The project shall produce a Phase 1 feature inventory and V1 SOW vs. actual comparison.
-- The project shall document delivered enhancements and recommendations for Phase 2 and future phases.
-- The project shall create a branded `IT Helpdesk` Teams app manifest and app package ZIP.
-- The app shall provide personal/static tab access to approved support entry points, prioritizing app-rail usability when app pinning is approved.
-- The app shall include or link to Home, Submit Ticket, My Tickets, Dashboards, Knowledge Base, Copilot Agent, and About experiences where tenant policy allows.
-- The app shall include app icon assets, short/long descriptions, deployment guidance, and setup policy guidance.
+### 4. SharePoint Pages
 
-### Dashboard requirements
+| Page | Purpose |
+|---|---|
+| Intranet Landing Page | Contains links to "Submit a Praise" and "View Praises" |
+| View Current Praises | Displays approved praises as a gallery/list |
+| View Submitted Praises | Shows the employee's own submitted praises |
 
-- All dashboards shall connect to the existing SharePoint ticket data, with the IT Ticket Intake Queue as primary source.
-- Power BI access shall respect report permissions, workspace/app permissions, and RLS rules where implemented.
-- Agent dashboard shall show open assigned tickets sorted by SLA target, with ticket number, title, priority, status, SLA target, and hours remaining.
-- Agent dashboard shall show breached tickets and tickets with fewer than two hours remaining before SLA breach.
-- Agent dashboard shall show tickets closed this week, tickets closed this month, average resolution time, SLA compliance percentage, filters, and ticket volume by category.
-- Employee dashboard shall show the logged-in user's open tickets, ticket history, status, priority, assigned agent, SLA target, submitted date, closed date, final status, and filters.
-- Executive dashboard shall show weekly and monthly volume trends, total tickets this month, average resolution time, SLA compliance scorecard, sortable agent performance, resolution time by category, top issue categories, and submission heatmap.
-- Dashboards shall be embedded or linked through Microsoft Teams, subject to Power BI licensing and permissions.
+### 5. Power Automate — Approval Flow
 
-### Copilot and knowledge base requirements
+A Power Automate flow is triggered when a new praise is submitted. Flow behavior:
+1. New item created in the Praise list triggers the flow
+2. Flow creates an approval request via the **Microsoft Teams Approvals** connector
+3. Approval request is sent to HR Manager(s)
+4. HR Manager receives the request in **Teams Approvals App**
+5. On approval: content moderation status on the list item is updated to Approved; Congratulations email is sent to the recognized employee
+6. On rejection: item is rejected/moderated out; submitter may be notified
 
-- The Copilot Agent shall be available in Microsoft Teams when Copilot Studio licensing, capacity, publishing rights, and tenant constraints permit.
-- The agent shall answer natural-language ticket status requests such as "What is the status of my ticket?" and "Any update on INC-00042?"
-- Ticket status lookup shall return current status, assigned agent, and SLA target while scoping results to tickets associated with the requesting account.
-- The agent shall guide ticket submission by collecting issue title, category, subcategory, priority, description, and location, then calling a Power Automate flow to create the ticket.
-- The agent shall answer FAQ questions from the SharePoint knowledge base.
-- If no useful FAQ answer is available, the agent shall offer ticket creation or handoff.
-- If unresolved after two attempts, the agent shall summarize the conversation and post a handoff notification to the Agents Private Channel.
-- Handoff cards should include employee name/email, request summary, priority, conversation summary, source, timestamp, pending request ID or ticket number, and links where available.
+### 6. Microsoft Teams — Approvals App
 
-## Technical Stack & Constraints
+HR Managers use the **Microsoft Teams Approvals App** to review and approve or reject praise submissions. The approval card includes:
+- Praised employee name
+- Submitter (Praise from)
+- Core Value Demonstrated
+- Description
+- Manager information
 
-- Tenant: City of Rancho Cordova Microsoft 365 Government (GCC) tenant.
-- Current site collection: `https://cityofranchocordovaorg.sharepoint.com/sites/ITHelpdesk`.
-- Current primary data store: SharePoint Online IT Ticket Intake Queue list.
-- Supporting SharePoint assets: IT Helpdesk Settings, IT Helpdesk Routing, IT Helpdesk Holidays, IT Helpdesk Locations, Tickets document library, managed site columns, list views, and Term Store.
-- Current automation: Power Automate flows for Provision Ticket, Intake On Change, Forms-to-Ticket, Email-to-Ticket, and SLA Breach.
-- Phase 2 automation: Power Automate integrations for Copilot guided ticket submission and handoff notifications; connector licensing must be reviewed before production.
-- Conversational layer: Microsoft Copilot Studio published to Microsoft Teams, subject to Copilot Studio availability and licensing/capacity.
-- Reporting layer: Power BI dashboards published to a workspace and embedded or linked in Teams, subject to Power BI licensing, permissions, and RLS validation.
-- Teams packaging: Microsoft Teams app manifest, icons, package ZIP, personal/static tabs, organizational app catalog, app permission policies, app setup policies, and optional app rail pinning.
-- Knowledge layer: SharePoint FAQ list managed by IT administrators.
-- Taxonomy: Category/Subcategory and Location Term Store term sets remain the basis for consistent classification and reporting.
-- Security: Existing item-level SharePoint permissions must be preserved; Copilot and Power BI must not leak cross-user ticket data.
-- Design direction: Mockups show a Teams-native shell with IT Helpdesk app rail placement, top navigation, refresh/bookmarks/filters controls, KPI cards, priority/status badges, tabular ticket views, bar/line charts, heatmap, and role-specific dashboard pages.
-- Delivery timeline: estimated 3 to 4 weeks, dependent on administrator availability, Teams app approval, Power BI workspace access, Copilot Studio licensing, and validation cycles.
-- Cost constraint: professional services budget is $4,999; Microsoft subscription and licensing costs are excluded.
+### 7. Microsoft Outlook — Email Notifications
 
-## Success Criteria
+Two email templates are in use:
+- **Praise Alert Email:** Notifies relevant parties of a new pending praise submission
+- **Congratulations Email:** Sent to the recognized employee upon HR approval of their praise
 
-- Phase 1 audit report, V1 vs. actual comparison, enhancement log, gap analysis, and recommendations are delivered.
-- `IT Helpdesk` Teams app package is created, branded, packaged, documented, and tested in Teams subject to admin approval.
-- Agreed Teams app tabs are configured or documented with realistic approved Microsoft 365 entry points.
-- Power BI dashboards are created for agent, employee, and leadership audiences and published to the agreed workspace.
-- Dashboard access and RLS behavior are validated so users see only the data appropriate to their role.
-- Agent dashboard clearly surfaces SLA risk, open workload, closure KPIs, average resolution time, and category distribution.
-- Employee dashboard shows only the logged-in employee's open tickets and ticket history.
-- Executive dashboard provides useful operational visibility for ticket trends, SLA compliance, resolution time, agent performance, top categories, and submission timing.
-- Copilot Agent is configured or prepared for Teams publishing, including welcome/help, ticket status lookup, guided ticket submission, FAQ, and handoff topics.
-- Ticket status lookup, guided ticket submission, FAQ responses, and handoff notifications are tested.
-- SharePoint FAQ list and maintenance guidance are delivered.
-- Licensing dependencies, premium connector risks, admin approvals, and deployment constraints are explicitly documented.
-- Phase 2 enhancements do not break existing Phase 1 intake, routing, SLA, notification, permission, or reporting foundations.
+## User Roles and Responsibilities
 
-## Open Questions / Risks
+| Role | Responsibilities |
+|---|---|
+| **Employee (submitter)** | Submits praise for a peer via the intranet form |
+| **Employee (recognized)** | Receives Congratulations email on approval |
+| **HR Manager** | Reviews and approves/rejects praise submissions via Teams Approvals |
+| **IT Admin** | Manages SharePoint lists, Power Automate flows, permissions, and list configuration |
 
-- Confirm whether Rancho Cordova allows custom Teams apps and organizational app catalog upload in the Microsoft Teams Admin Center.
-- Confirm whether app setup policies can install or pin the `IT Helpdesk` app to the Teams app rail for target users.
-- Confirm whether personal/static tabs can render each intended Microsoft 365 experience reliably in Teams.
-- Confirm final tab URLs and whether Submit Ticket will use Microsoft Forms, SharePoint, a Teams-hosted page, or another approved M365 surface.
-- Confirm Copilot Studio availability, licensing, capacity/credits, publishing rights, and GOV tenant limitations.
-- Confirm whether Microsoft 365 Copilot licensing affects the intended Copilot Agent audience.
-- Confirm whether any Copilot or Power Automate integration requires premium connectors, HTTP actions, custom connectors, Dataverse, or other premium licensing.
-- Confirm Power BI Pro, Premium, or Fabric licensing for intended users and whether broad employee dashboard access is financially and administratively approved.
-- Confirm Power BI workspace/app permissions and the authoritative identity fields for RLS: requester email, assigned agent email, SharePoint person fields, claims, or Entra ID attributes.
-- Confirm whether RLS is mandatory implementation scope or guidance-only, since the SOW states RLS "will be considered" while dashboard privacy requires strong user scoping.
-- Confirm whether Copilot guided ticket submission must support attachment upload; the mockup asks for attachment upload in Submit Ticket, but Copilot attachment handling is not explicit.
-- Confirm whether Copilot can return the final `INC-XXXXX` ticket number synchronously after existing provisioning completes or should return a pending confirmation.
-- Confirm branding assets, app icons, approved colors, app descriptions, and any City style requirements.
-- Confirm who will author initial FAQ entries and approve ongoing knowledge base governance.
-- Risk: Existing Phase 1 configuration may require cleanup before Phase 2 work can be layered on cleanly.
-- Risk: Some SharePoint or Power BI pages may not render cleanly inside Teams tabs and may need layout or URL adjustments.
-- Risk: FAQ quality directly affects Copilot usefulness and ticket deflection.
-- Risk: GOV tenant limitations or licensing procurement delays could shift the timeline beyond 3 to 4 weeks.
-- Risk: The mockups include polished dashboard UI expectations; implementation should clarify whether exact visual fidelity is required or whether they serve as directional references.
+## Data Model Summary
 
-## Input Sources
+Three SharePoint lists form the data backbone:
+- **Praise** — system of record for submissions (with approval workflow)
+- **Praise (Archive)** — historical data
+- **Praise Cards** — display-optimized companion list for card views
 
-- refdocs: `IT_Issue_Tracking_Platform_V2_Phase_2_SOW_Consolidated.md`
-- refdocs: `IT_IssueTracking_SolutionArchitecture.md`
-- refdocs: `Category_Subcategory-TermSet.json`
-- refdocs: `Location-TermSet.json`
-- refdocs: `IT Ticket Intake Queue-Fields.json`
-- refdocs: `IT Ticket Intake Queue-Properties.json`
-- refdocs: `IT Ticket Intake Queue-Views.json`
-- refdocs: `IT Helpdesk Routing-Fields.json`
-- refdocs: `IT Helpdesk Routing-Properties.json`
-- refdocs: `IT Helpdesk Routing-Views.json`
-- refdocs: `IT Helpdesk Settings-Fields.json`
-- refdocs: `IT Helpdesk Settings-Properties.json`
-- refdocs: `IT Helpdesk Settings-Views.json`
-- refdocs: `IT Helpdesk Holidays-Fields.json`
-- refdocs: `IT Helpdesk Holidays-Properties.json`
-- refdocs: `IT Helpdesk Holidays-Views.json`
-- refdocs: `IT Helpdesk Locations-Fields.json`
-- refdocs: `IT Helpdesk Locations-Properties.json`
-- refdocs: `IT Helpdesk Locations-Views.json`
-- refdocs: `Tickets-Fields.json`
-- refdocs: `Tickets-Properties.json`
-- refdocs: `Tickets-Views.json`
-- refdocs: `SiteColumns-ByGroup.json`
-- refdocs: `SiteColumns-Special.json`
-- refdocs: `IT Helpdesk-SiteColumns.json`
-- refdocs mockups: `mockups/Agent Workload & Performance Dashboard.png`
-- refdocs mockups: `mockups/Employee Self-Service Ticket History.png`
-- refdocs mockups: `mockups/IT Leadership Executive Dashboard.png`
-- refdocs visual reference: `IT Issue Tracking Platform V1 Solution Architecture Diagram.jpg`
-- refdocs binary references present: `Phase1_Rancho_Cordova_ITHelpDesk_SOW-status.docx`, `Phase2_SOW.docx`
-- refdocs Power Automate packages present: `ITIssueTrackingPlatform-Email-to-ticketflow_20260502182343.zip`, `ITIssueTrackingPlatform-Forms-to-ticketflow_20260502182326.zip`, `ITIssueTrackingPlatform-IntakeOnChange_20260502182311.zip`, `ITIssueTrackingPlatform-ProvisionTicketflow_20260502182254.zip`, `ITIssueTrackingPlatform-SLABreach_20260502182359.zip`
-- source-code: Not applicable. Workflow state has `reverseEngineering = false`.
+The `Category` (Core Value Demonstrated) field is a Choice column on the Praise list and is the primary classification dimension for recognitions.
+
+## KT Document Scope
+
+The KT Document to be produced must cover:
+
+1. **Functional Overview** — What the system does, who uses it, business value
+2. **Architecture & Components** — All M365 components, how they connect
+3. **Data Model** — All three SharePoint lists with field inventory, types, and constraints
+4. **Process Flow** — End-to-end submission-to-publication workflow with approval gates
+5. **Configuration Reference** — List settings, view configurations, moderation settings
+6. **Power Automate Flow** — Trigger, actions, approval logic, email notifications
+7. **SharePoint Pages** — Page inventory, web parts, embedded views
+8. **Permissions & Access** — Who has access to what (lists, views, flows, approval)
+9. **Operational Runbook** — How to approve/reject, archive, add/remove users
+10. **Data Snapshot** — CSV archives (Praise.csv, Praise Archive.csv) as evidence
+11. **Brand Compliance** — Color palette, typography, logo/icon usage, and tone of voice mapped to each solution component
+
+## Brand Guidelines
+
+The solution's visual design and communication must comply with two official Ruiz Foods brand references provided in `refdocs/`:
+
+| Document | Scope |
+|---|---|
+| `Learning Color Brand Guide.pdf` | Corporate color system — primary and secondary palette |
+| `RZF003_22 El Monterey_Brand_Guidelines_10_27_22_v3.pdf` | El Monterey sub-brand guidelines (logo, typography, tone, icons) |
+
+### Relevant Dimensions for the KT Document
+
+| Dimension | Relevance to Praise Program |
+|---|---|
+| **Color palette** | SharePoint page theming, Power Automate email templates, Praise Card visual design |
+| **Typography / fonts** | Font choices in SharePoint pages and email body |
+| **Logo & icon usage** | Logo placement on intranet pages; `Icon` field values on Praise and Praise Cards lists |
+| **Tone of voice / messaging** | Copy in the submission form, approval emails, and congratulations email must reflect brand voice |
+
+The KT Document must include a Brand Compliance section that references both guidelines and maps each brand dimension to the specific component where it applies (pages, emails, form copy, icons).
+
+## Non-Goals / Out of Scope
+
+- No new development or feature additions
+- No migration to other platforms
+- No changes to existing list structure, flows, or permissions
+- No PowerApps or custom SPFx development
+
+## Evidence / Reference Inputs
+
+| File | Type | Used for |
+|---|---|---|
+| Praise-Fields.json | JSON | Praise list field inventory |
+| Praise-Properties.json | JSON | Praise list configuration |
+| Praise-Views.json | JSON | Praise list views |
+| Praise(Archive)-Fields/Properties/Views.json | JSON | Archive list configuration |
+| Praise Cards-Fields/Properties/Views.json | JSON | Praise Cards list configuration |
+| Praise-Schema.xml | XML | Full list schema |
+| Praise(Archive)-Schema.xml | XML | Archive list schema |
+| Praise Cards-Schema.xml | XML | Cards list schema |
+| Praise.csv | CSV | Live data sample |
+| Praise(Archive).csv | CSV | Historical data |
+| Praise Program.pptx | PPTX | Program presentation/overview |
+| Power Automate - Approvals - Praise Submission (...).pdf | PDF | Approval flow evidence |
+| Mirosoft Outlook - Congratulations Email.pdf | PDF | Email notification evidence |
+| mockups/*.jpg | Images | UI evidence for all system screens |
+| HumanResources-PraiseProgram_*.zip | ZIP | Additional HR artifacts |
+| Learning Color Brand Guide.pdf | PDF | Corporate color palette reference |
+| RZF003_22 El Monterey_Brand_Guidelines_*.pdf | PDF | El Monterey brand: logo, typography, tone of voice, icons |
 
 ## Goals
 

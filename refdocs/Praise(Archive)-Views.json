@@ -1,0 +1,38 @@
+[
+  {
+    "Title": "All Items",
+    "Id": "7a39d32b-0d37-484a-a209-91eff9438e68",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive/AllItems.aspx",
+    "DefaultView": true,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Approve/reject Items",
+    "Id": "ce6b3af5-8bbf-454f-8297-5efcba4a3c8d",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive/Approve-reject Items.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<GroupBy><FieldRef Name=\"_ModerationStatus\" Ascending=\"FALSE\" /></GroupBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "My submissions",
+    "Id": "f9e9d212-e27e-4013-bc46-9f3e98a11285",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive/My submissions.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy><Where><Eq><FieldRef Name=\"Praisefrom2\" /><Value Type=\"User\"><UserID /></Value></Eq></Where>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Top 10 Recognitions",
+    "Id": "ceaa2382-e752-4178-8c18-db18fd13753e",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive/Top 10 Recognitions.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 10
+  }
+]

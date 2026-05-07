@@ -1,0 +1,17 @@
+{
+  "Title": "Praise(Archive)",
+  "Id": "ef1b5ea0-3e87-4336-9f6f-175b0780481b",
+  "BaseTemplate": 100,
+  "BaseType": 0,
+  "Hidden": false,
+  "EnableVersioning": true,
+  "EnableMinorVersions": false,
+  "EnableModeration": false,
+  "ForceCheckout": false,
+  "ItemCount": 407,
+  "DefaultViewUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive/AllItems.aspx",
+  "RootFolderServerUrl": "/sites/RuizNetPortal/Lists/RecognitionArchive",
+  "Description": "",
+  "ContentTypesEnabled": false,
+  "OnQuickLaunch": false
+}

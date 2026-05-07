@@ -1,14 +1,70 @@
-# Sprint Plan - IT Issue Tracking Platform V2 Phase 2
+# Sprint Plan — Ruiz Foods Praise Program (KT Document)
 
-| Sprint | Goal | Stories |
-|---|---|---|
-| Sprint 1 | Audit and Teams app foundation | S-01, S-02, S-03 |
-| Sprint 2 | Submit ticket and employee visibility | S-04, S-05 |
-| Sprint 3 | Agent and employee dashboards | S-06, S-07 |
-| Sprint 4 | Executive dashboard and Power BI access | S-08, S-09 |
-| Sprint 5 | Copilot and knowledge base | S-10, S-11, S-12, S-13, S-14 |
-| Sprint 6 | Handoff, governance, testing, and handoff docs | S-15, S-16, S-17 |
+## Overview
 
-## Dependencies
+User decision: **single sprint** — all KT document sections produced in one iteration.
 
-Sprint 1 establishes audit and Teams app governance. Sprint 2 depends on approved ticket entry points. Sprints 3 and 4 depend on Power BI workspace and ticket data access. Sprint 5 depends on Copilot Studio and SharePoint FAQ readiness. Sprint 6 depends on prior components being ready for integrated validation.
+| Attribute | Value |
+|---|---|
+| Total sprints | 1 |
+| Total stories | 11 |
+| Sprint goal | Complete all 11 KT Document sections: functional overview through brand compliance |
+| Audience | New IT Admin (technical) + IT Leadership (functional) |
+| Output | Complete Knowledge Transfer Document in Markdown, committed to repository |
+
+---
+
+## Sprint 1 — Complete KT Document
+
+**Goal:** Author, review, and finalize all 11 sections of the Praise Program Knowledge Transfer Document, validated against all refdocs evidence (schemas, CSVs, mockups, PDFs).
+
+### Story Schedule
+
+| Order | Story | Section | Epic | Effort |
+|---|---|---|---|---|
+| 1 | S-01 | Functional Overview | E-01 | M |
+| 2 | S-02 | Architecture & Components | E-01 | M |
+| 3 | S-03 | Data Model | E-01 | L |
+| 4 | S-04 | Process Flow | E-01 | M |
+| 5 | S-05 | List Configuration & Views | E-02 | L |
+| 6 | S-06 | Power Automate Flow | E-02 | M |
+| 7 | S-07 | SharePoint Pages | E-02 | S |
+| 8 | S-08 | Permissions & Access | E-02 | M |
+| 9 | S-09 | Operational Runbook | E-03 | L |
+| 10 | S-10 | Data Snapshot Evidence | E-03 | S |
+| 11 | S-11 | Brand Compliance | E-03 | M |
+
+*Effort: S = Small, M = Medium, L = Large (relative to documentation complexity)*
+
+### Dependencies
+
+```
+S-01 (Functional) ──► S-02 (Architecture) ──► S-03 (Data Model) ──► S-04 (Process Flow)
+                                                      │
+                                              S-05 (List Config)
+                                              S-06 (PA Flow)
+                                              S-07 (Pages)
+                                              S-08 (Permissions)
+                                                      │
+                                              S-09 (Runbook) ──► S-10 (Data)
+                                                                  S-11 (Brand)
+```
+
+### Acceptance Gate
+
+Sprint 1 is complete when:
+- All 11 stories have status `done` in `tasks.md`
+- All 11 KT sections exist in the output document with no `TBD` or placeholder text
+- Each section references at least one refdoc as evidence
+- Brand compliance section cites both brand guide PDFs
+- Document reviewed against refdocs by author and stakeholder
+
+### Output Artifact
+
+The KT Document should be committed to the repository as a single Markdown file:
+
+```
+docs/KT-Praise-Program.md
+```
+
+or equivalent path agreed with the stakeholder.

@@ -1,7 +1,79 @@
 openapi: 3.1.0
 info:
-  title: Local Project — HTTP / RPC surface
+  title: Praise Program — SharePoint & Power Automate Integration Reference
   version: 1.0.0
-  x-vision-fallback: true
-  description: "Fallback OpenAPI shell — real endpoints are RPC + Edge Functions in the product PRD."
+  description: |
+    This file documents the Microsoft 365 API surface used by the Praise Program.
+    The solution uses no custom HTTP APIs. All integration happens via:
+    - SharePoint Online REST API (list operations, content moderation)
+    - Power Automate connectors (SharePoint, Teams Approvals, Outlook)
+
+    This reference is for IT Admin/Developer KT purposes only.
+
+x-solution:
+  type: Microsoft 365 Native
+  custom-code: none
+  platform: SharePoint Online + Power Automate + Teams + Outlook
+
+x-sharepoint-site:
+  url: /sites/RuizNetPortal/
+  list-recognition: /sites/RuizNetPortal/Lists/Recognition/
+  api-base: /sites/RuizNetPortal/_api/web/lists/getbytitle('Recognition')/
+
+x-sharepoint-operations:
+  get-all-approved-items:
+    description: Returns all approved praise items (default view)
+    endpoint: /sites/RuizNetPortal/_api/web/lists/getbytitle('Recognition')/items
+    filter: "$filter=OData__ModerationStatus eq 0"
+    orderby: "$orderby=Id desc"
+
+  get-top-10-approved:
+    description: Returns top 10 approved praises for homepage/cards view
+    endpoint: /sites/RuizNetPortal/_api/web/lists/getbytitle('Recognition')/items
+    filter: "$filter=OData__ModerationStatus eq 0"
+    orderby: "$orderby=Id desc"
+    top: "$top=10"
+
+  get-my-submissions:
+    description: Returns current user's own submissions
+    endpoint: /sites/RuizNetPortal/_api/web/lists/getbytitle('Recognition')/items
+    filter: "$filter=AuthorId eq [CurrentUserId]"
+    orderby: "$orderby=Id desc"
+
+  update-moderation-status:
+    description: Power Automate sets this after HR approval/rejection
+    endpoint: /sites/RuizNetPortal/_api/web/lists/getbytitle('Recognition')/items([itemId])
+    method: PATCH
+    body:
+      OData__ModerationStatus: 0  # 0=Approved, 1=Rejected, 2=Pending
+
+x-power-automate-connectors:
+  sharepoint:
+    trigger: "When an item is created"
+    actions:
+      - "Update item"
+  teams-approvals:
+    actions:
+      - "Start and wait for an approval"
+  outlook:
+    actions:
+      - "Send an email (V2)"
+
+x-moderation-status-values:
+  0: Approved
+  1: Rejected
+  2: Pending
+
+x-key-field-internal-names:
+  praise-for: Recognitionfor
+  core-value: Category
+  description: Description
+  manager: Manager
+  status: Status
+  department: Department
+  icon: Icon
+  praise-from-author: Author
+  moderation-status: _ModerationStatus
+  moderation-comments: _ModerationComments
+
 paths: {}

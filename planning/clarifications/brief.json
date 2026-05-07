@@ -1,0 +1,26 @@
+{
+  "stage": "brief",
+  "completedAt": "2026-05-07T15:15:00.000Z",
+  "answers": [
+    {
+      "question": "¿Cuál es el propósito principal del documento que quieres generar?",
+      "answer": "KT completo para nuevo administrador — Documento técnico + funcional para alguien que va a tomar ownership del sistema Praise existente en producción"
+    },
+    {
+      "question": "¿Quién es la audiencia del KT Document?",
+      "answer": "Dual audience: (1) Gerencia / Liderazgo IT — para comunicar el alcance y valor de la solución existente; (2) Nuevo desarrollador / IT Admin — persona técnica que tomará ownership de la solución"
+    },
+    {
+      "question": "¿Quieres que los sprints del VISION Framework representen secciones del KT Document?",
+      "answer": "No — un solo sprint con todo el contenido del KT Document en una sola iteración"
+    },
+    {
+      "question": "¿Qué tipo de proyecto es este?",
+      "answer": "Knowledge Transfer (KT) Document de una solución existente en producción. El sistema Praise Program de Ruiz Foods, Inc. lleva años en producción. No se está construyendo nada nuevo — se está documentando lo existente para transferencia de conocimiento."
+    },
+    {
+      "question": "¿Cuáles son los componentes principales de la solución que deberán estar cubiertos en el KT?",
+      "answer": "SharePoint Online Lists (Praise, Praise Archive, Praise Cards), Microsoft Forms o List Form para el submit, Power Automate flows (aprobaciones HR, notificaciones email), Microsoft Teams Approvals App (aprobación para HR managers), Microsoft Outlook emails (alertas y congratulations), SharePoint Pages (intranet landing, view praises pages)"
+    }
+  ]
+}

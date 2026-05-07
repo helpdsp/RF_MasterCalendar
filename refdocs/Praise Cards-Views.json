@@ -1,0 +1,29 @@
+[
+  {
+    "Title": "All Items",
+    "Id": "e1becee9-dd5c-4057-b99d-c034982f5421",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/Praise Cards/AllItems.aspx",
+    "DefaultView": true,
+    "Hidden": false,
+    "ViewQuery": "",
+    "RowLimit": 30
+  },
+  {
+    "Title": "Praise",
+    "Id": "54aa6515-4e39-476a-9d9d-b6da354d387a",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/Praise Cards/Praise.aspx",
+    "DefaultView": false,
+    "Hidden": false,
+    "ViewQuery": "<OrderBy><FieldRef Name=\"ID\" Ascending=\"FALSE\" /></OrderBy>",
+    "RowLimit": 30
+  },
+  {
+    "Title": "RssView",
+    "Id": "8b362e6e-92aa-4ed3-af00-5b1546357d3c",
+    "ServerRelativeUrl": "/sites/RuizNetPortal/Lists/Praise Cards/RssView.aspx",
+    "DefaultView": false,
+    "Hidden": true,
+    "ViewQuery": "",
+    "RowLimit": 25
+  }
+]
