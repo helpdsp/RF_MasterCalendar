@@ -15,8 +15,8 @@ Basado en:
 ### 1. Clonar y preparar
 
 ```bash
-git clone https://github.com/Nexus360-tech/vision.git mi-proyecto
-cd mi-proyecto
+git clone https://github.com/helpdsp/rf_engineering.git rf_engineering
+cd rf_engineering
 npm install
 ```
 

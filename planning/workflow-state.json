@@ -1,50 +1,41 @@
 {
   "version": 1,
   "setup": {
-    "reverseEngineering": false,
+    "reverseEngineering": null,
     "referencesDir": "refdocs",
     "sourceDir": "source-code",
-    "initializedAt": "2026-05-07T19:55:15.394Z"
+    "initializedAt": null
   },
-  "status": "sprint_complete",
+  "status": "awaiting_project_type",
   "brief": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "path": "spec-kit/input/brief.md",
-    "generatedAt": "2026-05-07T20:00:20.883Z",
-    "approvedAt": "2026-05-07T20:01:06.179Z"
+    "generatedAt": null,
+    "approvedAt": null
   },
   "spec": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-05-07T20:01:06.179Z",
-    "approvedAt": "2026-05-07T20:06:29.278Z",
-    "artifactFiles": [
-      "PRD.md",
-      "technical-spec.md",
-      "api-spec.yaml",
-      "data-model.md",
-      "epics.md",
-      "stories.md",
-      "sprint-plan.md",
-      "test-plan.md"
-    ]
+    "generatedAt": null,
+    "approvedAt": null,
+    "artifactFiles": []
   },
   "sprints": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-05-07T20:06:29.279Z",
-    "approvedAt": "2026-05-07T20:06:29.281Z",
-    "total": 1,
+    "generatedAt": null,
+    "approvedAt": null,
+    "total": 0,
     "active": null,
-    "completed": [1]
+    "completed": []
   },
   "lastAction": {
-    "command": "start_sprint",
-    "at": "2026-05-07T20:07:24.940Z",
-    "details": "Sprint 1 completed. Deliverable: docs/KT-InvoicesForTaxTeam.md. All 71 tasks marked done. All 12 quality gates passed."
+    "command": null,
+    "at": null,
+    "details": ""
   },
-  "updatedAt": "2026-05-07T20:07:24.940Z"
+  "updatedAt": "2026-05-08T22:33:12.194Z"
 }
