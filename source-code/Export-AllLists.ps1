@@ -11,4 +11,4 @@ foreach ($list in $lists) {
 }
 
 
-.\source-code\Export-SiteColumns.ps1 -SiteUrl "https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam" -OutputFolder "C:\DATA\Repos\rf_taxteam\refdocs" -ColumnGroup "Custom Columns"
+.\source-code\Export-SiteColumns.ps1 -SiteUrl "https://ruizfoods.sharepoint.com/sites/eng-hub" -OutputFolder "C:\DATA\Repos\rf_engineering\refdocs" -ColumnGroup "Custom Columns"

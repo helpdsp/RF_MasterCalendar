@@ -1,0 +1,54 @@
+# Sprint 1 Stories
+
+- [ ] Section 1 covers business value, user roles, high-level data flow
+- [ ] Architecture diagram shows: User → PnP Search → Libraries → Managed Metadata → Content Types
+- [ ] All 15 CTs listed with ID, parent, field count
+- [ ] Inheritance hierarchy shown (Ruiz Foods Document → Engineering Document → 10 sub-types)
+- [ ] All custom columns documented: Area (`Area`), Facility (`Facility`), Legal Entity (`Legal_x0020_entity`), Classification (`Classification`), Supplier (`Supplier`), Engineering Folder (`Engineering_x0020_Folder`)
+- [ ] TaxonomyFieldType columns linked to their term set
+- [ ] All libraries listed: Agreements, Assets (CA1, CA4), Approved Projects (x4), CAD Blocks, all CEP libraries
+- [ ] CEP naming convention `CEP YY-NNN Facility Description` documented
+- [ ] All 6 views with CAML: All Vendors, All COI, All MNDA, All W9, All Visitor's Liability, All Documents
+- [ ] Agreement Document fields documented including expiration tracking columns
+- [ ] Classification MMD term values documented
+- [ ] App Catalog deployment steps documented
+- [ ] Solution package name: `pnp-modern-search-parts-v4.sppkg`
+- [ ] Search page URL and web part layout documented
+- [ ] Libraries with unique permissions (CA1 Assets, CA4 Assets) flagged
+- [ ] Steps to add/remove users documented
+- [ ] Steps numbered and executable
+- [ ] Naming convention enforced, content types assigned, standard views created
+- [ ] Steps to access Term Store, add terms to Area/Facility/Classification/Supplier
+- [ ] Zero TBD/TODO/placeholder instances
+- [ ] All fields have internal names from JSON exports
+- [ ] All CAML queries transcribed verbatim from library exports
+- Standardize document classification across all facilities using a single Ruiz Foods content type hierarchy
+- Provide a faceted search experience (PnP Modern Search V4) so engineers can filter by facility, area, document type, and project simultaneously
+- Structure Capital Engineering Projects (CEPs) each in their own dedicated document library following a consistent naming convention: `CEP YY-NNN Facility Description`
+- Support per-facility access control (the Assets libraries carry unique role assignments)
+- Centralize vendor agreements with contract expiration tracking
+- Provide a single URL for all engineering documentation across all four Ruiz Foods facilities
+- Enable faceted search powered by SharePoint Search and PnP Modern Search V4
+- Enforce consistent metadata tagging on all documents via Ruiz Foods Taxonomy content types
+- Organize Capital Engineering Projects each in isolated document libraries with standardized folder structures
+- Track vendor agreement expiration dates and classify contract types (COI, MNDA, W9, Visitor's Liability Release, etc.)
+- Support per-facility permissions on Asset libraries without affecting the rest of the portal
+- Provide a shared CAD Blocks library accessible across projects
+- **Como** parte de los roles definidos en el PRD **quiero** el comportamiento descrito en **RF-01** **para** cumplir el requisito funcional.
+- **RF:** RF-01
+- **Criterios de aceptación (checklist):**
+- [ ] The system shall allow any employee to submit a praise for a peer via the intranet entry point.
+- [ ] The submission form shall collect: Praise for (employee), Core Value Demonstrated, Description, and Manager of the recognized employee.
+- [ ] Submissions shall be stored in the **Praise** SharePoint list (internal name: Recognition) on the `/sites/RuizNetPortal/` site.
+- [ ] The list shall enforce content moderation — submitted items are placed in Pending status until approved by HR.
+- **Dependencias:** orden lógico respecto a otros RF (ver PRD); integraciones listadas en §8 si aplica.
+- **Owner sugerido:** frontend, backend
+- **Notas técnicas:** tablas Supabase, RLS, RPC y Edge Functions según PRD §7–8.
+- The system shall allow any employee to submit a praise for a peer via the intranet entry point.
+- The submission form shall collect: Praise for (employee), Core Value Demonstrated, Description, and Manager of the recognized employee.
+- Submissions shall be stored in the **Praise** SharePoint list (internal name: Recognition) on the `/sites/RuizNetPortal/` site.
+- The list shall enforce content moderation — submitted items are placed in Pending status until approved by HR.
+- **Como** parte de los roles definidos en el PRD **quiero** el comportamiento descrito en **RF-02** **para** cumplir el requisito funcional.
+- **RF:** RF-02
+- **Criterios de aceptación (checklist):**
+

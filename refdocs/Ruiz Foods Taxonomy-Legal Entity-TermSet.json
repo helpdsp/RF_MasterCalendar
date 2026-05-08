@@ -1,0 +1,54 @@
+{
+  "ExportedAt": "2026-05-08T16:04:52Z",
+  "SiteUrl": "https://ruizfoods.sharepoint.com/sites/eng-hub",
+  "TermGroupName": "Ruiz Foods Taxonomy",
+  "TermGroupId": "4629c72b-aee4-49ef-82e7-07a9d6166f09",
+  "TermSetName": "Legal Entity",
+  "TermSetId": "38f9eb73-4544-44f3-87fe-619757c5354e",
+  "Description": "",
+  "IsOpenForTermCreation": false,
+  "Contact": "",
+  "TermCount": 4,
+  "Terms": [
+    {
+      "Name": "All Legal Entities",
+      "Id": "0a4122ee-e068-4e80-bb42-35f75f6e92b4",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "All Legal Entities",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "RG1 Holding Co, LLC (RG1)",
+      "Id": "a4273cd0-4aa5-453f-a76d-a732d187a612",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "RG1 Holding Co, LLC (RG1)",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "RG4 Holding Company , LLC (RG4)",
+      "Id": "56721b94-2d22-45f2-8842-1c6a1325c0a1",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "RG4 Holding Company , LLC (RG4)",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Ruiz Food Products, Inc (RFP)",
+      "Id": "27696a99-daa4-40c0-9d30-c5435a004b39",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Ruiz Food Products, Inc (RFP)",
+      "Depth": 0,
+      "ParentName": null
+    }
+  ]
+}

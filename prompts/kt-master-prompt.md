@@ -19,11 +19,26 @@ This is **not a development project** — the solution already exists in product
 Fill in before sending:
 
 - **Solution name:** `[SOLUTION_NAME]` *(e.g., "IT Helpdesk Ticket System", "Holiday Calendar", "Employee Onboarding Portal")*
-- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/InvoiceForTaxTeam/`
+- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/eng-hub/`
 - **In production since:** `2025`
-- **Brief description:** `This project involves the creation and configuration of a SharePoint Online site named Invoices for Tax Team to consolidate invoice-related emails coming from FixedAssets@ruizfoods.com and AP@ruizfoods.com. Currently, the reliance on a shared mailbox (InvoicesforTaxTeam@ruizfoods.com) is presenting challenges due to imminent storage space limitations. This SharePoint solution will resolve the storage limit, establish strict access rules (read-only for members), and offer an enriched search engine similar to MS Outlook, all by leveraging out-of-the-box (OOTB) capabilities of the platform.`
+- **Brief description:** `This new structure builds
+on years of hands-on
+experience
+delivering mission-critical
+engineering projects for
+the food service industry.
+It represents not only a
+consolidation of best
+practices but also
+a technological leap
+forward, deeply integrated
+with SharePoint to
+simplify collaboration,
+document discovery,
+knowledge sharing, and
+reusability.`
 - **Primary M365 components used:** `[check all that apply]`
-  - [ ] SharePoint Online Lists
+  - [ x] SharePoint Online Lists
   - [ x ] SharePoint Pages / Intranet
    [ x ] SharePoint Document Libraries
     [ x ] SharePoint Content Types
@@ -44,7 +59,6 @@ Fill in before sending:
 - **Organization:** Ruiz Foods, Inc.
 - **IT Environment:** Microsoft 365-native — no custom code, no SPFx, no third-party services (unless specified above)
 - **SharePoint tenant:** `ruizfoods.sharepoint.com`
-- **Brand guidelines available in:** `refdocs/Learning Color Brand Guide.pdf` and `refdocs/RZF003_22 El Monterey_Brand_Guidelines_10_27_22_v3 (1).pdf`
 - **Framework:** VISION Framework (governed by `CLAUDE.md` and `commands/` in this repo)
 
 ---

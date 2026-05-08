@@ -1,0 +1,94 @@
+{
+  "ExportedAt": "2026-05-08T16:04:51Z",
+  "SiteUrl": "https://ruizfoods.sharepoint.com/sites/eng-hub",
+  "TermGroupName": "Ruiz Foods Taxonomy",
+  "TermGroupId": "4629c72b-aee4-49ef-82e7-07a9d6166f09",
+  "TermSetName": "Facility",
+  "TermSetId": "343b3d39-70cc-405a-878d-0ebac6f3379d",
+  "Description": "List of plants in Ruiz Foods",
+  "IsOpenForTermCreation": false,
+  "Contact": "haarongconsult@ruizfoods.com",
+  "TermCount": 8,
+  "Terms": [
+    {
+      "Name": "All Facilities",
+      "Id": "8e36eb99-b590-4906-8958-2ba0bf08cc5f",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "All Facilities",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Denison",
+      "Id": "65ff8b2d-fd9c-4788-a1e6-9dbd50768c91",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Denison",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Dinuba",
+      "Id": "8f0b7ff5-cf47-410d-883d-dcdef0f7d689",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Dinuba",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Florence",
+      "Id": "59c73ff8-c5c0-4d27-b425-c3d11f44bf1b",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Florence",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Frisco",
+      "Id": "97f0a9e3-9765-4bf5-b993-8b54c0e0e29e",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Frisco",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Tulare",
+      "Id": "99465240-6c52-4661-8842-aac275ef3d99",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Tulare",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Vernon MFG",
+      "Id": "284b7a5a-6a1c-4888-bd58-2aabadced723",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Vernon MFG",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Vernon WH",
+      "Id": "a005805c-49af-4269-93dc-98fd1a3af84c",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Vernon WH",
+      "Depth": 0,
+      "ParentName": null
+    }
+  ]
+}

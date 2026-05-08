@@ -1,0 +1,176 @@
+{
+  "GroupName": "Custom Columns",
+  "ColumnCount": 34,
+  "Columns": [
+    {
+      "Title": "Area_0",
+      "InternalName": "e51087729cc94665ae8e4e06a90f2324",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Class_0",
+      "InternalName": "i4baf7728d254047b399a28171344f1d",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Classification_0",
+      "InternalName": "jc76080e02f24217a3933ac7afb1466c",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Color",
+      "InternalName": "_ColorHex",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Color Tag",
+      "InternalName": "_ColorTag",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Comment count",
+      "InternalName": "_CommentCount",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Compliance Asset Id",
+      "InternalName": "ComplianceAssetId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Emoji",
+      "InternalName": "_Emoji",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Engineering Folder_0",
+      "InternalName": "ded98a979aae46ab8b7b188f292ef03e",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Facility_0",
+      "InternalName": "o3b7d11dc35f4d59bf8322fadb272430",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Is Featured Discussion",
+      "InternalName": "IsFeatured",
+      "TypeAsString": "Boolean"
+    },
+    {
+      "Title": "Item is a Record",
+      "InternalName": "_IsRecord",
+      "TypeAsString": "Computed"
+    },
+    {
+      "Title": "Label applied by",
+      "InternalName": "_ComplianceTagUserId",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Label applied by App Id",
+      "InternalName": "ComplianceTagAppId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Label Event Date",
+      "InternalName": "TagEventDate",
+      "TypeAsString": "DateTime"
+    },
+    {
+      "Title": "Label setting",
+      "InternalName": "_ComplianceFlags",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Legal entity_0",
+      "InternalName": "cd7444e494fd42eab6d0e1525fce69d7",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Like count",
+      "InternalName": "_LikeCount",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Modified By",
+      "InternalName": "MyEditor",
+      "TypeAsString": "User"
+    },
+    {
+      "Title": "Parent Folder Id",
+      "InternalName": "ParentFolderId",
+      "TypeAsString": "Integer"
+    },
+    {
+      "Title": "Parent ID",
+      "InternalName": "ParentID",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Parent Item Editor",
+      "InternalName": "ParentItemEditor",
+      "TypeAsString": "User"
+    },
+    {
+      "Title": "Parent Item ID",
+      "InternalName": "ParentItemID",
+      "TypeAsString": "Integer"
+    },
+    {
+      "Title": "Retention label",
+      "InternalName": "_ComplianceTag",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Retention label Applied",
+      "InternalName": "_ComplianceTagWrittenTime",
+      "TypeAsString": "Lookup"
+    },
+    {
+      "Title": "Shortest Thread-Index Id",
+      "InternalName": "ShortestThreadIndexId",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "Supplier_0",
+      "InternalName": "ic0262debfaf49ce94efd95ff4d7d4e8",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Task Outcome",
+      "InternalName": "TaskOutcome",
+      "TypeAsString": "OutcomeChoice"
+    },
+    {
+      "Title": "TaxKeywordTaxHTField",
+      "InternalName": "TaxKeywordTaxHTField",
+      "TypeAsString": "Note"
+    },
+    {
+      "Title": "Taxonomy Catch All Column",
+      "InternalName": "TaxCatchAll",
+      "TypeAsString": "LookupMulti"
+    },
+    {
+      "Title": "Taxonomy Catch All Column1",
+      "InternalName": "TaxCatchAllLabel",
+      "TypeAsString": "LookupMulti"
+    },
+    {
+      "Title": "Trigger Flow Info",
+      "InternalName": "TriggerFlowInfo",
+      "TypeAsString": "Text"
+    },
+    {
+      "Title": "WSEnabled",
+      "InternalName": "WSEnabled",
+      "TypeAsString": "Boolean"
+    },
+    {
+      "Title": "WSPublishState",
+      "InternalName": "WSPublishState",
+      "TypeAsString": "Integer"
+    }
+  ]
+}

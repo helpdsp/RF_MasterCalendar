@@ -1,0 +1,64 @@
+{
+  "ExportedAt": "2026-05-08T16:04:52Z",
+  "SiteUrl": "https://ruizfoods.sharepoint.com/sites/eng-hub",
+  "TotalGroups": 1,
+  "TotalTermSets": 8,
+  "TotalTerms": 71,
+  "Groups": [
+    {
+      "GroupName": "Ruiz Foods Taxonomy",
+      "GroupId": "4629c72b-aee4-49ef-82e7-07a9d6166f09",
+      "TermSetCount": 8,
+      "TermSets": [
+        {
+          "TermSetName": "Area",
+          "TermSetId": "9115c481-4ca2-4e31-9a93-bac90958737c",
+          "TermCount": 1,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Area-TermSet.json"
+        },
+        {
+          "TermSetName": "Classification",
+          "TermSetId": "7a39a5ee-b091-44f1-b315-ff1a95b0f861",
+          "TermCount": 11,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Classification-TermSet.json"
+        },
+        {
+          "TermSetName": "Department",
+          "TermSetId": "0b1e71c5-0ff0-456d-9d3c-3d13fec1830f",
+          "TermCount": 36,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Department-TermSet.json"
+        },
+        {
+          "TermSetName": "Engineering Navigation",
+          "TermSetId": "ffd29a9e-70e2-4e06-b54d-98925dd236c3",
+          "TermCount": 8,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Engineering Navigation-TermSet.json"
+        },
+        {
+          "TermSetName": "Equipment",
+          "TermSetId": "36de550e-90a1-4e22-bef6-c5f529b891d0",
+          "TermCount": 1,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Equipment-TermSet.json"
+        },
+        {
+          "TermSetName": "Facility",
+          "TermSetId": "343b3d39-70cc-405a-878d-0ebac6f3379d",
+          "TermCount": 8,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Facility-TermSet.json"
+        },
+        {
+          "TermSetName": "Legal Entity",
+          "TermSetId": "38f9eb73-4544-44f3-87fe-619757c5354e",
+          "TermCount": 4,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Legal Entity-TermSet.json"
+        },
+        {
+          "TermSetName": "Vendor",
+          "TermSetId": "3216f607-dacf-42d9-a5d7-cbc924a6a266",
+          "TermCount": 2,
+          "OutputFile": "C:\\DATA\\Repos\\rf_engineering\\refdocs\\Ruiz Foods Taxonomy-Vendor-TermSet.json"
+        }
+      ]
+    }
+  ]
+}

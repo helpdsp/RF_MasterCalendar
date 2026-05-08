@@ -1,0 +1,94 @@
+{
+  "ExportedAt": "2026-05-08T16:04:51Z",
+  "SiteUrl": "https://ruizfoods.sharepoint.com/sites/eng-hub",
+  "TermGroupName": "Ruiz Foods Taxonomy",
+  "TermGroupId": "4629c72b-aee4-49ef-82e7-07a9d6166f09",
+  "TermSetName": "Engineering Navigation",
+  "TermSetId": "ffd29a9e-70e2-4e06-b54d-98925dd236c3",
+  "Description": "Navigation term set generated from Engineering Hub portal tree",
+  "IsOpenForTermCreation": false,
+  "Contact": "",
+  "TermCount": 8,
+  "Terms": [
+    {
+      "Name": "Approved Projects",
+      "Id": "ce30b905-428e-45f0-9e27-e3e29e740307",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Approved Projects",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Assets",
+      "Id": "9d8719a6-dec9-4e86-8f76-b8d565842f8c",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Assets",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Corporate and Engineering",
+      "Id": "94c86125-0011-409c-808f-c88a23ba56dc",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Corporate and Engineering",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Facilities",
+      "Id": "c89f6cb1-6645-4722-9507-8e76e222f314",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Facilities",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Home",
+      "Id": "4f82c7aa-b708-4baf-8157-7fefda70df4c",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Home",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Proposed Projects",
+      "Id": "3e84bb29-6c3f-43c3-8582-df6c20ede1a6",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Proposed Projects",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Standards ＆ Policies",
+      "Id": "41037327-43bb-42d6-9e6d-cca448b4108e",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Standards ＆ Policies",
+      "Depth": 0,
+      "ParentName": null
+    },
+    {
+      "Name": "Vendors ＆ Contractors",
+      "Id": "7b223bbb-4870-44e4-8d9d-d4f0e1658a9a",
+      "Description": "",
+      "IsAvailableForTagging": true,
+      "IsDeprecated": false,
+      "PathOfTerm": "Vendors ＆ Contractors",
+      "Depth": 0,
+      "ParentName": null
+    }
+  ]
+}
