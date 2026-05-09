@@ -8,7 +8,7 @@
 
 ## TASK
 
-Convert the Knowledge Transfer Document at `docs/KT-InvoicesForTaxTeam.md` into a professional Microsoft Word document (`.docx`) that can be shared with IT Leadership and used as an official handover document at Ruiz Foods, Inc.
+Convert the Knowledge Transfer Document at `docs/KT-EngineeringWebPortal.md` into a professional Microsoft Word document (`.docx`) that can be shared with IT Leadership and used as an official handover document at Ruiz Foods, Inc.
 
 The output file should be: `docs/KT-InvoicesForTaxTeam.docx`
 
@@ -25,10 +25,10 @@ pandoc --version
 
 If available, run:
 ```powershell
-pandoc docs/KT-Praise-Program.md `
+pandoc docs/KT-EngineeringWebPortal.md `
   --from markdown `
   --to docx `
-  --output docs/KT-Praise-Program.docx `
+  --output docs/KT-EngineeringWebPortal.docx `
   --toc `
   --toc-depth=2 `
   --highlight-style=tango
@@ -36,10 +36,10 @@ pandoc docs/KT-Praise-Program.md `
 
 If you want to apply a Word reference template for branding (recommended):
 ```powershell
-pandoc docs/KT-Praise-Program.md `
+pandoc docs/KT-EngineeringWebPortal.md `
   --from markdown `
   --to docx `
-  --output docs/KT-Praise-Program.docx `
+  --output docs/KT-EngineeringWebPortal.docx `
   --reference-doc=prompts/word-reference-template.docx `
   --toc `
   --toc-depth=2
@@ -56,10 +56,10 @@ npm install docx markdown-it
 ```
 
 Write a script at `scripts/md-to-docx.js` that:
-1. Reads `docs/KT-Praise-Program.md`
+1. Reads `docs/KT-EngineeringWebPortal.md`
 2. Parses it with `markdown-it`
 3. Generates a `docx` using the `docx` npm package
-4. Writes `docs/KT-Praise-Program.docx`
+4. Writes `docs/KT-EngineeringWebPortal.docx`
 
 ### Option C — Python with python-docx (if Python available)
 
@@ -137,7 +137,7 @@ If neither pandoc, Node.js docx package, nor Python are available, provide:
 ## OUTPUT
 
 ```
-docs/KT-Praise-Program.docx    ← primary deliverable
+docs/KT-EngineeringWebPortal.docx    ← primary deliverable
 ```
 
 Confirm the file size is reasonable (expect 200KB–2MB for a document of this size without embedded images).
