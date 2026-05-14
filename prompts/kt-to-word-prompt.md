@@ -22,21 +22,20 @@ The output file should be: `docs/KT-EngineeringWebPortal.docx`
 
 Before converting, run the pre-processing step that:
 
-1. **Discovers runbook source files** — scans `refdocs/` for any files matching
-   `Runbook - *.md`. Each file is a detailed step-by-step runbook with
-   screenshots that must be appended to the Word document as an appendix section.
+1. **Discovers runbook source files** — scans `refdocs/Runbooks/*/runbook.md`
+   (one subfolder per runbook, sorted alphabetically). Each runbook folder
+   contains a `runbook.md` and an `images/` subfolder with screenshots.
 
-2. **Fixes image paths** — the runbook markdown files reference images with
-   absolute paths like `](/refdocs/mockups/...)`. These must be rewritten to
-   relative paths (`](refdocs/mockups/...)`) so pandoc can resolve them from
-   the repo root.
+2. **Fixes image paths** — runbook markdowns reference screenshots as relative
+   `images/foo.jpg` paths. These are rewritten to repo-root-relative paths
+   (`refdocs/Runbooks/{folder}/images/foo.jpg`) so pandoc can find them via
+   `--resource-path .`.
 
-3. **Demotes heading levels** — runbook files use `# Title` (H1) and
-   `## Chapter` (H2). When appended to the KT document, headings are demoted
-   by one level so they nest correctly under the existing section hierarchy:
-   - Runbook H1 → H2 (appears as "Appendix: {runbook title}" in TOC)
-   - Runbook H2 → H3
-   - Runbook H3 → H4
+3. **Demotes heading levels** — each runbook's H1 becomes H2 (the appendix
+   title shown in the TOC), H2 → H3 (chapters), H3 → H4 (sub-steps):
+   - `# Runbook Title` → `## Appendix: Runbook Title`
+   - `## Chapter: ...` → `### Chapter: ...`
+   - `### Sub-section` → `#### Sub-section`
 
 4. **Writes a merged temp file** — `_kt_merged.md` at the repo root, combining
    the KT markdown and all runbook appendices. This file is deleted after pandoc
@@ -172,17 +171,42 @@ After generating the `.docx`, verify:
 
 ## ADDING A NEW RUNBOOK
 
-To include an additional runbook scenario in future Word exports:
+Runbooks live in `refdocs/Runbooks/` — one subfolder per runbook:
 
-1. Create `refdocs/Runbook - {scenario name}.md` following the chapter
-   structure used in existing runbooks.
-2. Place all screenshots in `refdocs/mockups/Runbook - {scenario name}/`.
-3. Reference images in the markdown as:
-   `![Alt text describing the screenshot](/refdocs/mockups/Runbook - {scenario name}/image.jpg)`
-4. Re-run `py scripts/build-docx.py` — the new runbook is automatically
-   discovered and appended as a new appendix.
+```
+refdocs/Runbooks/
+  {runbook-folder-name}/
+    runbook.md       ← full step-by-step content
+    images/          ← screenshots referenced from runbook.md
+      step-01.jpg
+      step-02.jpg
+      ...
+```
+
+To add a new runbook:
+
+1. Create the folder: `refdocs/Runbooks/{kebab-case-name}/`
+2. Create `runbook.md` using this chapter structure:
+   ```markdown
+   # Runbook Title
+   Brief description of what this runbook covers.
+   ## Prerequisites
+   - ...
+   ## Chapter: Step group name
+   **Step 1:** ...
+   ![Description of what the screenshot shows](images/step-01.jpg)
+   **Step 2:** ...
+   ```
+3. Drop screenshots into `images/` and reference them as `![alt text](images/filename.jpg)`
+4. Update `spec-kit/input/runbooks.md` — add a row to the Runbook Inventory table
+5. Re-run `py scripts/build-docx.py` — the new runbook is automatically
+   discovered (sorted alphabetically), path-fixed, and appended as a new appendix
 
 No changes to `build-docx.py` or the KT markdown are needed.
+
+> **Stub runbooks** — if images are not yet ready, use `> [ADD SCREENSHOT: description]`
+> blockquotes as placeholders. The Word document will include the placeholder text
+> until real screenshots are added.
 
 ---
 

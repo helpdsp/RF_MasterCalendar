@@ -29,6 +29,7 @@ from docx.oxml import OxmlElement
 
 REPO        = Path(__file__).parent.parent
 MD_IN       = REPO / "docs" / "KT-EngineeringWebPortal.md"
+RUNBOOKS_DIR = REPO / "refdocs" / "Runbooks"   # refdocs/Runbooks/*/runbook.md
 MERGED_MD   = REPO / "_kt_merged.md"       # temp; deleted after pandoc
 DOCX_TMP    = REPO / "docs" / "_kt_tmp.docx"
 DOCX_OUT    = REPO / "docs" / "KT-EngineeringWebPortal.docx"
@@ -88,9 +89,19 @@ def _field_run(para, field_code: str):
 # Step 0 — pre-process: merge KT + runbook files, fix image paths
 # ---------------------------------------------------------------------------
 
-def _fix_image_paths(content: str) -> str:
-    """Rewrite /refdocs/ absolute image paths to refdocs/ relative paths."""
-    return content.replace("](/refdocs/", "](refdocs/")
+def _fix_image_paths(content: str, rb_folder_rel: str | None = None) -> str:
+    """
+    Rewrite image paths so pandoc can resolve them from the repo root.
+
+    - Legacy absolute paths: /refdocs/... → refdocs/...
+    - Runbook-relative paths: images/foo.jpg → refdocs/Runbooks/{folder}/images/foo.jpg
+    """
+    content = content.replace("](/refdocs/", "](refdocs/")
+    if rb_folder_rel:
+        # images/ is relative to the runbook folder; make it repo-root-relative
+        rb_prefix = rb_folder_rel.replace("\\", "/")
+        content = content.replace("](images/", f"]({rb_prefix}/images/")
+    return content
 
 
 def _demote_headings(content: str) -> str:
@@ -115,28 +126,37 @@ def _demote_headings(content: str) -> str:
 
 def build_merged_markdown() -> tuple[Path, str]:
     """
-    Merge the KT markdown with any Runbook - *.md files found in refdocs/.
+    Merge the KT markdown with every runbook found at
+    refdocs/Runbooks/*/runbook.md, sorted by folder name.
+    Each runbook is appended as an appendix section.
     Returns (path_to_merged_file, full_merged_content).
     """
     kt_content = MD_IN.read_text(encoding="utf-8")
     kt_content = _fix_image_paths(kt_content)
 
-    runbooks = sorted(REPO.glob("refdocs/Runbook - *.md"))
+    runbooks = sorted(RUNBOOKS_DIR.glob("*/runbook.md")) if RUNBOOKS_DIR.exists() else []
 
     if runbooks:
-        print(f"  merge   -> {len(runbooks)} runbook file(s) found")
+        print(f"  merge   -> {len(runbooks)} runbook(s) found in refdocs/Runbooks/")
         appendix_parts = []
         for rb_path in runbooks:
             rb_raw = rb_path.read_text(encoding="utf-8")
-            rb_raw = _fix_image_paths(rb_raw)
+            # rb_folder_rel: e.g. "refdocs/Runbooks/new-cep-project-library"
+            rb_folder_rel = str(rb_path.parent.relative_to(REPO)).replace("\\", "/")
+            rb_raw = _fix_image_paths(rb_raw, rb_folder_rel)
             rb_demoted = _demote_headings(rb_raw)
-            label = rb_path.stem  # e.g. "Runbook - new-cep-project-folder creation"
+            label = rb_path.parent.name   # e.g. "new-cep-project-library"
+            # Use the H1 title from the runbook as the appendix heading if present
+            first_h1 = next(
+                (l.lstrip("# ").strip() for l in rb_raw.splitlines() if l.startswith("# ")),
+                label
+            )
             appendix_parts.append(
-                f"\n\n---\n\n## Appendix: {label}\n\n{rb_demoted}"
+                f"\n\n---\n\n## Appendix: {first_h1}\n\n{rb_demoted}"
             )
         merged = kt_content + "".join(appendix_parts)
     else:
-        print("  merge   -> no runbook files in refdocs/ — using KT markdown as-is")
+        print("  merge   -> no runbooks in refdocs/Runbooks/ — using KT markdown as-is")
         merged = kt_content
 
     MERGED_MD.write_text(merged, encoding="utf-8")

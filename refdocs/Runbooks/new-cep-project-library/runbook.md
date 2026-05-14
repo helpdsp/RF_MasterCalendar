@@ -51,7 +51,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 2:** On the "What type of copy would you like to do?" screen, choose **Copy structure and content** under SharePoint and Microsoft 365.
 
-![ShareGate copy type selection screen](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/All_Folders_view_in_document_library__folders_list_cd79d9f191.jpg)
+![ShareGate copy type selection screen](images/All_Folders_view_in_document_library__folders_list_cd79d9f191.jpg)
 
 ---
 
@@ -61,7 +61,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 4:** Confirm your authentication details, then click **Connect**.
 
-![Select destination screen with site address and authentication options](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Select_destination_screen_with_site_addr_1c897f8f7e.jpg)
+![Select destination screen with site address and authentication options](images/ShareGate_Select_destination_screen_with_site_addr_1c897f8f7e.jpg)
 
 ---
 
@@ -69,7 +69,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 5:** On the **Copy structure** screen, you'll see the source and destination site structures displayed side by side. Browse the folders and libraries and select the item you want to copy (for example, "CEP 09-000 SCI New Project Quick Example").
 
-![Copy structure screen showing source and destination side by side](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Copy_structure_screen_showing_source_and_7904dc58f2.jpg)
+![Copy structure screen showing source and destination side by side](images/ShareGate_Copy_structure_screen_showing_source_and_7904dc58f2.jpg)
 
 ---
 
@@ -89,7 +89,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 7:** Click the checkmark in the upper right of the dialog to save your options.
 
-![Copy options dialog with title, URL, operation mode, and configuration checkboxes](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Copy_options_dialog_with_fields_for_titl_bddd0f2b41.jpg)
+![Copy options dialog with title, URL, operation mode, and configuration checkboxes](images/ShareGate_Copy_options_dialog_with_fields_for_titl_bddd0f2b41.jpg)
 
 > **Tip:** If you need to map fields or content types to different values in the destination, click **Mappings** in the upper right of the Copy structure screen before starting.
 
@@ -99,11 +99,11 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 8:** Back on the **Copy structure** screen, verify your selections, then click **Start copy** in the lower right.
 
-![Copy structure screen with Start copy button](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Copy_structure_screen_with__Start_copy___306b98e1de.jpg)
+![Copy structure screen with Start copy button](images/ShareGate_Copy_structure_screen_with__Start_copy___306b98e1de.jpg)
 
 **Step 9:** The Migration report screen opens automatically. You'll initially see a status of "Copying..." and "Initializing..." as the process starts. Items will appear in the table and their statuses will update as the copy progresses.
 
-![Migration report screen showing copy progress](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Migration_report_screen_with_items_liste_94844588e3.jpg)
+![Migration report screen showing copy progress](images/ShareGate_Migration_report_screen_with_items_liste_94844588e3.jpg)
 
 ---
 
@@ -111,7 +111,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 10:** Once the copy finishes, confirm that all items show a green checkmark and "Copied successfully" in the Details column.
 
-![Migration report showing all items copied successfully](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/ShareGate_Migration_report_screen_with_more_items__caa77eebc9.jpg)
+![Migration report showing all items copied successfully](images/ShareGate_Migration_report_screen_with_more_items__caa77eebc9.jpg)
 
 **Step 11:** Click **Export** to save the migration report. In the Save As dialog, choose a destination (such as OneDrive or a local folder), enter a descriptive file name, and click **Save**.
 
@@ -121,7 +121,7 @@ This chapter walks you through the full process of copying a SharePoint document
 
 **Step 12:** Open the destination SharePoint site and navigate to the document library or folder where the content was copied. Confirm that the titles, document counts, and metadata appear as expected.
 
-![SharePoint Engineering Hub showing copied document libraries](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_Engineering_Hub_site_showing_document_l_99bfc8e6d9.jpg)
+![SharePoint Engineering Hub showing copied document libraries](images/SharePoint_Engineering_Hub_site_showing_document_l_99bfc8e6d9.jpg)
 
 Your content is now successfully copied to the destination site. Next, you'll update the library settings and description to match the service request requirements.
 
@@ -138,23 +138,23 @@ After confirming the copy, take a moment to clean up the library settings so the
 
 The settings page also gives you access to General Settings, Permissions and Management options, Content Types, and Columns — all of which were carried over from the source library.
 
-![Document library settings page showing general settings, content types, and columns](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_document_library_settings_page_showing__7ff5e5bcb1.jpg)
+![Document library settings page showing general settings, content types, and columns](images/SharePoint_document_library_settings_page_showing__7ff5e5bcb1.jpg)
 
 **Step 14:** Click **List name, description and navigation**. Update the **Description** field to reference the ticket that authorized the library creation (for example, "CEP 26-701 HQ2 Frisco R&D Lab created per ticket request 989897"). Click **Save**.
 
 > **Tip:** Before updating the description, open your service request system (e.g., ManageEngine) and locate the relevant ticket to confirm the exact wording and ticket number required.
 
-![Updated library name and description settings](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_document_library_settings_page_with_upd_563b0a3893.jpg)
+![Updated library name and description settings](images/SharePoint_document_library_settings_page_with_upd_563b0a3893.jpg)
 
 **Step 15:** Back on the settings page, click **Change new button order and default content type**. Review the list of content types, set each one's **Visible** checkbox as needed, and adjust the **Position from Top** order to control how they appear when users create new items. Click **OK** to save.
 
 **Step 16:** Scroll down to the **Columns** section and verify that all required columns are present and correctly configured. Confirm that columns such as Agreement Status, Area, CEP Project #, Class, Date Uploaded, Document Type, EAM Asset #, Expiration Date, Facility, Legal Entity, and Supplier/Vendor are listed and mapped to the appropriate content types.
 
-![Document library settings showing detailed columns list](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_document_library_settings_page_with_ext_db02ce5615.jpg)
+![Document library settings showing detailed columns list](images/SharePoint_document_library_settings_page_with_ext_db02ce5615.jpg)
 
 **Step 17:** Return to your service request ticket and confirm that all requirements — library name, description, and configuration — have been met before closing the request.
 
-![Service request details confirming library creation requirements](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Service_request_details_confirming_project_library_244b174ce2.jpg)
+![Service request details confirming library creation requirements](images/Service_request_details_confirming_project_library_244b174ce2.jpg)
 
 The library is now fully set up and verified against the original request. You're ready to move on to the next step.
 
@@ -170,11 +170,11 @@ Once your document library is set up, you'll want to make sure each document car
 
 The settings page displays all configured columns — including Agreement Status, Area, Class, Document Type, EAM Asset #, Expiration Date, Facility, Legal Entity, Supplier/Vendor, and others — along with each column's type and the content types that use it.
 
-![SharePoint Document Library Settings page showing columns, types, and usage](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_Document_Library_Settings_page_showing__789aa22946.jpg)
+![SharePoint Document Library Settings page showing columns, types, and usage](images/SharePoint_Document_Library_Settings_page_showing__789aa22946.jpg)
 
 **Step 2:** Scroll through the columns list and click **Legal Entity** to open its settings.
 
-![Cursor selecting the Legal Entity column in the columns list](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Cursor_selecting_the__Legal_Entity__column_in_the__40bc262e1f.jpg)
+![Cursor selecting the Legal Entity column in the columns list](images/Cursor_selecting_the__Legal_Entity__column_in_the__40bc262e1f.jpg)
 
 **Step 3:** On the column settings page, you'll see that **Legal Entity** uses a managed term set. A **Select: Default** dialog lists the available entities:
 - RG1 Holding Co. LLC (RG1)
@@ -183,11 +183,11 @@ The settings page displays all configured columns — including Agreement Status
 
 Select your desired default value — for example, **RG4 Holding Company, LLC (RG4)** — and click **OK**.
 
-![Dialog box for selecting default legal entity, with RG4 highlighted](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Dialog_box_for_selecting_default_legal_entity__wit_371c30fbe7.jpg)
+![Dialog box for selecting default legal entity, with RG4 highlighted](images/Dialog_box_for_selecting_default_legal_entity__wit_371c30fbe7.jpg)
 
 **Step 4:** Review the updated column settings — confirm the correct term set and default value are shown — then click **OK** or **Save** to apply the change. The view returns to the main Library Settings page, confirming the update was saved.
 
-![Library Settings page after editing the Legal Entity column](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Settings_page_for_CEP_26-701_HQ2_Frisco_R_D_Lab__s_0709069429.jpg)
+![Library Settings page after editing the Legal Entity column](images/Settings_page_for_CEP_26-701_HQ2_Frisco_R_D_Lab__s_0709069429.jpg)
 
 ---
 
@@ -197,35 +197,35 @@ With column defaults in place, you can now tag multiple documents at once using 
 
 **Step 1:** Navigate to the document library's list view. You'll see columns such as Name, Title, ID, Facility, Area, Content Type, Document Type, Supplier/Vendor, CEP Project #, EAM Asset #, Legal Entity, and File Size.
 
-![Document library grid view with all columns and filters visible](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Document_library_grid_view_with_all_columns_and_fi_7433c27ae0.jpg)
+![Document library grid view with all columns and filters visible](images/Document_library_grid_view_with_all_columns_and_fi_7433c27ae0.jpg)
 
 **Step 2:** Check the checkboxes next to the items you want to update. In this example, "Assets and Nameplates" and "Bids and RFPs" are selected. A **Bulk edit properties** pane opens on the right, showing all editable metadata fields: Content Type, Legal Entity, Facility, Area, CEP Project #, Document Type, Class, EAM Asset #, Supplier/Vendor, and Description.
 
-![Bulk edit properties pane open for selected items](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Bulk_edit_properties_pane_open_for_selected_items_e1c63aaeb8.jpg)
+![Bulk edit properties pane open for selected items](images/Bulk_edit_properties_pane_open_for_selected_items_e1c63aaeb8.jpg)
 
 **Step 3:** Fill in the metadata fields in the bulk edit pane:
 
 - **Legal Entity** — Start typing (e.g., "R") and select the correct entity from the suggestions that appear, such as Ruiz Food Products, Inc. (RFP).
 
-  ![Typing in Legal Entity field with suggestions visible](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Typing_in_Legal_Entity_field__suggestions_visible_fd96170099.jpg)
+  ![Typing in Legal Entity field with suggestions visible](images/Typing_in_Legal_Entity_field__suggestions_visible_fd96170099.jpg)
 
 - **Facility** — Type and select **Frisco**.
 - **CEP Project #** — Enter **CEP 26-701**.
 - Fill in any remaining fields as needed (Document Type, Class, EAM Asset #, Supplier/Vendor, Description).
 
-  ![Facility and CEP Project # fields filled in the bulk edit pane](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Facility_and_CEP_Project___fields_filled__ready_fo_be3fba8dd0.jpg)
+  ![Facility and CEP Project # fields filled in the bulk edit pane](images/Facility_and_CEP_Project___fields_filled__ready_fo_be3fba8dd0.jpg)
 
 **Step 4:** Click **Save** at the bottom of the bulk edit pane to apply your changes to all selected items at once.
 
-![Save button highlighted in the bulk edit pane](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Save_button_highlighted_in_bulk_edit_pane_7b7241e1d7.jpg)
+![Save button highlighted in the bulk edit pane](images/Save_button_highlighted_in_bulk_edit_pane_7b7241e1d7.jpg)
 
 **Step 5:** The library refreshes automatically. Verify that the updated values now appear in the columns for each edited item — for instance, Legal Entity shows "Ruiz Food Products, Inc. (RFP)," Facility shows "Frisco," and CEP Project # shows "CEP 26-701."
 
-![Document library showing updated metadata for selected items](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Document_library_showing_updated_metadata_for_sele_1487ceb05d.jpg)
+![Document library showing updated metadata for selected items](images/Document_library_showing_updated_metadata_for_sele_1487ceb05d.jpg)
 
 > **Tip:** If you have documents in multiple folders, navigate to each folder and repeat the bulk edit steps to keep metadata consistent across the entire library.
 
-![Document library after refresh confirming metadata updates](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Document_library_refreshed__showing_consistent_met_7f01157314.jpg)
+![Document library after refresh confirming metadata updates](images/Document_library_refreshed__showing_consistent_met_7f01157314.jpg)
 
 ## Chapter: Finalizing Bulk Metadata Edits and Navigating SharePoint Libraries
 
@@ -239,7 +239,7 @@ This chapter walks you through completing a bulk metadata edit across all docume
 
 **Step 2:** Click the checkbox at the top of the **Name** column to select all items. All rows highlight, and the **Bulk edit properties** pane opens on the right side of the screen.
 
-![All items selected, bulk edit properties pane open](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/All_items_selected__bulk_edit_properties_pane_open_bf75514c37.jpg)
+![All items selected, bulk edit properties pane open](images/All_items_selected__bulk_edit_properties_pane_open_bf75514c37.jpg)
 
 The pane displays these editable fields: Content Type, Legal Entity, Facility, Area, CEP Project #, Document Type, Class, EAM Asset #, Supplier/Vendor, and Description.
 
@@ -263,15 +263,15 @@ For each field, type the value and select it from the dropdown when it appears.
 
 **Step 5:** Navigate back to the **Engineering Hub** home page using the top navigation bar or breadcrumb. The home page includes a welcome banner, a search bar for engineering documents, and quick links to resources such as Training, Presentations, Templates, and Vendor & Purchasing.
 
-![Engineering Hub home page with navigation menu and resources](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Engineering_Hub_home_page_with_navigation_menu_and_e6cf1c20a2.jpg)
+![Engineering Hub home page with navigation menu and resources](images/Engineering_Hub_home_page_with_navigation_menu_and_e6cf1c20a2.jpg)
 
 **Step 6:** To go directly back to the project library, hover over **Master Drawing (CAD)** in the top navigation bar, then select **HQ2 Frisco > CEP 26-701 HQ2 Frisco R&D Lab** from the dropdown menu.
 
-![Top navigation menu open, selecting CEP 26-701 HQ2 Frisco R&D Lab](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Top_navigation_menu_open__selecting_CEP_26-701_HQ2_a3d572032f.jpg)
+![Top navigation menu open, selecting CEP 26-701 HQ2 Frisco R&D Lab](images/Top_navigation_menu_open__selecting_CEP_26-701_HQ2_a3d572032f.jpg)
 
 **Step 7:** Once back in the library, switch to the **All Folders** view. You'll see the project's top-level folders, including Asset and Operations, People and Stakeholders, Compliance and QA, Cost and Procurement, and Project Lifecycle. The **Modified** and **Modified By** columns show when each folder was last updated and by whom.
 
-![All Folders view showing project folders with modified dates](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/All_Folders_view_in_document_library__folders_list_cd79d9f191.jpg)
+![All Folders view showing project folders with modified dates](images/All_Folders_view_in_document_library__folders_list_cd79d9f191.jpg)
 
 Select any folder — for example, **Asset and Operations** — to open it and view or manage its contents.
 
@@ -302,7 +302,7 @@ Once your folders and documents are in place, you can view and update their meta
 
 The activity log at the bottom of the pane shows recent edits and creations for that folder.
 
-![SharePoint folder view with properties pane for 'Software' selected, showing metadata fields and activity log](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/SharePoint_folder_view_with_properties_pane_for__S_b747dc63e5.jpg)
+![SharePoint folder view with properties pane for 'Software' selected, showing metadata fields and activity log](images/SharePoint_folder_view_with_properties_pane_for__S_b747dc63e5.jpg)
 
 **Step 3:** To update the metadata, click **Edit all** or the pencil icon in the properties pane. Update fields such as **Class**, **EAM Asset #**, or **Description** as needed, then click **Save**.
 
@@ -316,11 +316,11 @@ If you need to apply the same metadata values to several folders at once, bulk e
 
 **Step 2:** The right pane updates to show **Bulk edit properties**. The same metadata fields are available — Content Type, Legal Entity, Facility, Area, CEP Project #, Document Type, Class, EAM Asset #, Supplier/Vendor, and Description — and any value you enter will be applied to all selected items.
 
-![Bulk edit properties pane open for multiple selected folders](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Bulk_edit_properties_pane_open_for_multiple_select_4400ee7b04.jpg)
+![Bulk edit properties pane open for multiple selected folders](images/Bulk_edit_properties_pane_open_for_multiple_select_4400ee7b04.jpg)
 
 **Step 3:** Scroll through the library to confirm all the items you want to update are selected.
 
-![Document library with many folders selected and bulk edit pane visible](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Document_library_with_many_folders_selected_and_bu_9d6af383e9.jpg)
+![Document library with many folders selected and bulk edit pane visible](images/Document_library_with_many_folders_selected_and_bu_9d6af383e9.jpg)
 
 **Step 4:** Enter the desired values in the bulk edit pane, then click **Save** at the bottom of the pane to apply the changes to all selected items.
 
@@ -332,11 +332,11 @@ If you need to apply the same metadata values to several folders at once, bulk e
 
 **Step 2:** To return to the Engineering Hub home page at any time, click the **Engineering Hub** link in the navigation bar. From there you can access the welcome note, search bar, quick links, and team news.
 
-![Engineering Hub home page with welcome note, search bar, and resource links](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Engineering_Hub_home_page_with_welcome_note__searc_00786e82a5.jpg)
+![Engineering Hub home page with welcome note, search bar, and resource links](images/Engineering_Hub_home_page_with_welcome_note__searc_00786e82a5.jpg)
 
 **Step 3:** From the main library view, you can navigate to any of the top-level folders — **Assets and Operations**, **People and Stakeholders**, **Compliance and QA**, **Cost and Procurement**, and **Project Lifecycle**. Each folder displays its last modified date and the user who modified it.
 
-![Main folder view with top-level folders listed](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Main_folder_view_with_several_top-level_folders_li_cf6f0822d6.jpg)
+![Main folder view with top-level folders listed](images/Main_folder_view_with_several_top-level_folders_li_cf6f0822d6.jpg)
 
 ---
 
@@ -346,7 +346,7 @@ If the default metadata fields don't cover everything your team needs, you can e
 
 **Step 1:** In the main library view, click **Add column** to create a new metadata field.
 
-![Cursor hovering over 'Add column' in the main folder view](/refdocs/mockups/Runbook%20-%20new-cep-project-folder%20creation/Cursor_hovering_over__Add_column__in_the_main_fold_6a0bb680db.jpg)
+![Cursor hovering over 'Add column' in the main folder view](images/Cursor_hovering_over__Add_column__in_the_main_fold_6a0bb680db.jpg)
 
 > **Tip:** Adding custom columns lets you tailor the library view to your team's specific tracking and reporting needs.
 
