@@ -1,6 +1,8 @@
 # Prompt — Convert KT Markdown to Word Document (Ruiz Foods)
 
-> **How to use:** Copy everything from the horizontal rule below and paste it as your first message in a new Claude Code session (or in this same session). No placeholders to fill — works as-is for the Praise Program KT.
+> **How to use:** Copy everything from the horizontal rule below and paste it as
+> your first message in a new Claude Code session (or in this same session).
+> No placeholders to fill — works as-is for the Engineering Web Portal KT.
 
 ---
 
@@ -8,102 +10,138 @@
 
 ## TASK
 
-Convert the Knowledge Transfer Document at `docs/KT-EngineeringWebPortal.md` into a professional Microsoft Word document (`.docx`) that can be shared with IT Leadership and used as an official handover document at Ruiz Foods, Inc.
+Convert the Knowledge Transfer Document at `docs/KT-EngineeringWebPortal.md`
+into a professional Microsoft Word document (`.docx`) that can be shared with
+IT Leadership and used as an official handover document at Ruiz Foods, Inc.
 
-The output file should be: `docs/KT-InvoicesForTaxTeam.docx`
+The output file should be: `docs/KT-EngineeringWebPortal.docx`
 
 ---
 
-## APPROACH — CHECK IN THIS ORDER
+## STEP 0 — PRE-PROCESSING (required before pandoc)
 
-### Option A — pandoc (preferred, best fidelity)
+Before converting, run the pre-processing step that:
 
-Check if pandoc is installed:
-```powershell
-pandoc --version
+1. **Discovers runbook source files** — scans `refdocs/` for any files matching
+   `Runbook - *.md`. Each file is a detailed step-by-step runbook with
+   screenshots that must be appended to the Word document as an appendix section.
+
+2. **Fixes image paths** — the runbook markdown files reference images with
+   absolute paths like `](/refdocs/mockups/...)`. These must be rewritten to
+   relative paths (`](refdocs/mockups/...)`) so pandoc can resolve them from
+   the repo root.
+
+3. **Demotes heading levels** — runbook files use `# Title` (H1) and
+   `## Chapter` (H2). When appended to the KT document, headings are demoted
+   by one level so they nest correctly under the existing section hierarchy:
+   - Runbook H1 → H2 (appears as "Appendix: {runbook title}" in TOC)
+   - Runbook H2 → H3
+   - Runbook H3 → H4
+
+4. **Writes a merged temp file** — `_kt_merged.md` at the repo root, combining
+   the KT markdown and all runbook appendices. This file is deleted after pandoc
+   runs.
+
+**Script:** `py scripts/build-docx.py` handles all of the above automatically.
+
+---
+
+## STEP 1 — CONVERSION APPROACH
+
+### Option A — `scripts/build-docx.py` (preferred — handles everything)
+
+This script implements all pre-processing, pandoc invocation, branding
+post-processing, and validation in one pass:
+
+```bash
+py scripts/build-docx.py
 ```
 
-If available, run:
+Requirements: pandoc installed + `py -m pip install python-docx`
+
+---
+
+### Option B — Manual pandoc (if you need to run pandoc directly)
+
+After completing Step 0 pre-processing manually, run pandoc on the merged file:
+
 ```powershell
-pandoc docs/KT-EngineeringWebPortal.md `
+pandoc _kt_merged.md `
   --from markdown `
   --to docx `
   --output docs/KT-EngineeringWebPortal.docx `
+  --resource-path . `
   --toc `
   --toc-depth=2 `
   --highlight-style=tango
 ```
 
-If you want to apply a Word reference template for branding (recommended):
-```powershell
-pandoc docs/KT-EngineeringWebPortal.md `
-  --from markdown `
-  --to docx `
-  --output docs/KT-EngineeringWebPortal.docx `
-  --reference-doc=prompts/word-reference-template.docx `
-  --toc `
-  --toc-depth=2
-```
+> `--resource-path .` is **required** — it tells pandoc to resolve image paths
+> from the repo root (where `refdocs/mockups/` lives). Without it, pandoc
+> looks only in `docs/` and all runbook screenshots will be missing.
 
-> To generate a starter reference template: `pandoc -o prompts/word-reference-template.docx --print-default-data-file reference.docx`
-> Then open it in Word and apply Ruiz Foods fonts/colors to the Heading 1, Heading 2, Heading 3, Normal, and Table styles.
+---
 
-### Option B — Node.js with `docx` npm package (if pandoc not available)
+### Option C — Node.js with `docx` npm package (if pandoc not available)
 
-Install the package and write a conversion script:
 ```bash
 npm install docx markdown-it
 ```
 
-Write a script at `scripts/md-to-docx.js` that:
-1. Reads `docs/KT-EngineeringWebPortal.md`
-2. Parses it with `markdown-it`
-3. Generates a `docx` using the `docx` npm package
-4. Writes `docs/KT-EngineeringWebPortal.docx`
-
-### Option C — Python with python-docx (if Python available)
-
-Check: `python --version`
-
-Install: `pip install python-docx mistune`
-
-Write a script at `scripts/md_to_docx.py` that converts the markdown to docx with proper heading mapping.
+Write `scripts/md-to-docx.js` that reads the merged markdown, embeds images
+by resolving paths from the repo root, and outputs the docx.
 
 ---
 
 ## WORD DOCUMENT REQUIREMENTS
 
 ### Structure
-- [ ] **Cover page** with: Solution name ("Praise Program"), subtitle ("Knowledge Transfer Document"), organization ("Ruiz Foods, Inc."), date (2026-05-07), and "CONFIDENTIAL — INTERNAL USE ONLY"
+
+- [ ] **Cover page** with:
+  - Solution name: "Engineering Web Portal"
+  - Subtitle: "Knowledge Transfer Document"
+  - Organization: "Ruiz Foods, Inc." + "Engineering Department"
+  - Date: May 8, 2026
+  - Site URL: https://ruizfoods.sharepoint.com/sites/eng-hub
+  - "CONFIDENTIAL — INTERNAL USE ONLY" in red
 - [ ] **Table of Contents** (auto-generated, 2 levels deep)
 - [ ] **Page numbers** in footer (format: "Page X of Y")
-- [ ] **Header** on every page (after cover): "Ruiz Foods — Praise Program KT Document | CONFIDENTIAL"
-- [ ] All 11 sections from the Markdown must be present and complete
+- [ ] **Running header** on every page after cover:
+  `Ruiz Foods — Engineering Web Portal KT Document | CONFIDENTIAL`
+- [ ] All 11 KT sections present and complete
+- [ ] All runbook appendices appended after Section 11 with "Appendix:" prefix headings
 
 ### Formatting
-- [ ] **Heading 1** → each of the 11 numbered sections (e.g., "1. Functional Overview")
-- [ ] **Heading 2** → subsections (e.g., "3.1 Praise List", "9.1 Task 1 — Approve a Praise")
-- [ ] **Heading 3** → sub-subsections (e.g., "Custom Fields", "Key System Fields")
-- [ ] **Tables** → properly formatted with header row shading; no table should overflow the page margin
-- [ ] **Code blocks** (CAML queries, architecture diagram, CSV headers) → monospace font (Courier New 9pt), light gray background
-- [ ] **Bold text** → preserved from Markdown `**bold**`
-- [ ] **Inline code** → monospace font, preserved from Markdown backticks
+
+- [ ] **Heading 1** → document title only
+- [ ] **Heading 2** → each of the 11 numbered sections + each runbook appendix
+- [ ] **Heading 3** → subsections within sections and runbook chapters
+- [ ] **Heading 4** → sub-subsections within runbook chapters
+- [ ] **Tables** → header row shaded navy (`#1F2D5C`) with white bold text;
+  no table overflows page margin
+- [ ] **Code blocks** (CAML queries, architecture diagram) → monospace
+  Courier New 9pt, light gray background
+- [ ] **Bold / inline code** → preserved from Markdown
 - [ ] **Bullet and numbered lists** → properly indented
-- [ ] **Horizontal rules** (`---`) → convert to a thin page-width line separator
+- [ ] **Blockquotes** (`> Note:`, `> Tip:`) → indented with left border or
+  light background
 
-### Branding (Ruiz Foods / El Monterey)
-Apply these styles based on brand guidelines in `refdocs/`:
-- **Primary heading color:** Use brand primary color from `Learning Color Brand Guide.pdf` (if known; otherwise use dark navy `#1F2D5C` as placeholder — confirm with stakeholder)
-- **Table header row:** Brand primary color background with white text
-- **Accent / highlight color:** Brand secondary color for callout boxes or important notes
-- **Body font:** As specified in `RZF003_22 El Monterey_Brand_Guidelines_10_27_22_v3 (1).pdf` (if known; otherwise use Calibri 11pt as M365 default)
-- **Heading font:** As specified in brand guidelines (if known; otherwise use Calibri Light)
-- **Logo:** If you have a Ruiz Foods or El Monterey logo file available, add it to the cover page and page header
+### Images (runbook screenshots)
 
-### Special Elements
-- [ ] The **architecture diagram** (ASCII art in Section 2) → render inside a fixed-width code block or as a monospace text box; do NOT try to convert it to a Visio/SmartArt shape
-- [ ] **Callout box** for the `> Note:` and `> Critical:` blockquotes → light yellow or light blue background box with left border accent
-- [ ] **Appendix** section at the end → formatted as a separate section with "Appendix" as a Heading 1
+- [ ] **All images embedded** — not linked externally; verify count matches
+  source markdown
+- [ ] **Images resized** — any image wider than 5.5 inches scaled down
+  proportionally to fit within page margins
+- [ ] **Figure captions** — alt text rendered as an italic, gray, 8pt caption
+  centered below each image
+
+### Branding (Ruiz Foods)
+
+- **Primary heading color:** `#1F2D5C` (dark navy) — from brand guidelines
+- **Table header:** navy background with white text
+- **Body font:** Calibri 11pt (M365 default)
+- **Heading font:** Calibri Light
+- **CONFIDENTIAL label:** `#CC0000` red on cover page
 
 ---
 
@@ -111,38 +149,69 @@ Apply these styles based on brand guidelines in `refdocs/`:
 
 After generating the `.docx`, verify:
 
-- [ ] Open in Microsoft Word and confirm no rendering errors
-- [ ] Table of Contents resolves correctly (update fields if needed: Ctrl+A → F9)
-- [ ] All 11 section headings appear in the TOC
-- [ ] Tables do not overflow page margins (adjust column widths if needed)
-- [ ] Code blocks (CAML queries, CSV headers) are readable in monospace
-- [ ] Architecture diagram is intact and readable
-- [ ] No Markdown syntax characters (`##`, `**`, `|`, `` ` ``) visible in the rendered document
-- [ ] Page count is reasonable (expect 15–25 pages for this document)
-- [ ] Footer shows correct page numbers
+- [ ] Open in Microsoft Word — no rendering errors
+- [ ] Table of Contents resolves (update fields: Ctrl+A → F9 if needed)
+- [ ] All 11 section headings appear in TOC
+- [ ] Each runbook appendix appears in TOC as an H2 entry
+- [ ] **Image count matches** — script reports `X/Y images embedded [OK]`;
+  if any are missing, check that:
+  - Image paths in the runbook `.md` use `](refdocs/...` (not `](/refdocs/...`)
+  - pandoc was run with `--resource-path .` from the repo root
+  - Image files exist in `refdocs/mockups/{runbook-folder}/`
+- [ ] All screenshots display at a readable size (≤5.5" wide)
+- [ ] Each screenshot is followed by an italic gray caption
+- [ ] Tables do not overflow page margins
+- [ ] Code blocks readable in monospace
+- [ ] Architecture diagram intact
+- [ ] No raw Markdown syntax visible (`##`, `**`, `|`, `` ` ``)
+- [ ] Page count reasonable (expect 25–60 pages with runbook screenshots)
+- [ ] Footer shows page numbers on all pages except cover
 - [ ] Header shows on all pages except cover
+
+---
+
+## ADDING A NEW RUNBOOK
+
+To include an additional runbook scenario in future Word exports:
+
+1. Create `refdocs/Runbook - {scenario name}.md` following the chapter
+   structure used in existing runbooks.
+2. Place all screenshots in `refdocs/mockups/Runbook - {scenario name}/`.
+3. Reference images in the markdown as:
+   `![Alt text describing the screenshot](/refdocs/mockups/Runbook - {scenario name}/image.jpg)`
+4. Re-run `py scripts/build-docx.py` — the new runbook is automatically
+   discovered and appended as a new appendix.
+
+No changes to `build-docx.py` or the KT markdown are needed.
 
 ---
 
 ## IF CONVERSION TOOLS ARE NOT AVAILABLE
 
-If neither pandoc, Node.js docx package, nor Python are available, provide:
+If pandoc is not available, use the Word COM object as a last resort:
 
-1. A **PowerShell script** that opens the `.md` file and uses the **Word COM object** (`New-Object -ComObject Word.Application`) to create the document programmatically — only as a last resort, as this is slow and requires Word to be installed on the machine.
+```powershell
+$word = New-Object -ComObject Word.Application
+$word.Visible = $false
+$doc = $word.Documents.Open("$PWD\_kt_merged.md")
+$doc.SaveAs2("$PWD\docs\KT-EngineeringWebPortal.docx", 16)  # 16 = docx
+$doc.Close(); $word.Quit()
+```
 
-2. Or **instructions for manual conversion** using the Microsoft Word built-in Markdown import (File → Open → change file type to All Files → open the .md file → Word will auto-convert).
+Note: COM conversion does not embed images or apply branding — treat as a
+plain-text fallback only.
 
 ---
 
 ## OUTPUT
 
 ```
-docs/KT-EngineeringWebPortal.docx    ← primary deliverable
+docs/KT-EngineeringWebPortal.docx    <- primary deliverable
 ```
 
-Confirm the file size is reasonable (expect 200KB–2MB for a document of this size without embedded images).
+Expected file size: 500 KB – 3 MB when runbook screenshots are embedded.
 
 ---
 
-*Prompt version: 1.0 — Companion to kt-master-prompt.md*
-*Repo: rf_praise / VISION Framework*
+*Prompt version: 2.0 — Engineering Web Portal / VISION Framework*
+*Supports: multi-runbook appendices, embedded screenshots, figure captions*
