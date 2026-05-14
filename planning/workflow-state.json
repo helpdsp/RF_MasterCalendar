@@ -28,7 +28,8 @@
       "epics.md",
       "stories.md",
       "sprint-plan.md",
-      "test-plan.md"
+      "test-plan.md",
+      "runbooks.md"
     ]
   },
   "sprints": {
@@ -37,14 +38,14 @@
     "mode": "local",
     "generatedAt": "2026-05-08T23:41:14.640Z",
     "approvedAt": "2026-05-08T23:41:14.643Z",
-    "total": 1,
+    "total": 2,
     "active": null,
-    "completed": [1]
+    "completed": [1, 2]
   },
   "lastAction": {
     "command": "complete_sprint",
-    "at": "2026-05-08T23:55:00.000Z",
-    "details": "Sprint 1 completed. Deliverable: docs/KT-EngineeringWebPortal.md (11 sections, 20 tasks done)."
+    "at": "2026-05-14T20:27:30.518Z",
+    "details": "Sprint 2 completed. Section 9 rewritten with 6-runbook catalog. Appendix B added. Word rebuilt: 33/33 images, 3588 KB."
   },
-  "updatedAt": "2026-05-08T23:55:00.000Z"
+  "updatedAt": "2026-05-14T20:27:30.518Z"
 }

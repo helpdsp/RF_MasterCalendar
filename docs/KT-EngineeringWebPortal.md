@@ -578,83 +578,178 @@ All other libraries (Agreements, CAD Blocks, Approved Projects, all CEP librarie
 
 ## 9. Operational Runbook
 
-### Runbook 1 — Create a New CEP Library
+This section is the operational reference for IT Administrators and SharePoint Administrators
+responsible for maintaining the Engineering Hub. Each runbook covers a specific admin scenario
+with numbered steps, screenshots, and FAQs.
 
-Use this procedure when a new Capital Engineering Project is approved and needs a document library.
-
-1. Navigate to `https://ruizfoods.sharepoint.com/sites/eng-hub`
-2. Click the Settings gear (⚙) → Site Contents
-3. Click "+ New" → "Document library"
-4. Set the **Name** following the convention: `CEP YY-NNN Facility Description`
-   - Example: `CEP 23-001 CA1 New Packaging Line`
-5. Click **Create**
-6. Open the new library → Library Settings → Advanced Settings
-7. Set "Allow management of content types?" to **Yes** → OK
-8. In Library Settings → Content Types section, click "Add from existing site content types"
-9. Select group "Ruiz Foods Taxonomy" and add:
-   - `Engineering Document` (or the appropriate sub-type)
-   - `Engineering Folder`
-   - Remove the default "Document" CT if not needed
-10. In Library Settings → Versioning Settings:
-    - Enable versioning: **Yes**
-    - Keep the following number of major versions: **500**
-    - Require content approval: **No**
-    - Require check out: **No**
-11. Click "OK"
-12. Create standard views:
-    - **All Folders** (default): columns = Classification, DocIcon, LinkFilename, Date Uploaded, Expiration Date, Created, Author, Facility, Legal entity; sort by Expiration Date descending
-    - **All Documents**: filter `<Where><Neq><FieldRef Name="ContentType" /><Value Type="Computed">Engineering Folder</Value></Neq></Where>`
-13. Ensure NoCrawl = false (library is indexed): Library Settings → Advanced Settings → Search → Allow items from this list to appear in search results = **Yes**
+**Runbook source files:** `refdocs/Runbooks/{runbook-name}/runbook.md`
+**Runbook catalog:** `spec-kit/input/runbooks.md`
+**In the Word document:** each runbook appears as a full appendix with embedded screenshots
+immediately after Section 11.
 
 ---
 
-### Runbook 2 — Add a New Term to Ruiz Foods Taxonomy
+### Runbook Catalog
 
-Use this procedure to add a new facility, area, supplier, or classification term.
+| ID | Runbook | Audience | Trigger | Status | Word Appendix |
+|---|---|---|---|---|---|
+| RB-01 | Create a New CEP Project Library (ShareGate) | IT Admin | New CEP service request | Complete | Appendix: Create a New CEP Project Library Using ShareGate |
+| RB-02 | Manage Ruiz Foods Taxonomy Terms | IT Admin | New term needed (facility, area, supplier, classification) | Stub — screenshots pending | Appendix: Manage Ruiz Foods Taxonomy Terms in Term Store |
+| RB-03 | Manage Unique Permissions on Assets Libraries | IT Admin / Eng Manager | Employee onboarding, offboarding, or role change | Stub — screenshots pending | Appendix: Manage Unique Permissions on Assets Libraries |
+| RB-04 | Troubleshoot PnP Modern Search | IT Admin | Missing results, stale results, web part errors | Stub — screenshots pending | Appendix: Troubleshoot PnP Modern Search Indexing and Web Parts |
+| RB-05 | Upload and Tag Engineering Documents | Engineering Staff / PM | New document ready for the portal | Stub — screenshots pending | Appendix: Upload and Tag Engineering Documents |
+| RB-06 | Deploy / Update PnP Modern Search V4 Solution | IT Admin | New PnP release or post-migration redeploy | Stub — screenshots pending | Appendix: Deploy / Update PnP Modern Search V4 Solution |
 
-1. Navigate to the SharePoint Admin Center: `https://ruizfoods-admin.sharepoint.com`
-2. Click "Content services" → "Term store"
-3. In the Term Store tree, expand: **Ruiz Foods Taxonomy** → [select the term set to update]
-   - To add a facility: expand the **Facility** term set
-   - To add a production area: expand the **Area** term set
-   - To add a supplier: expand the **Supplier** term set
-   - To add a classification: expand the **Classification** term set
-4. Click the term set or parent term where you want to add the new term
-5. Click "+ Add term"
-6. Type the new term name and press Enter
-7. In the right panel, set:
-   - **Available for tagging**: On (so users can select it)
-   - **Description**: Optional but recommended
-8. Click "Save"
-
-> **Important:** Existing documents tagged with parent terms will not automatically re-tag to the new child term. If a term is renamed (vs. added), use the "Other Labels" section to add the old name as a synonym — this preserves search continuity.
+> **Stub runbooks** contain full chapter structures, step descriptions, and placeholder
+> image callouts (`> [ADD SCREENSHOT: ...]`). Screenshots are added by dropping JPG/PNG
+> files into `refdocs/Runbooks/{name}/images/` and re-running `py scripts/build-docx.py`.
 
 ---
 
-### Runbook 3 — Update / Redeploy PnP Modern Search V4
+### RB-01 — Create a New CEP Project Library (ShareGate)
 
-Use when a new version of PnP Modern Search is available.
+**Status:** Complete (33 screenshots)
+**Full runbook:** `refdocs/Runbooks/new-cep-project-library/runbook.md`
+**Audience:** SharePoint administrators, IT staff
+**Trigger:** New Capital Engineering Project service request received
 
-1. Download the new `.sppkg` file from the PnP Modern Search releases page
-2. Navigate to the Tenant App Catalog: SharePoint Admin Center → More Features → Apps → Open
-3. Locate `pnp-modern-search-parts-v4.sppkg` in the list
-4. Click the file → "Deploy" to update the existing deployment
-5. After deployment, navigate to the Engineering Hub site and test the search page
-6. Verify Search Box, Filters, Verticals, and Results web parts are all rendering correctly
-7. Test a sample search to confirm results are returned
+**Summary of steps:**
+
+| Phase | Steps | Tool |
+|---|---|---|
+| Copy library from template | Select source CEP library, configure destination title and URL, set operation mode and element selection | ShareGate Desktop |
+| Monitor and export migration report | Watch item status, confirm all items "Copied successfully", export the report | ShareGate Desktop |
+| Update library settings | Rename description to reference the ticket number, verify content type visibility and order | SharePoint Online |
+| Verify columns | Confirm all required columns present (Area, CEP Project #, Legal Entity, Facility, Supplier/Vendor, EAM Asset #, etc.) | SharePoint Online |
+| Set Legal Entity default | Open column settings, select the correct managed term default (RFP / RG4 / RG1) | SharePoint Online |
+| Bulk-edit metadata | Select all document sets, fill Facility / Legal Entity / CEP Project # in bulk edit pane, save | SharePoint Online |
+
+> See the full step-by-step procedure with screenshots in the Word document appendix:
+> **"Appendix: Create a New CEP Project Library Using ShareGate"**
 
 ---
 
-### Runbook 4 — Troubleshoot Missing Search Results
+### RB-02 — Manage Ruiz Foods Taxonomy Terms
 
-Use when documents exist in a library but do not appear in PnP Search results.
+**Status:** Stub — screenshots pending
+**Full runbook:** `refdocs/Runbooks/manage-taxonomy-terms/runbook.md`
+**Audience:** SharePoint administrators
+**Trigger:** New facility, area, classification value, or supplier needed
+**Prerequisites:** Term Store Administrator or Site Collection Administrator role
 
-1. **Check NoCrawl:** Library Settings → Advanced Settings → confirm "Allow items from this list to appear in search results" = **Yes**
-2. **Force re-index:** Library Settings → Advanced Settings → click "Reindex Document Library" → OK
-3. **Wait for crawl:** SharePoint Online crawls on a schedule (typically 15–60 minutes for content changes)
-4. **Check Managed Properties:** In SharePoint Admin Center → Search → Manage Search Schema, verify that the custom columns (e.g., `Area`, `Facility`) are mapped to Managed Properties and are set as "Refinable" and "Queryable"
-5. **Check PnP Search web part configuration:** Edit the page → Edit the Search Results web part → verify the Data Source is set to "SharePoint Search" with the correct scope
-6. **Check permissions:** Confirm the searching user has at least Read access to the library
+**Summary of steps:**
+1. Open SharePoint Admin Center → Content services → Term store
+2. Expand **Ruiz Foods Taxonomy** term group in the left tree
+3. Select the target term set (Area, Facility, Classification, or Supplier)
+4. Click **Add term**, type the name, press Enter
+5. Set **Available for tagging = On** and add a description
+6. Save and verify the term appears in the library metadata picker
+
+> **Important:** Use **deprecation** (uncheck "Available for tagging") rather than deletion
+> for terms that are no longer valid — deletion breaks existing document metadata.
+
+> See the full procedure in the Word document appendix:
+> **"Appendix: Manage Ruiz Foods Taxonomy Terms in Term Store"**
+
+---
+
+### RB-03 — Manage Unique Permissions on Assets Libraries
+
+**Status:** Stub — screenshots pending
+**Full runbook:** `refdocs/Runbooks/manage-assets-permissions/runbook.md`
+**Audience:** IT Administrators, Engineering Managers
+**Trigger:** Employee onboarding, offboarding, or facility access role change
+**Prerequisites:** Site Collection Administrator or Full Control on the specific library
+
+**Summary of steps (grant access):**
+1. Navigate to CA1 Dinuba Assets or CA4 Vernon MFG Assets library
+2. Library Settings → Permissions for this document library
+3. Confirm banner reads "This library has unique permissions"
+4. Click **Grant Permissions**, search for the user, select permission level (Read / Contribute)
+5. Click Share and verify the user appears in the permissions list
+
+**Summary of steps (revoke access):**
+1. On the Library Permissions page, locate the user
+2. Check their name checkbox → **Remove User Permissions**
+3. Confirm and verify removal
+
+> **Note:** Removing site-level group membership does NOT revoke Assets library access
+> because these libraries break permission inheritance. Always revoke at the library level.
+
+> See the full procedure in the Word document appendix:
+> **"Appendix: Manage Unique Permissions on Assets Libraries"**
+
+---
+
+### RB-04 — Troubleshoot PnP Modern Search
+
+**Status:** Stub — screenshots pending
+**Full runbook:** `refdocs/Runbooks/troubleshoot-pnp-search/runbook.md`
+**Audience:** IT Administrators
+**Trigger:** Missing results, stale results, or web part errors on the search page
+
+**Symptom → Action quick reference:**
+
+| Symptom | First action |
+|---|---|
+| No results for any query | Check crawl log in SharePoint Admin Center → Search |
+| Specific library missing | Library Settings → Advanced Settings → Reindex Document Library |
+| Results are stale | Request manual re-crawl; wait 15–60 min |
+| Web part blank or error | Edit page → verify Search Box → Results → Filters connections |
+| Refiners show no values | Admin Center → Search Schema → verify `owstaxId*` managed properties are Refinable |
+
+**Search page URL:** `https://ruizfoods.sharepoint.com/sites/eng-hub/SitePages/engineering-search.aspx`
+
+> See the full diagnostic procedure in the Word document appendix:
+> **"Appendix: Troubleshoot PnP Modern Search Indexing and Web Parts"**
+
+---
+
+### RB-05 — Upload and Tag Engineering Documents
+
+**Status:** Stub — screenshots pending
+**Full runbook:** `refdocs/Runbooks/upload-and-tag-documents/runbook.md`
+**Audience:** Engineering Staff, Project Managers
+**Trigger:** New engineering document ready for the portal
+
+**Library selection guide:**
+
+| Document type | Target library |
+|---|---|
+| Capital Engineering Project documents | `CEP YY-NNN Facility Description` |
+| Facility equipment assets | CA1 Dinuba Assets or CA4 Vernon MFG Assets |
+| Vendor contracts and certificates | Agreements |
+| AutoCAD drawing blocks | CAD Blocks |
+| Approved project plans | Approved Projects — `{Facility}` |
+
+**Required metadata for all documents:**
+Facility · Area · Classification · Legal Entity · CEP Project # (if applicable)
+
+> See the full upload and tagging procedure in the Word document appendix:
+> **"Appendix: Upload and Tag Engineering Documents"**
+
+---
+
+### RB-06 — Deploy / Update PnP Modern Search V4 Solution
+
+**Status:** Stub — screenshots pending
+**Full runbook:** `refdocs/Runbooks/update-pnp-search-solution/runbook.md`
+**Audience:** IT Administrators
+**Trigger:** New PnP Modern Search V4 release, or post-tenant-migration redeploy
+**Prerequisites:** SharePoint App Catalog Owner or Tenant Administrator role
+
+**Summary of steps:**
+1. Download `pnp-modern-search-parts-v4.sppkg` from the PnP GitHub releases page
+2. Open App Catalog → Apps for SharePoint → Upload, replacing the existing package
+3. Deploy with **"Make available to all sites"** checked; Trust the API permissions dialog
+4. Verify the Apps for SharePoint list shows the new version number
+5. Navigate to the search page and run a test query to confirm the web parts still function
+6. If a major version upgrade (4.x → 5.x), re-add and reconnect web parts on the search page
+
+**Rollback:** Re-upload the previous `.sppkg` version and deploy — no per-site action needed.
+
+> See the full deployment procedure in the Word document appendix:
+> **"Appendix: Deploy / Update PnP Modern Search V4 Solution"**
 
 ---
 
@@ -765,5 +860,34 @@ The following PowerShell scripts (in `source-code/`) were used to generate the `
 
 ---
 
-*KT Document generated by VISION Framework — Sprint 1*
-*Source data exported: 2026-05-08 | Document generated: 2026-05-08*
+## Appendix B — Runbook File Inventory
+
+Detailed step-by-step runbooks with screenshots live in `refdocs/Runbooks/`.
+Each folder contains a `runbook.md` and an `images/` subfolder.
+All runbooks are automatically appended to this Word document as appendices
+when `py scripts/build-docx.py` is run.
+
+| Folder | Title | Status | Screenshots |
+|---|---|---|---|
+| `new-cep-project-library` | Create a New CEP Project Library (ShareGate) | Complete | 33 |
+| `manage-taxonomy-terms` | Manage Ruiz Foods Taxonomy Terms in Term Store | Stub | 0 — pending |
+| `manage-assets-permissions` | Manage Unique Permissions on Assets Libraries | Stub | 0 — pending |
+| `troubleshoot-pnp-search` | Troubleshoot PnP Modern Search Indexing and Web Parts | Stub | 0 — pending |
+| `upload-and-tag-documents` | Upload and Tag Engineering Documents | Stub | 0 — pending |
+| `update-pnp-search-solution` | Deploy / Update PnP Modern Search V4 Solution | Stub | 0 — pending |
+
+**To add screenshots to a stub runbook:**
+1. Drop JPG/PNG files into `refdocs/Runbooks/{folder}/images/`
+2. Update the `runbook.md` — replace `> [ADD SCREENSHOT: description]` lines with the markdown image syntax pointing to your file in `images/`
+3. Update the status in `spec-kit/input/runbooks.md`
+4. Run `py scripts/build-docx.py` — the updated runbook is embedded automatically
+
+**To add a new runbook:**
+1. Create `refdocs/Runbooks/{kebab-case-name}/runbook.md` + `images/` folder
+2. Add a row to the catalog in `spec-kit/input/runbooks.md`
+3. Run `py scripts/build-docx.py` — auto-discovered and appended, no script changes needed
+
+---
+
+*KT Document generated by VISION Framework — Sprint 1 (2026-05-08) / Updated Sprint 2 (2026-05-14)*
+*Source data exported: 2026-05-08 | Runbook catalog: 6 runbooks (1 complete, 5 stubs)*
