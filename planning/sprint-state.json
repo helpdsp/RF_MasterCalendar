@@ -1,4 +1,7 @@
 {
-  "completed": [],
-  "active": 1
+  "completed": [
+    1,
+    2
+  ],
+  "active": null
 }
