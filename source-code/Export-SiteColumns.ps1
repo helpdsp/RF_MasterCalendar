@@ -3,8 +3,8 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$SiteUrl,
+    [Parameter(Mandatory = $false)]
+    [string]$SiteUrl = "https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
 
     [Parameter(Mandatory = $false)]
     [string]$OutputFolder,

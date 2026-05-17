@@ -4,8 +4,8 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$SiteUrl,
+    [Parameter(Mandatory = $false)]
+    [string]$SiteUrl = "https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
 
     [Parameter(Mandatory = $false)]
     [string]$LibraryName,       # If omitted, all non-hidden document libraries are exported

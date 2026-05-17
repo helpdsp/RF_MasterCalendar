@@ -1,26 +1,56 @@
 {
   "stage": "brief",
-  "completedAt": "2026-05-07T15:15:00.000Z",
+  "completedAt": "2026-05-17T00:00:00.000Z",
   "answers": [
     {
-      "question": "¿Cuál es el propósito principal del documento que quieres generar?",
-      "answer": "KT completo para nuevo administrador — Documento técnico + funcional para alguien que va a tomar ownership del sistema Praise existente en producción"
+      "id": "project_goal",
+      "question": "¿Cuál es el objetivo principal de este proyecto?",
+      "answer": "KT Document — Documento de Knowledge Transfer para transferir el ownership del Master Calendar existente en producción (ruizfoods.sharepoint.com/sites/RuizNetPortal). No se está construyendo nada nuevo; se está documentando el sistema existente."
     },
     {
-      "question": "¿Quién es la audiencia del KT Document?",
-      "answer": "Dual audience: (1) Gerencia / Liderazgo IT — para comunicar el alcance y valor de la solución existente; (2) Nuevo desarrollador / IT Admin — persona técnica que tomará ownership de la solución"
+      "id": "subscribe_flow",
+      "question": "El flow 'Corporate Intranet - Master Calendar - Suscribe' fue suspendido automáticamente el 2025-09-08 por inactividad (90+ días sin correr). ¿Está en scope reactivarlo o corregirlo?",
+      "answer": "Sí, incluirlo — Reactivar / corregir el flow de suscripción es parte del entregable del KT."
     },
     {
-      "question": "¿Quieres que los sprints del VISION Framework representen secciones del KT Document?",
-      "answer": "No — un solo sprint con todo el contenido del KT Document en una sola iteración"
+      "id": "governance",
+      "question": "¿Quién tiene permisos para crear/editar eventos en el Master Calendar?",
+      "answer": "Coordinadores por departamento — Cada departamento (HR, Sales, Finance, Facilities, etc.) tiene un coordinador que agrega sus propios eventos."
     },
     {
-      "question": "¿Qué tipo de proyecto es este?",
-      "answer": "Knowledge Transfer (KT) Document de una solución existente en producción. El sistema Praise Program de Ruiz Foods, Inc. lleva años en producción. No se está construyendo nada nuevo — se está documentando lo existente para transferencia de conocimiento."
+      "id": "year_naming",
+      "question": "Las plantillas de email dicen 'Master Calendar 2025' pero la página de SharePoint ya muestra '2026 Master Calendar'. ¿Cómo debe manejarse la transición anual?",
+      "answer": "Manual por admin — El admin actualiza el título/año manualmente al iniciar cada año. No se automatiza; el KT debe documentar el procedimiento de transición anual."
     },
     {
-      "question": "¿Cuáles son los componentes principales de la solución que deberán estar cubiertos en el KT?",
-      "answer": "SharePoint Online Lists (Praise, Praise Archive, Praise Cards), Microsoft Forms o List Form para el submit, Power Automate flows (aprobaciones HR, notificaciones email), Microsoft Teams Approvals App (aprobación para HR managers), Microsoft Outlook emails (alertas y congratulations), SharePoint Pages (intranet landing, view praises pages)"
+      "id": "kt_format",
+      "question": "¿En qué formato se entrega el KT Document del Master Calendar?",
+      "answer": "Markdown / repositorio — Archivos .md en este repo, versionados con git."
+    },
+    {
+      "id": "ux_visual_style",
+      "question": "Estilo visual del documento KT: ¿cómo debe verse?",
+      "answer": "Alineado a Fluent / Microsoft 365 — Estilo coherente con SharePoint y la intranet de Ruiz Foods (Fluent UI patterns, colores de marca Ruiz Foods: verde #008345)."
+    },
+    {
+      "id": "ux_theming",
+      "question": "Theming / apariencia: ¿cómo debe manejarse el aspecto visual (skins, claro/oscuro)?",
+      "answer": "N/A para KT Document — El KT es un repositorio Markdown; no aplica theming de aplicación."
+    },
+    {
+      "id": "ux_responsive",
+      "question": "Dispositivos y layout: ¿qué alcance de pantalla priorizamos?",
+      "answer": "N/A para KT Document — El KT es un repositorio Markdown; no aplica diseño responsive de UI."
+    },
+    {
+      "id": "ux_density",
+      "question": "Densidad y complejidad de la interfaz?",
+      "answer": "N/A para KT Document — El sistema Master Calendar tiene densidad equilibrada (lista estándar + calendar view); documentar tal cual existe."
+    },
+    {
+      "id": "ux_accessibility",
+      "question": "Objetivo de accesibilidad para la primera versión?",
+      "answer": "N/A para KT Document — El KT documenta la accesibilidad del sistema existente; no define objetivos de a11y nuevos."
     }
   ]
 }

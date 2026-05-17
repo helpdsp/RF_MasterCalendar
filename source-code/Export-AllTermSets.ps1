@@ -4,8 +4,8 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$SiteUrl,
+    [Parameter(Mandatory = $false)]
+    [string]$SiteUrl = "https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
 
     [Parameter(Mandatory = $false)]
     [string]$OutputFolder,
@@ -99,17 +99,6 @@ function Get-TermTree {
         [int]$Depth = 0
     )
 
-    $children = @($FlatTerms | Where-Object {
-        if ($Depth -eq 0) {
-            # Root terms have no parent or parent equals the term set
-            -not $_.TermsCount -and $_.PathOfTerm -notmatch ';'
-        } else {
-            $_.PathOfTerm -match "^.+;[^;]+$" -and
-            ($_.PathOfTerm -split ';')[-2] -eq $ParentId
-        }
-    })
-
-    # Simpler flat approach with depth indicated by PathOfTerm segments
     return @($FlatTerms | ForEach-Object {
         $path   = $_.PathOfTerm -split ';'
         $level  = $path.Count - 1

@@ -1,14 +1,44 @@
-#$lists = @("IT Helpdesk Holidays", "IT Helpdesk Locations", "IT Helpdesk Routing", "IT Helpdesk Settings", "IT Ticket Intake Queue")
-$lists = @("Accounts Payable","Fixed Assets","FY2023","FY2024")
-$siteUrl = "https://ruizfoods.sharepoint.com/sites/InvoiceforTaxTeam"
-$outputFolder = "C:\DATA\Repos\rf_taxteam\refdocs"
+# Master Calendar list export shortcut.
+#
+# This wrapper keeps the historical "Export-AllLists.ps1" entry point, but now
+# targets the RuizNetPortal Master Calendar solution by default.
 
-foreach ($list in $lists) {
-    & "C:\DATA\Repos\rf_taxteam\source-code\Export-ListSchema.ps1" `
-      -SiteUrl $siteUrl `
-      -ListTitle $list `
-      -OutputFolder $outputFolder
+[CmdletBinding()]
+param(
+    [Parameter(Mandatory = $false)]
+    [string]$SiteUrl = "https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
+
+    [Parameter(Mandatory = $false)]
+    [string[]]$ListNames = @("Master Calendar", "Master Calendar Sync"),
+
+    [Parameter(Mandatory = $false)]
+    [string]$OutputFolder,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$IncludeSitePages,
+
+    [Parameter(Mandatory = $false)]
+    [switch]$IncludeSampleItems,
+
+    [Parameter(Mandatory = $false)]
+    [int]$SampleItemLimit = 10
+)
+
+$ErrorActionPreference = "Stop"
+
+$exportScript = Join-Path $PSScriptRoot "Export-MasterCalendarSolution.ps1"
+if (-not (Test-Path $exportScript)) {
+    throw "Missing required script: $exportScript"
 }
 
+$params = @{
+    SiteUrl         = $SiteUrl
+    ListNames       = $ListNames
+    SampleItemLimit = $SampleItemLimit
+}
 
-.\source-code\Export-SiteColumns.ps1 -SiteUrl "https://ruizfoods.sharepoint.com/sites/eng-hub" -OutputFolder "C:\DATA\Repos\rf_engineering\refdocs" -ColumnGroup "Custom Columns"
+if ($OutputFolder) { $params.OutputFolder = $OutputFolder }
+if ($IncludeSitePages.IsPresent) { $params.IncludeSitePages = $true }
+if ($IncludeSampleItems.IsPresent) { $params.IncludeSampleItems = $true }
+
+& $exportScript @params

@@ -6,8 +6,8 @@
 
 [CmdletBinding()]
 param(
-    [Parameter(Mandatory = $true)]
-    [string]$SiteUrl,
+    [Parameter(Mandatory = $false)]
+    [string]$SiteUrl = "https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
 
     [Parameter(Mandatory = $false)]
     [string]$ListName,          # If omitted, all non-hidden, non-system lists are exported
@@ -246,17 +246,31 @@ foreach ($list in $targetLists) {
     Write-Host "     Reading fields..." -ForegroundColor Gray
     try {
         $fields = @(Get-PnPField -List $listTitle -ErrorAction Stop | Sort-Object Title | ForEach-Object {
+            $choices = @()
+            if ($_.TypeAsString -in @("Choice", "MultiChoice")) {
+                try { $choices = @($_.Choices) } catch { $choices = @() }
+            }
+
             [PSCustomObject]@{
-                Title         = $_.Title
-                InternalName  = $_.InternalName
-                Id            = $_.Id.ToString()
-                TypeAsString  = $_.TypeAsString
-                Required      = $_.Required
-                Hidden        = $_.Hidden
-                ReadOnlyField = $_.ReadOnlyField
-                Group         = $_.Group
-                DefaultValue  = $_.DefaultValue
-                Description   = $_.Description
+                Title            = $_.Title
+                InternalName     = $_.InternalName
+                StaticName       = $_.StaticName
+                Id               = $_.Id.ToString()
+                TypeAsString     = $_.TypeAsString
+                Required         = $_.Required
+                Hidden           = $_.Hidden
+                ReadOnlyField    = $_.ReadOnlyField
+                EnforceUniqueValues = $_.EnforceUniqueValues
+                Indexed          = $_.Indexed
+                Group            = $_.Group
+                DefaultValue     = $_.DefaultValue
+                Description      = $_.Description
+                Choices          = $choices
+                LookupList       = $_.LookupList
+                LookupField      = $_.LookupField
+                CustomFormatter  = $_.CustomFormatter
+                JSLink           = $_.JSLink
+                SchemaXml        = $_.SchemaXml
             }
         })
         Write-Host "     Fields found: $($fields.Count)" -ForegroundColor Gray

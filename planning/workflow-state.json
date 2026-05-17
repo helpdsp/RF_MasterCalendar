@@ -4,48 +4,38 @@
     "reverseEngineering": false,
     "referencesDir": "refdocs",
     "sourceDir": "source-code",
-    "initializedAt": "2026-05-08T23:27:04.990Z"
+    "initializedAt": "2026-05-17T11:01:38.873Z"
   },
-  "status": "sprint_completed",
+  "status": "created",
   "brief": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "path": "spec-kit/input/brief.md",
-    "generatedAt": "2026-05-08T23:37:32.183Z",
-    "approvedAt": "2026-05-08T23:37:39.943Z"
+    "generatedAt": null,
+    "approvedAt": null
   },
   "spec": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-05-08T23:37:39.943Z",
-    "approvedAt": "2026-05-08T23:41:14.640Z",
-    "artifactFiles": [
-      "PRD.md",
-      "technical-spec.md",
-      "api-spec.yaml",
-      "data-model.md",
-      "epics.md",
-      "stories.md",
-      "sprint-plan.md",
-      "test-plan.md",
-      "runbooks.md"
-    ]
+    "generatedAt": null,
+    "approvedAt": null,
+    "artifactFiles": []
   },
   "sprints": {
-    "generated": true,
-    "approved": true,
+    "generated": false,
+    "approved": false,
     "mode": "local",
-    "generatedAt": "2026-05-08T23:41:14.640Z",
-    "approvedAt": "2026-05-08T23:41:14.643Z",
-    "total": 2,
+    "generatedAt": null,
+    "approvedAt": null,
+    "total": 0,
     "active": null,
-    "completed": [1, 2]
+    "completed": []
   },
   "lastAction": {
-    "command": "complete_sprint",
-    "at": "2026-05-14T20:27:30.518Z",
-    "details": "Sprint 2 completed. Section 9 rewritten with 6-runbook catalog. Appendix B added. Word rebuilt: 33/33 images, 3588 KB."
+    "command": "init",
+    "at": "2026-05-17T11:01:38.873Z",
+    "details": "Reverse engineering mode set to no."
   },
-  "updatedAt": "2026-05-14T20:27:30.518Z"
+  "updatedAt": "2026-05-17T11:01:38.873Z"
 }
