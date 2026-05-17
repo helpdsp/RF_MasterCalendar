@@ -19,8 +19,8 @@ This is **not a development project** — the solution already exists in product
 Fill in before sending:
 
 - **Solution name:** `[SOLUTION_NAME]` *(e.g., "IT Helpdesk Ticket System", "Holiday Calendar", "Employee Onboarding Portal")*
-- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/eng-hub/`
-- **In production since:** `2025`
+- **SharePoint site:** `https://ruizfoods.sharepoint.com/sites/RuizNetPortal/`
+- **In production since:** `2024`
 - **Brief description:** `This new structure builds
 on years of hands-on
 experience
@@ -45,11 +45,11 @@ reusability.`
   - [ ] Microsoft List Forms
   - [ x ] Power Automate Cloud Flows
   - [ ] Microsoft Teams (Approvals / Channels / Tabs)
-  - [ ] Microsoft Outlook / Email notifications
+  - [ x ] Microsoft Outlook / Email notifications
   - [ ] Power Apps
   - [ ] Power BI Dashboards
   - [ ] Dataverse / SharePoint as data store
-  - [ ] Microsoft Forms
+  - [ x ] Microsoft Forms
   - [ ] Other: `[specify]`
 
 ---
