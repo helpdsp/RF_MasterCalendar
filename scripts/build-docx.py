@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Convert docs/KT-EngineeringWebPortal.md to a branded Word document.
+"""Convert docs/KT-MasterCalendar.md to a branded Word document.
 
 Steps:
   0. Pre-process: discover refdocs/Runbook - *.md files, fix image paths,
@@ -28,11 +28,11 @@ from docx.oxml.ns import qn
 from docx.oxml import OxmlElement
 
 REPO        = Path(__file__).parent.parent
-MD_IN       = REPO / "docs" / "KT-EngineeringWebPortal.md"
+MD_IN       = REPO / "docs" / "KT-MasterCalendar.md"
 RUNBOOKS_DIR = REPO / "refdocs" / "Runbooks"   # refdocs/Runbooks/*/runbook.md
 MERGED_MD   = REPO / "_kt_merged.md"       # temp; deleted after pandoc
 DOCX_TMP    = REPO / "docs" / "_kt_tmp.docx"
-DOCX_OUT    = REPO / "docs" / "KT-EngineeringWebPortal.docx"
+DOCX_OUT    = REPO / "docs" / "KT-MasterCalendar.docx"
 
 NAVY  = "1F2D5C"
 WHITE = "FFFFFF"
@@ -324,7 +324,7 @@ def set_headers_footers(doc: Document):
         hp = hdr.paragraphs[0] if hdr.paragraphs else hdr.add_paragraph()
         hp.alignment = WD_ALIGN_PARAGRAPH.CENTER
         _text_run(hp,
-                  "Ruiz Foods  —  Engineering Web Portal KT Document  |  CONFIDENTIAL",
+                  "Ruiz Foods  —  Master Calendar KT Document  |  CONFIDENTIAL",
                   size_pt=9, color_hex=NAVY)
 
         ftr = sec.footer
@@ -397,14 +397,14 @@ def insert_cover(doc: Document):
         ("",                                           20, False, NAVY,    "center", 0,  0),
         ("",                                           20, False, NAVY,    "center", 0,  0),
         ("",                                           20, False, NAVY,    "center", 0,  0),
-        ("Engineering Web Portal",                     56, True,  NAVY,    "center", 0,  6),
+        ("Master Calendar",                             56, True,  NAVY,    "center", 0,  6),
         ("Knowledge Transfer Document",                32, False, NAVY,    "center", 0, 40),
         ("",                                           20, False, NAVY,    "center", 0,  0),
         ("Ruiz Foods, Inc.",                           28, True,  NAVY,    "center", 0,  6),
-        ("Engineering Department",                     22, False, NAVY,    "center", 0,  6),
+        ("Information Technology",                     22, False, NAVY,    "center", 0,  6),
         ("",                                           20, False, NAVY,    "center", 0,  0),
-        ("May 8, 2026",                                22, False, "444444", "center", 0, 6),
-        ("https://ruizfoods.sharepoint.com/sites/eng-hub",
+        ("May 17, 2026",                               22, False, "444444", "center", 0, 6),
+        ("https://ruizfoods.sharepoint.com/sites/RuizNetPortal",
                                                        18, False, "444444", "center", 0, 40),
         ("",                                           20, False, NAVY,    "center", 0,  0),
         ("CONFIDENTIAL  —  INTERNAL USE ONLY",         20, True,  RED,     "center", 0,  0),
@@ -434,7 +434,7 @@ def validate_images(doc: Document, merged_content: str):
 # ---------------------------------------------------------------------------
 
 def main():
-    print("Building KT-EngineeringWebPortal.docx...")
+    print("Building KT-MasterCalendar.docx...")
 
     merged_path, merged_content = build_merged_markdown()
 
